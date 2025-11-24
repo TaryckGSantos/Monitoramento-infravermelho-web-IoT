@@ -1,0 +1,194 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 24 2025 16:02:22[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a9fch (109052) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002aa24 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0002aa48 vaddr=3ffb0000 size=03f7ch ( 16252) load[0m
+[0;32mI (135) esp_image: segment 3: paddr=0002e9cc vaddr=40080000 size=0164ch (  5708) load[0m
+[0;32mI (139) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=82330h (533296) map[0m
+[0;32mI (327) esp_image: segment 5: paddr=000b2358 vaddr=4008164c size=163c4h ( 91076) load[0m
+[0;32mI (373) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (373) boot: Disabling RNG early entropy source...[0m
+[0;32mI (384) cpu_start: Multicore app[0m
+[0;32mI (392) cpu_start: Pro cpu start user code[0m
+[0;32mI (392) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (392) app_init: Application information:[0m
+[0;32mI (393) app_init: Project name:     wifi_station[0m
+[0;32mI (397) app_init: App version:      1[0m
+[0;32mI (400) app_init: Compile time:     Nov 24 2025 16:01:55[0m
+[0;32mI (405) app_init: ELF file SHA256:  a0b17ff7a...[0m
+[0;32mI (410) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (413) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (417) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (421) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (425) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (432) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (436) heap_init: At 3FFB9890 len 00026770 (153 KiB): DRAM[0m
+[0;32mI (442) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (447) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (453) heap_init: At 40097A10 len 000085F0 (33 KiB): IRAM[0m
+[0;32mI (459) spi_flash: detected chip: generic[0m
+[0;32mI (462) spi_flash: flash io: dio[0m
+[0;33mW (464) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (478) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (528) wifi:wifi driver task: 3ffc1860, prio:23, stack:6656, core=0[0m
+[0;32mI (538) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (538) wifi:wifi certification version: v7.0[0m
+[0;32mI (538) wifi:config NVS flash: enabled[0m
+[0;32mI (548) wifi:config nano formatting: disabled[0m
+[0;32mI (548) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (548) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (558) wifi:Init management short buffer num: 32[0m
+[0;32mI (558) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (568) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (568) wifi:Init static rx buffer num: 10[0m
+[0;32mI (568) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (578) wifi_init: rx ba win: 6[0m
+[0;32mI (578) wifi_init: accept mbox: 6[0m
+[0;32mI (578) wifi_init: tcpip mbox: 32[0m
+[0;32mI (588) wifi_init: udp mbox: 6[0m
+[0;32mI (588) wifi_init: tcp mbox: 6[0m
+[0;32mI (588) wifi_init: tcp tx win: 5760[0m
+[0;32mI (598) wifi_init: tcp rx win: 5760[0m
+[0;32mI (598) wifi_init: tcp mss: 1440[0m
+[0;32mI (598) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (608) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (608) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (618) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (708) wifi:mode : sta (88:13:bf:63:c2:b4)[0m
+[0;32mI (708) wifi:enable tsf[0m
+[0;32mI (708) MLX-SIM: WiFi STA inicializado; conectando ao AP "Melk"[0m
+[0;32mI (718) MLX-SIM: Servidor HTTP + WebSocket rodando na porta 80[0m
+[0;32mI (718) MLX-SIM: Servidor WebSocket pronto em ws://<IP-DA-ESP>/ws[0m
+[0;33mW (718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;32mI (718) main_task: Returned from app_main()[0m
+[0;32mI (728) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (738) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (778) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (798) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (928) wifi:connected with Melk, aid = 10, channel 6, BW20, bssid = e8:45:8b:5d:b5:38[0m
+[0;32mI (928) wifi:security: WPA2-PSK, phy: bgn, rssi: -71[0m
+[0;32mI (938) wifi:pm start, type: 1[0m
+
+[0;32mI (938) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (958) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1378) wifi:<ba-add>idx:0 (ifx:0, e8:45:8b:5d:b5:38), tid:0, ssn:0, winSize:64[0m
+[0;33mW (1718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2428) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1[0m
+[0;33mW (2718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2908) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:6, winSize:64[0m
+[0;33mW (3718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (4718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (5718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (6718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (7718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (8718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (9718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (10718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (11718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (12718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (13718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (14718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (15718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (16718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (17718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (18718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (19718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (20718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (21718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (22718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (23718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (24718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (25718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (26718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (27718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (28718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (29718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (30718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (31718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (32718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (33718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (34718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (35718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (36718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (37718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (38718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (39718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (40718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (41718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (42718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (43718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (44718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (45718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (46718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (47718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (48718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (49718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (50718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (51718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (52718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (53718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (54718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (55718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (56718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (57718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (58718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (59718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (60718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (61718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (62718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (63718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (64718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (65718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (66718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (67718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (68718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (69718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (70718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (71718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (72718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (73718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (74718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (75718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (76718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (77718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (78718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (79718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (80718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (81718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (82718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (83718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (84718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (85718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (86718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (87718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (88718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (89718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (90718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (91718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (92718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (93718) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (94718) MLX-SIM: Nenhum cliente WebSocket conectado[0m

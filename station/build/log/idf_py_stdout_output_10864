@@ -1,0 +1,69 @@
+[1/5] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\taryc\Desktop\TESTE_WIFI_HTML\station\build\esp-idf\esptool_py && C:\Users\taryc\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/taryc/ESP/v5.4.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/partition_table/partition-table.bin C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/wifi_station.bin"
+wifi_station.bin binary size 0xb8740 bytes. Smallest app partition is 0x100000 bytes. 0x478c0 bytes (28%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\taryc\Desktop\TESTE_WIFI_HTML\station\build\bootloader\esp-idf\esptool_py && C:\Users\taryc\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/taryc/ESP/v5.4.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6570 bytes. 0xa90 bytes (9%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\taryc\ESP\v5.4.2\esp-idf\components\esptool_py && C:\Users\taryc\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/taryc/ESP/v5.4.2/esp-idf -D SERIAL_TOOL=C:/Users/taryc/.espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Users/taryc/ESP/v5.4.2/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build -P C:/Users/taryc/ESP/v5.4.2/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM5 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 wifi_station.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port COM5
+Connecting.........
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 88:13:bf:63:c2:b4
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000c8fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 25968 bytes to 16360...
+Writing at 0x00001000... (100 %)
+Wrote 25968 bytes (16360 compressed) at 0x00001000 in 0.7 seconds (effective 278.2 kbit/s)...
+Hash of data verified.
+Compressed 755520 bytes to 468866...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c6b5... (6 %)
+Writing at 0x0002557c... (10 %)
+Writing at 0x0003047d... (13 %)
+Writing at 0x00035c90... (17 %)
+Writing at 0x0003bb00... (20 %)
+Writing at 0x00041741... (24 %)
+Writing at 0x00047497... (27 %)
+Writing at 0x0004d109... (31 %)
+Writing at 0x0005335e... (34 %)
+Writing at 0x0005889c... (37 %)
+Writing at 0x0005e782... (41 %)
+Writing at 0x00063f66... (44 %)
+Writing at 0x00069581... (48 %)
+Writing at 0x0006f072... (51 %)
+Writing at 0x00074f84... (55 %)
+Writing at 0x0007a921... (58 %)
+Writing at 0x000804fd... (62 %)
+Writing at 0x000862b4... (65 %)
+Writing at 0x0008bd27... (68 %)
+Writing at 0x000919e2... (72 %)
+Writing at 0x0009796c... (75 %)
+Writing at 0x0009d3c7... (79 %)
+Writing at 0x000a6cf5... (82 %)
+Writing at 0x000add5f... (86 %)
+Writing at 0x000b3bd4... (89 %)
+Writing at 0x000b97c5... (93 %)
+Writing at 0x000bfbb7... (96 %)
+Writing at 0x000c4f4d... (100 %)
+Wrote 755520 bytes (468866 compressed) at 0x00010000 in 10.8 seconds (effective 559.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 477.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

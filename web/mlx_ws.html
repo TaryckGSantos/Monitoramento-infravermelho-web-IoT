@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>WebSocket MLX90640 Fake</h1>
+<p>Status: <span id="status">conectando...</span></p>
+<canvas id="heatmap" width="320" height="240" style="border:1px solid #000"></canvas>
+
+<script>
+const IP = "192.168.15.27"; // IP da sua ESP32
+const ws = new WebSocket(`ws://${IP}/ws`);
+
+const statusEl = document.getElementById("status");
+const canvas = document.getElementById("heatmap");
+const ctx = canvas.getContext("2d");
+const imgData = ctx.createImageData(320, 240);
+
+ws.onopen = () => {
+    console.log("WebSocket conectado!");
+    statusEl.textContent = "conectado";
+};
+
+ws.onerror = (err) => {
+    console.error("Erro no WebSocket:", err);
+    statusEl.textContent = "erro (ver console)";
+};
+
+ws.onclose = () => {
+    console.log("WebSocket fechado");
+    statusEl.textContent = "fechado";
+};
+
+ws.onmessage = (event) => {
+    console.log("Mensagem recebida:", event.data);
+    const data = JSON.parse(event.data);
+    drawFrame(data.frame);
+};
+
+function drawFrame(frame) {
+    for (let y = 0; y < 240; y++) {
+        const srcY = Math.floor(y * 24 / 240);
+
+        for (let x = 0; x < 320; x++) {
+            const srcX = Math.floor(x * 32 / 320);
+            const v = frame[srcY * 32 + srcX];
+
+            const idx = (y * 320 + x) * 4;
+            imgData.data[idx+0] = v;   // R
+            imgData.data[idx+1] = v;   // G
+            imgData.data[idx+2] = v;   // B
+            imgData.data[idx+3] = 255; // A
+        }
+    }
+    ctx.putImageData(imgData, 0, 0);
+}
+</script>
+
+</body>
+</html>
