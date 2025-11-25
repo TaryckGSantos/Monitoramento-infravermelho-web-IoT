@@ -1,57 +1,96 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <style>
+        /* Força suavização da imagem ao esticar o canvas */
+        canvas {
+            image-rendering: auto;
+            image-rendering: optimizeQuality;
+            width: 640px;   /* mostra maior na tela */
+            height: 480px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
 <body>
 
 <h1>WebSocket MLX90640 Fake</h1>
 <p>Status: <span id="status">conectando...</span></p>
-<canvas id="heatmap" width="320" height="240" style="border:1px solid #000"></canvas>
+
+<canvas id="heatmap" width="320" height="240"></canvas>
 
 <script>
-const IP = "192.168.15.27"; // IP da sua ESP32
+const IP = "192.168.15.22";
 const ws = new WebSocket(`ws://${IP}/ws`);
 
 const statusEl = document.getElementById("status");
-const canvas = document.getElementById("heatmap");
-const ctx = canvas.getContext("2d");
-const imgData = ctx.createImageData(320, 240);
+const canvas   = document.getElementById("heatmap");
+const ctx      = canvas.getContext("2d");
 
-ws.onopen = () => {
-    console.log("WebSocket conectado!");
-    statusEl.textContent = "conectado";
-};
+// resolução REAL do sensor
+const RAW_COLS = 32;
+const RAW_ROWS = 24;
 
-ws.onerror = (err) => {
-    console.error("Erro no WebSocket:", err);
-    statusEl.textContent = "erro (ver console)";
-};
+// canvas “offscreen” com a resolução original
+const rawCanvas = document.createElement('canvas');
+rawCanvas.width  = RAW_COLS;
+rawCanvas.height = RAW_ROWS;
+const rawCtx = rawCanvas.getContext('2d');
+const rawImgData = rawCtx.createImageData(RAW_COLS, RAW_ROWS);
 
-ws.onclose = () => {
-    console.log("WebSocket fechado");
-    statusEl.textContent = "fechado";
-};
+ws.onopen  = () => { statusEl.textContent = "conectado"; };
+ws.onerror = () => { statusEl.textContent = "erro (ver console)"; };
+ws.onclose = () => { statusEl.textContent = "fechado"; };
 
 ws.onmessage = (event) => {
-    console.log("Mensagem recebida:", event.data);
     const data = JSON.parse(event.data);
     drawFrame(data.frame);
 };
 
+// Colormap arco-íris
+function rainbowColorMap(v) {
+    const t = v / 255.0;
+    let r=0, g=0, b=0;
+
+    if (t < 0.25) {
+        const u = t / 0.25;
+        r=0; g=255*u; b=255;
+    } else if (t < 0.5) {
+        const u = (t - 0.25) / 0.25;
+        r=0; g=255; b=255*(1-u);
+    } else if (t < 0.75) {
+        const u = (t - 0.5) / 0.25;
+        r=255*u; g=255; b=0;
+    } else {
+        const u = (t - 0.75) / 0.25;
+        r=255; g=255*(1-u); b=0;
+    }
+    return [r|0, g|0, b|0];
+}
+
 function drawFrame(frame) {
-    for (let y = 0; y < 240; y++) {
-        const srcY = Math.floor(y * 24 / 240);
+    // 1) preenche imagem 32x24 com as cores
+    for (let y = 0; y < RAW_ROWS; y++) {
+        for (let x = 0; x < RAW_COLS; x++) {
+            const v = frame[y * RAW_COLS + x];
+            const [r, g, b] = rainbowColorMap(v);
 
-        for (let x = 0; x < 320; x++) {
-            const srcX = Math.floor(x * 32 / 320);
-            const v = frame[srcY * 32 + srcX];
-
-            const idx = (y * 320 + x) * 4;
-            imgData.data[idx+0] = v;   // R
-            imgData.data[idx+1] = v;   // G
-            imgData.data[idx+2] = v;   // B
-            imgData.data[idx+3] = 255; // A
+            const idx = (y * RAW_COLS + x) * 4;
+            rawImgData.data[idx + 0] = r;
+            rawImgData.data[idx + 1] = g;
+            rawImgData.data[idx + 2] = b;
+            rawImgData.data[idx + 3] = 255;
         }
     }
-    ctx.putImageData(imgData, 0, 0);
+    rawCtx.putImageData(rawImgData, 0, 0);
+
+    // 2) desenha esse canvas pequeno no canvas grande com smoothing
+    ctx.save();
+    ctx.imageSmoothingEnabled = true;      // chave da interpolação
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(rawCanvas, 0, 0, canvas.width, canvas.height);
+    ctx.restore();
 }
 </script>
 

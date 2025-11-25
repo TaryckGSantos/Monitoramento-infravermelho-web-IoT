@@ -1,0 +1,343 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 24 2025 16:02:22[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1aa2ch (109100) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002aa54 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0002aa78 vaddr=3ffb0000 size=03f7ch ( 16252) load[0m
+[0;32mI (135) esp_image: segment 3: paddr=0002e9fc vaddr=40080000 size=0161ch (  5660) load[0m
+[0;32mI (139) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=822b4h (533172) map[0m
+[0;32mI (327) esp_image: segment 5: paddr=000b22dc vaddr=4008161c size=163f4h ( 91124) load[0m
+[0;32mI (373) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (373) boot: Disabling RNG early entropy source...[0m
+[0;32mI (384) cpu_start: Multicore app[0m
+[0;32mI (392) cpu_start: Pro cpu start user code[0m
+[0;32mI (392) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (392) app_init: Application information:[0m
+[0;32mI (393) app_init: Project name:     wifi_station[0m
+[0;32mI (397) app_init: App version:      74a4d58-dirty[0m
+[0;32mI (401) app_init: Compile time:     Nov 24 2025 17:46:39[0m
+[0;32mI (406) app_init: ELF file SHA256:  938588012...[0m
+[0;32mI (411) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (414) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (418) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (422) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (426) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (433) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (438) heap_init: At 3FFB9288 len 00026D78 (155 KiB): DRAM[0m
+[0;32mI (443) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (448) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (454) heap_init: At 40097A10 len 000085F0 (33 KiB): IRAM[0m
+[0;32mI (460) spi_flash: detected chip: generic[0m
+[0;32mI (463) spi_flash: flash io: dio[0m
+[0;33mW (466) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (479) main_task: Started on CPU0[0m
+[0;32mI (489) main_task: Calling app_main()[0m
+[0;32mI (529) wifi:wifi driver task: 3ffc1258, prio:23, stack:6656, core=0[0m
+[0;32mI (539) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (539) wifi:wifi certification version: v7.0[0m
+[0;32mI (539) wifi:config NVS flash: enabled[0m
+[0;32mI (549) wifi:config nano formatting: disabled[0m
+[0;32mI (549) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (549) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (559) wifi:Init management short buffer num: 32[0m
+[0;32mI (559) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (569) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (569) wifi:Init static rx buffer num: 10[0m
+[0;32mI (569) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (579) wifi_init: rx ba win: 6[0m
+[0;32mI (579) wifi_init: accept mbox: 6[0m
+[0;32mI (579) wifi_init: tcpip mbox: 32[0m
+[0;32mI (589) wifi_init: udp mbox: 6[0m
+[0;32mI (589) wifi_init: tcp mbox: 6[0m
+[0;32mI (589) wifi_init: tcp tx win: 5760[0m
+[0;32mI (599) wifi_init: tcp rx win: 5760[0m
+[0;32mI (599) wifi_init: tcp mss: 1440[0m
+[0;32mI (599) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (609) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (609) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (619) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (709) wifi:mode : sta (88:13:bf:63:c2:b4)[0m
+[0;32mI (709) wifi:enable tsf[0m
+[0;32mI (709) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"[0m
+[0;32mI (719) MLX-WS: Servidor HTTP + WebSocket rodando na porta 80[0m
+[0;32mI (719) MLX-WS: Servidor WebSocket pronto em ws://<IP-DA-ESP>/ws[0m
+[0;32mI (719) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (729) wifi:state: init -> auth (0xb0)[0m
+[0;33mW (729) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (729) main_task: Returned from app_main()[0m
+[0;32mI (739) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (759) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38[0m
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1assoc (0x0)[0m
+LX-WS: Servidor WebSocket pronto em ws://<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bic (0x0)[0m
+LX-WS: Servidor WebSocket pronto em ws://<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 10x0)[0m
+LX-WS: Servidor WebSocket pronto em ws://<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400[0m
+LX-WS: Servidor WebSocket pronto em ws://<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, liWS: Servidor WebSocket pronto em ws://<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)[0m
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3,Servidor WebSocket pronto em ws://<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)[0m
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scaldor WebSocket pronto em ws://<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)[0m
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale liWebSocket pronto em ws://<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)[0m
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listenocket pronto em ws://<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)[0m
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen intt pronto em ws://<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)[0m
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen intervaonto em ws://<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)[0m
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval fr em ws://<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)[0m
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 3ws://<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)[0m
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 30720/<IP-DA-ESI (759) wifi:state: assoc -> run (0x10)[0m
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us-DA-ESI (759) wifi:state: assoc -> run (0x10)[0m
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 3SI (759) wifi:state: assoc -> run (0x10)[0m
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 30720759) wifi:state: assoc -> run (0x10)[0m
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0mwifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+ifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+ifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+ifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+ifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+ifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+ifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+ifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+ifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+ifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0I (879) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38
+[0;32mI (879) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 7200 us[0m
+[0;33mW (929) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (959) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;33mW (1129) MLX-WS: Nenhum cliente WebSocket conectado[0m
+�W (929) MLX-WS: Nenhum cliente WebSocket conectado
+, BW20, bssiI (959) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+, rssi: -67
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: W (1129) MLX-WS: Nenhum cliente WebSocket conectado[0m
+00 us to 30I200 us
+ifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0 (1229) MLX-WS: Nenhum cliente WebSocket conectado
+, BW20, bssiI (959) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+, rssi: -67
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: W (1129) MLX-WS: Nenhum cliente WebSocket conectado[0m
+00 us to 30I200 us
+ifi:state: assoc -> run (0x10)
+ ap:<255,255>, sta:<6,0 (1279) MLX-WS: Nenhum cliente WebSocket conectado
+, BW20, bssiI (959) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+������������>������� w�����������������>�����������������������w�������������������������������������������������������������������������������������������������������������������������������W (1929) MLX-WS: Nenhum cliente WebSocket conectado
+[0;33mW (2129) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2329) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1[0m
+[0;33mW (2329) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2529) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2529) MLX-WS: Handshake WebSocket OK[0m
+[0;32mI (2539) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:6, winSize:64[0m
+� Started on CPU0
+[0;32mI (489) main_task: Calling app_main()[0m
+[0;32mI (529) wifi:wifi driver task: 3ffc1258, prio:23, stack:6656, core=0[0m
+[0;32mI (539) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (539) wifi:wifi certification version: v7.0[0m
+[0;32mI (539) wifi:config NVS flash: enabled[0m
+[0;32mI (549) wifi:config nano formatting: disabled[0m
+[0;32mI (549) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (549) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (559) wifi:Init management short buffer num: 32[0m
+[0;32mI (559) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (569) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (569) wifi:Init static rx buffer num: 10[0m
+[0;32mI (569) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (579) wifi_init: rx ba win: 6[0m
+[0;32mI (579) wifi_init: accept mbox: 6[0m
+[0;32mI (579) wifi_init: tcpip mbox: 32[0m
+[0;32mI (589) wifi_init: udp mbox: 6[0m
+[0;32mI (589) wifi_init: tcp mbox: 6[0m
+[0;32mI (589) wifi_init: tcp tx win: 5760[0m
+[0;32mI (599) wifi_init: tcp rx win: 5760[0m
+[0;32mI (599) wifi_init: tcp mss: 1440[0m
+[0;32mI (599) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (609) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (609) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (619) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (709) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (789) wifi:mode : sta (88:13:bf:63:c2:b4)[0m
+[0;32mI (789) wifi:enable tsf[0m
+[0;32mI (799) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"[0m
+[0;32mI (799) MLX-WS: Servidor HTTP + WebSocket rodando na porta 80[0m
+[0;32mI (799) MLX-WS: Servidor WebSocket pronto em ws://<IP-DA-ESP>/ws[0m
+[0;33mW (799) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (809) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (819) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (819) main_task: Returned from app_main()[0m
+[0;32mI (829) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (849) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (979) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38[0m
+[0;32mI (979) wifi:security: WPA2-PSK, phy: bgn, rssi: -77[0m
+[0;32mI (979) wifi:pm start, type: 1[0m
+
+[0;32mI (979) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;33mW (1019) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (1049) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;33mW (1219) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (1369) wifi:<ba-add>idx:0 (ifx:0, e8:45:8b:5d:b5:38), tid:0, ssn:0, winSize:64[0m
+[0;33mW (1419) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1619) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1819) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2019) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2219) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2419) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1[0m
+[0;33mW (2419) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2619) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2819) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2909) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:6, winSize:64[0m
+[0;33mW (3019) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (3219) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (3419) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (3619) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (3819) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (4019) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (4219) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (4419) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (4619) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (4819) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (5019) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (5219) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (5419) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (5619) MLX-WS: Nenhum cliente WebSocket conectado[0m

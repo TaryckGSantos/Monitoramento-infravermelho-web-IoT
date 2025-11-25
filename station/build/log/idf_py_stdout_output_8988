@@ -1,0 +1,2298 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 24 2025 16:02:22[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1c2a0h (115360) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0002c2c8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (128) esp_image: segment 2: paddr=0002c2ec vaddr=3ffb0000 size=03d2ch ( 15660) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=87734h (554804) map[0m
+[0;32mI (328) esp_image: segment 4: paddr=000b775c vaddr=3ffb3d2c size=002dch (   732) load[0m
+[0;32mI (329) esp_image: segment 5: paddr=000b7a40 vaddr=40080000 size=18d40h (101696) load[0m
+[0;32mI (384) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (384) boot: Disabling RNG early entropy source...[0m
+[0;32mI (394) cpu_start: Multicore app[0m
+[0;32mI (403) cpu_start: Pro cpu start user code[0m
+[0;32mI (403) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (403) app_init: Application information:[0m
+[0;32mI (403) app_init: Project name:     wifi_station[0m
+[0;32mI (407) app_init: App version:      74a4d58-dirty[0m
+[0;32mI (411) app_init: Compile time:     Nov 24 2025 17:46:39[0m
+[0;32mI (416) app_init: ELF file SHA256:  ea03d1105...[0m
+[0;32mI (421) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (425) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (428) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (432) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (437) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (443) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFBBEA0 len 00024160 (144 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (458) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 40098D40 len 000072C0 (28 KiB): IRAM[0m
+[0;32mI (471) spi_flash: detected chip: generic[0m
+[0;32mI (473) spi_flash: flash io: dio[0m
+[0;33mW (476) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (488) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (499) main_task: Started on CPU0[0m
+[0;32mI (509) main_task: Calling app_main()[0m
+[0;32mI (549) wifi:wifi driver task: 3ffc3e70, prio:23, stack:6656, core=0[0m
+[0;32mI (559) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (559) wifi:wifi certification version: v7.0[0m
+[0;32mI (569) wifi:config NVS flash: enabled[0m
+[0;32mI (569) wifi:config nano formatting: disabled[0m
+[0;32mI (569) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (569) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (579) wifi:Init management short buffer num: 32[0m
+[0;32mI (579) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (589) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (589) wifi:Init static rx buffer num: 10[0m
+[0;32mI (589) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (599) wifi_init: rx ba win: 6[0m
+[0;32mI (599) wifi_init: accept mbox: 6[0m
+[0;32mI (599) wifi_init: tcpip mbox: 32[0m
+[0;32mI (609) wifi_init: udp mbox: 6[0m
+[0;32mI (609) wifi_init: tcp mbox: 6[0m
+[0;32mI (609) wifi_init: tcp tx win: 5760[0m
+[0;32mI (619) wifi_init: tcp rx win: 5760[0m
+[0;32mI (619) wifi_init: tcp mss: 1440[0m
+[0;32mI (619) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (629) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (629) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (639) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (729) wifi:mode : sta (88:13:bf:63:c2:b4)[0m
+[0;32mI (729) wifi:enable tsf[0m
+[0;32mI (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"[0m
+[0;32mI (739) MLX-WS: Servidor HTTP + WebSocket rodando na porta 80[0m
+[0;32mI (739) MLX-WS: Servidor WebSocket pronto em ws://<IP-DA-ESP>/ws[0m
+[0;32mI (739) MLX-WS: Inicializando I2C e MLX90640...[0m
+[0;32mI (749) MLX90640_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+[0;32mI (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (789) wifi:state: init -> auth (0xb0)[0m
+40_I2C: I2C inicializado (port=0, SDA=21,I (839) wifi:state: assoc -> run (0x10)
+[1;31mE (899) MLX-WS: Erro MLX90640_ExtractParameters: -3[0m
+[0;33mW (899) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (899) main_task: Rek1, snd_ch_cfg:0x0[0m
+[0;32mI (789) wifi:state: init -> auth (0xb0)[0m
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C� I2C inicielizado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturnsnd_ch_cfg:0x0
+[0;32mI (789) wifi:state: init -> auth (0xb0)[0m
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned frh_cfg:0x0
+[0;32mI (789) wifi:state: init -> auth (0xb0)[0m
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from ag:0x0
+[0;32mI (789) wifi:state: init -> auth (0xb0)[0m
+ws? (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_m0
+[0;32mI (789) wifi:state: init -> auth (0xb0)[0m
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main( (789) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws� (819)�wifi:w�ete� euuh%-� ewwoo$(0}0)-.5���.���*�$�74=�$}l���? 0����������inicmeliz�}� (t�������������������������������������V!(7=- MLX-Ww�!WmFi S]U�mnicializ�mo;-conectmndo ao AP%"Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws?�(8�=�$w��i:��mt�:�auum ->�as��c (0���
+0�����.
+I (7��� MLX��� 0I2o: I2g inicializado (port=0, SDA=21, SCL=22, freq=400000)
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws��������������������au�� -��������������������������������ml\��������������������������������������������$�l=66�$fveq=450440)-
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws�����}�$�m����������u�m�-���������������������������?����������$0����������������������������������������������������}5�5��5-
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:wuate: auth -> aswoc (0|0-
+0�4�...
+I (7�=� MLX�56��I7������ �������i��l������u�4������?�����������������������V%(7=- MLX-W�!WmFi S}E inicializ�mo?�conectmndo ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws?�(8�=� w�fi:w�et�: auuh ->$as�oc (0�4�
+0����..
+I (7�=� MLX�5 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906$0_I2C> I2G inicializado (uovt=0,$WDe=21, wGl=62� fveu=450454--.v (729) MLX-WS: WiFi STA inicializado; conectando ao AP &Melk"[0m
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws� (819) wmfi>w�e�e: euuh%-� ewwoo$,5|0)-�46��.�.�.�$�749) ML\906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws? (819) wifi:state: auth -> awwog$(5|0)-
+4644...-*I$,749) mL\=56 0I2o: I2g inicializado (port=4- S�A=65� SgL=66� freq=5�54�5-
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=440440)[0m
+V (769) MLX-WS: WiFi STA inicielizado; conecuando$ao AP &M�lk"-
+e (7}9) wifi:new<7,0?, old:�u-0�, ap>}6}5m2�u�, s��:<6�0�� p��}urned fvom app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws�������$�����������������m��������������������������������������$5�����������������������������4����A=>5�$SgL=62, freq=440000)
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wmfi:w�ate: auth ->$as�oc (0}4�
+0����..
+I (7��� MlX�57 0����������inicmaliz�do (t����4����e=������������fv��}���������V!(7w=) MLX-Ww>%WmFi SUA inicializedo;,conectmndo ao AP%"Melk"
+m �w�9- �if�>new:<6,0>, o�d:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:=255,255>, sta:<6,0>, pvofturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws���������������������������������������������������$�7�=�$}l\=56 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2G in�cializado (port=0, WDe=21,$wGl=22, fveu=4�5454-��R (7w9) MLX-WS> WiFi SUA inicializedo; conectmndo ao AP%"Melk"[0m
+}$���}�$�����o}�}7��-$�����u�5���e�?�7���7�u�������<���e�����urned fvom app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws?�(8���$w�������t���au�� ->�aw����(0�����0����������������MLX����������������������m�������������������������������������������R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws? (819) wifi:state: auth -> assog (0x0)-
+0645...
+I$,749) ml\956$���o�������������m����m����u����������������������������������%���-l���-�����m�����u�mom���m��mm����o��m�}����U�������&����(7����w��i����}���� ol�:�um0�, ap>=655l2u5~, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)-[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (7}9) wmfi:new|7,0, old:�u-0, ap>}6}5l2�5�, st�<7,0?l pofturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws�������,�����������������m���������������������.�*�$�74=)�ml\906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, at:=255,255>,�sta:<6,5>, tvonturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws�$(819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws? (819) wifi:state: auth -> aswog (0x0)-4644...�*I$,74=) ml\=56�5����������������i���������u�4���������������������}����������%�w=-$}m�-�W!�m�i�W}E�mom�iml��edo?�o�n��moe��eo�}�-���m�n�/e (7�}��w�fi:������5��-old:�����������7�u�2�u�, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+e (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profturned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws: (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+R (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+turned from app_main()
+[0;33mW (1099) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (1099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (1099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (1299) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (1359) MLX90640_I2C: I2CRead: erro ao ler (addr 0x8000, n=1): ESP_ERR_TIMEOUT[0m
+[0;33mW (1359) MLX-WS: MLX90640_GetFrameData erro: -1[0m
+[0;33mW (1499) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1699) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1899) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2009) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38[0m
+[0;32mI (2009) wifi:security: WPA2-PSK, phy: bgn, rssi: -77[0m
+[0;32mI (2019) wifi:pm start, type: 1[0m
+
+[0;32mI (2019) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2029) wifi:AP's beacon interval =v (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()[0m
+89) wifi:state: init -> auth (0xb0)
+ws��(=���$w����������au�� ->�as��g -0���4�����������?����ml\����������������������}���������������������������������}��5������= (7w9- MLX-WW WiFi SUA inicializedo; conectendo ao AP$"Melk"
+ 10289) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, :new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM per0>, old:<1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period =ld:<1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, at:=255l255>,�sta:<6,0>, tvonaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws�������$����?�����������m������ﭽ���������������������������������������������e�i��l������u�4}�����?5���m�6w���e�}5��u��-��= (779) MLX-WS: WiFi SUA inicializado; conectendo ao AP$"Melk"
+$102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+ws� (819) wifi:state: auth -> aswog (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C> m2G inicializado (tort=0,$WDe=21, SGL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:w�ate: auth -> aswoc (0|0)
+06�4...
+I (75=) MLX�57 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsm (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C> m2G �nicmeli~ado$,uowt=4,$wDe=65�$wgl=66, fveq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsl (819) wifi:state: auth -> assoc (0x0)
+0640...
+[0;32mI (749) MLX906 0_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+= (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"
+ 102400 us, DTIM period = 3
+1,0>, ap:<255,255>, sta:<6,0>, profaurned from app_main()
+89) wifi:state: init -> auth (0xb0)
+wsm (8��� w����������au�m ->�as����(0����������������������ML\���$0���������������������������������������������������������������5�7=-,�m}-ww�%�mi�W}E�mom�m}l}�mo?�o�n�g�mom��eo�E�%�}�m�"�$1���5�$u�� DT}}�pm���m$=t��
+1���, a��7���2��������:���0��������urn�d from a�p_ma�n(�
+�9) �ifi>state: init -> auth (�xb0)*ws����������������������������������������������������������������$����������������������������������������������������������������5�7�=�l�}�-��%�m����E�mom�m�l���m�?�o�n�g�m�}���o�E�->��m�&�$1���5�$u�� DT}}-pmrmod =`3�
+1m0�, at?�7�u�2�u�� s��:<�0�� t���euvned from app_main()
+89) wifi:stat�: init -> auth (0xb0)
+ws����������������������������������������������������������������������������������������������������������������������������������������mlX���������������������������������������������&}���o-
+�����������������������}����������������������������������������mu�ned fr�$ep���a}�()�
+8�� w��i:����:,ini}����au�� (0���������E (2619) MLX90640_I2C: I2CRead: erro ao ler (addr 0x8000, n=1): ESP_ERR_TIMEOUT
+[0;33mW (2619) MLX-WS: MLX90640_GetFrameData erro: -1[0m
+[0;33mW (2699) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (2829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (2829) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (2899) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (3099) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (3299) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (3329) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3329) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3379) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3379) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;32mI (3409) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1[0m
+[1;31mE (3429) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3429) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3479) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3479) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (3499) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (3529) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3529) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3579) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3579) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;32mI (3579) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+[0;32mI (3609) MLX-WS: Handshake WebSocket OK[0m
+[1;31mE (3629) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3629) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3679) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3829) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+EP_ERR_TIMEOUT
+[0;33mW (3829) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (39R_TIMEOUT
+[0;33mW (3829) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MEOUT
+[0;33mW (3829) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90
+[0;33mW (3829) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_(3829) MLX-WS: MLX90640_GetFrameData erro: -2
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C:9) MLX-WS: MLX90640_GetFrameData erro: -2
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CLX-WS: MLX90640_GetFrameData erro: -2
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead:: MLX90640_GetFrameData erro: -2
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: errX90640_GetFrameData erro: -2
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao40_GetFrameData erro: -2
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao envetFrameData erro: -2
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar ameData erro: -2
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addrata erro: -2
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0xerro: -2
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000: -2
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): E
+[1;31mE (3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FA3779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+W (3990640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) 0_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-C: I2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: 2CRead: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX9ad: erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640erro ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_Get ao enviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFramenviar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameDatar addr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData errdr (0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -0x8000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3=2�) MLX=564�I2g:$I2GRead:$erv� ao envmar$addr$(0|=�54-:$ES,(3969) MLX91640_I2C: I2CRead:$evro ao enviar addv (0x8040): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES�_FAIL-
+[0;33mW (3879)$mLX-Ww:$Ml\=5744GetFve�e���e!��v�>$-6-*45->�EwE (3�6��,MLX��6���I2�:$I2GRead:$erw� ao envmar$addr$(0|=�55�:%ES,(3969) MLX91640_I2C: I2CRead: ewro ao enviar addv (0x8040): ESP_FAIL[0m
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES (3929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+000): ESE (3879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (3879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (3829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES_FAIL
+[0;33mW (3929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3979) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3979) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4029) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4029) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4079) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4079) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4129) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4129) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4179) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4179) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4229) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4229) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4279) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4279) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4329) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4329) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4379) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4379) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4429) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4429) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4479) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4479) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4529) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4529) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4579) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4579) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4629) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4629) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4679) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4679) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4629) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+� (4679)$M�X9064�I2C:$I7CVead? mvvo$ao env�er%a�dr ,4�<544->$EwE (4w7�) MLX�164�I2g:$I2�Reed:$erv� ao envmar$addr$(0|=�54-:$EST_ERV29) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8400): ESE (4729) MLX90640_I2C: I2CRead: ervo ao enviar addr (0x8000): EST_ERR_TIMEOUT
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+� (4679)$mlX90�44I2G:$I6CVeed: mvvo$ao enviev a�dr ,4x8104)>$EwE (477�) MLX�5645_I2G:$I2gRead: ervo ao envmar addr$(0|9504-:$ESP_ERR_TIMMLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (�779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT0640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+W _I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+W (477: I2CRead: erro ao enviar addr (0x8000): ESE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLRead: erro ao enviar addr (0x8000): ESE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: erro ao enviar addr (0x8000): ESE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLro ao enviar addr (0x8000): ESE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX906o enviar addr (0x8000): ESE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_Gviar addr (0x8000): ESE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFr addr (0x8000): ESE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameDr (0x8000): ESE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+� (4679)$mlX=564�I2G:$I6C�eed>$mvvo$ao$�n���v�a�l�$�5�=�45-���wE (4���������������?����2�����:�ev����o �nv�������rm(0�����������_�V_UI�}UUm
+W�-}7�=m$�LY-�w }l}957�u�G�u�m}��eu�$�}55�-�$�WE (4�7�- MLX�5u�i2�,I2w��ad:�er�o ao envmar�addr�(0�����}�����_ER�_TIMEOUT
+[0;33mW (4729) MLX-WS: mLX90640GetFremeData erro: �2[0m
+�����������������������������������������������������������������������������������������������������������������������������������v���mMEOU���w�-4w���-�}�-W��-mLX=�������u������t� er���}�mESE (4�6�) MLX�uu�i2-I2S��ad:$er�o ao envmar�addr�(0}8���}��EST_ERV_TIMEOUT
+[0;33mW (4729) MLX-WS: MLX90640GetFrameData erro: -2[0m
+�������-�����������������o��������������������������������������e (4���������������?����6�����:�ev����o env�ar��ddr-(0���5����EW�_EVV_TIMEOUU
+W$(57w9) �LX-WS> mL�91640�Get�remeDatm evvo�$-2-WE (4w29)$MLX90645_i2G:$I6CRe�d?$erwo$eo$mnvier$a�dv �4}8514)>$eP_ERV_TIMEOUT
+[0;33mW (4729) MLX-WS: MLX90640GetFrameData erro: -2[0m
+�����������������������������������������n����������������������������������������������������������������������������������������V�_�i��U�}~W�-}7��}-�m�-� ���=��u�O�u�m}���u�-����-�w�u$���6�m�mL�=5wt�i6o,M7w���d?$uv�o,e$�nwi�v�e��� �4}8�54i�,��_ERV_TIMEOUT
+[0;33mW (4729) MLX-WS: MLX90640GetFrameD�ta erro: -�
+�������������������������������mv��������������������������������������������������������������������������������}�������������_�Vw_Ui}EoUU-.W�(57w9) �LY-�W> }l}957�1�G�t�we}u�eu�$�vwo�$�6-
+}$(4w2=)�M�}=4w45i2G:$�6SRe��? �vo,�o�mnvi�v$a�d���4x8514m>$e_T_ERV_TIMEOUT
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+�������-�}�X=u�5���6�?%i�o����$������%�n���������$�5�=�45���Ew��,��������X��6��y6�;$mw��m�d>$ew��eo$�n�m�w$e�ew%-�|=�54�?$��P_ERV_TIMEOUU
+W$(47w9) MLX-WS> MLX90640_GetFrameData ervo: -2
+[1;31mE (4729)$MLX90644_I2C: I6CRead: ervo ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+� �5�79-$mlX95644_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+U�(5�7�-$MLX=u�����6�:%I2oR�ad?�er���a� env�ar�ad�r��0�}��5�:�u�E�(����������������?�;=�2����d:$e�����o�e�v�er�ad�r--0}��5����ESP_ERV_TIMEOUU
+W$(57w9) MLX-WS> MLX90751�Get�vemeDat�$erwo:$-2-
+e (4w29)$MLX90645_i2G:$I6CReed: ervo$eo mnvier a�dv (4x8014)> ESu_ERR_TIMEOUT
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+�$(4v7�)�m�x=5�5��I6�>$I�o�e�d?$��w�$eo �n���w�a�d�$�5�=�45->�uwE (4���- MLX��6���i2o:$I2�vead:$erv� ao envmar$addr$(0|=�54�:%EST_ERR_TIMEOUT
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX95644I2C: I2CRead: ervo ao enviar addr$(0x8004): ESE (477=) MLX91645_I2G: I2GRead: ervo ao envmar addr$(0x8504):$ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData ervo: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640I2C: I2CRead: ervo ao enviar addr (0x8104): ESE (477=)$MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+} (4679) MLX90644_I2C: I2CVead: erro ao enviar addr (0x8000)> ESE (477=) MLX91645_I2C: I2GRead: ervo ao envmar addr (0x8004):$ESP_ERR_TIMEOUT
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+} (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8004): ESE (477=) MLX90640_I2C: I2CRead: erro$ao enviar addr (0x8000): ESP_ERR_TIMEOUT
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4729) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4679) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4779) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4779) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4729) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESE (4829) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4829) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4879) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4879) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4979) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4979) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5029) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5029) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5079) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5079) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5129) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5129) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5179) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5179) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5229) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5229) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5279) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5279) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5329) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5329) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5379) MLX90640_I2C: I2CRead: erro ao enviar a�dr (0x8000): ESP (5279) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESU�FAIL[0m
+W$(56w�) MLX-Ww:�MLX=5�4=GetFremeDat� erw�:�-2=�05-:�ES�$,576�)�mlx��64�y2g:$m7�Ve�d>$eww�%ao��nwmew,e�ew%,5|=�54->%��u_FAIL
+[0;33mW (5329)$MLX-WS: MLX90645_GetFrameData ervo: -2[0m
+0�): ESE (5379) MLX90640_I2C: I2CRead: ervo ao enviar addr (0x8010): EST_ERR79) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESUFAIL
+W%(5>w�) MLX-Ww:$MlX=5�4=�GetFremeDate ev�:�-2-
+05):$ESe ,576�)��lX�564�I2G� i6Gweed: �wvo$ao �nvmev$e�dw$,5|9�44->$eWU_FAIL
+[0;33mW (5329) MLX-WS: MLX90641_GetFrameData erro: -2[0m
+01): ESE (5379) MLX90644_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMMLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ES��E�l�
+�$�5?w�-�m�x�Ww>%m�|�564��o�uF~m�e������v�>�-6=�45->��wu�,��?�����x���4�I2g: I6CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (5329) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5379) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT0640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (5279) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5329) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (5329) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5379) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT
+W (I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (5279) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5329) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (5329) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5379) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT
+W (5379 I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (5279) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5329) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (5329) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5379) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT
+[0;33mW (5379) MLRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5279) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5329) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (5329) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5379) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT
+[0;33mW (5379) MLX-WS: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5279) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5329) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (5329) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5379) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT
+[0;33mW (5379) MLX-WS: MLro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5279) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5329) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (5329) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5379) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT
+[0;33mW (5379) MLX-WS: MLX906o enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5279) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ESE (5329) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL
+[0;33mW (5329) MLX-WS: MLX90641_GetFrameData ervo: -2-[0m
+0�): ESE (5779)$MLX90645_i2G:$I6CVeed? erwo,e$mnwiev,a�dv��4}851}i>m�T_ER�_TIMEOUT
+[0;33mW (5379) MLX-WS: MLX90�40�Gvmar$addr�(0|854�): ESE (5929) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5929) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+����"a�B��OUT
+[0;33mW (5779) MLX-WS:$}LX90�44�Geiar$addr (0|804�): ES�������������������������������������������������������������������������������������������������������������������������������������������-����������?�}�}���}�������������m-�����}�������m���������������������6�-M�W����$�v��m�%���m���������������}����$(59�a�B��OUT[0m
+[0;33mW (5379) MLX-WS: MLX90�40�Geiar$addr (0x8040): ES����������������������������������������������������������������������������������������������������������������������������������֑j-��!A$)��#���LX-WS: MLX90640_GetFrameData erro: -2[0m
+00): ES

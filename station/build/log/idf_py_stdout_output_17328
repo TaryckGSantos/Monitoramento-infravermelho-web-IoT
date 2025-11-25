@@ -1,0 +1,116 @@
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 24 2025 16:02:22[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1bda4h (114084) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0002bdcc vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0002bdf0 vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=0002fdd0 vaddr=40080000 size=00248h (   584) load[0m
+[0;32mI (139) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=84d04h (544004) map[0m
+[0;32mI (332) esp_image: segment 5: paddr=000b4d2c vaddr=40080248 size=186bch (100028) load[0m
+[0;32mI (383) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (383) boot: Disabling RNG early entropy source...[0m
+[0;32mI (393) cpu_start: Multicore app[0m
+[0;32mI (402) cpu_start: Pro cpu start user code[0m
+[0;32mI (402) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (402) app_init: Application information:[0m
+[0;32mI (402) app_init: Project name:     wifi_station[0m
+[0;32mI (406) app_init: App version:      74a4d58-dirty[0m
+[0;32mI (411) app_init: Compile time:     Nov 24 2025 17:46:39[0m
+[0;32mI (416) app_init: ELF file SHA256:  243530912...[0m
+[0;32mI (420) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (424) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (428) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (432) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (436) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (442) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (447) heap_init: At 3FFB92E8 len 00026D18 (155 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (457) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 40098904 len 000076FC (29 KiB): IRAM[0m
+[0;32mI (470) spi_flash: detected chip: generic[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (498) main_task: Calling app_main()[0m
+[0;32mI (538) wifi:wifi driver task: 3ffc12b8, prio:23, stack:6656, core=0[0m
+[0;32mI (548) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (548) wifi:wifi certification version: v7.0[0m
+[0;32mI (548) wifi:config NVS flash: enabled[0m
+[0;32mI (548) wifi:config nano formatting: disabled[0m
+[0;32mI (558) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (558) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (568) wifi:Init management short buffer num: 32[0m
+[0;32mI (568) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (578) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (578) wifi:Init static rx buffer num: 10[0m
+[0;32mI (578) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (588) wifi_init: rx ba win: 6[0m
+[0;32mI (588) wifi_init: accept mbox: 6[0m
+[0;32mI (588) wifi_init: tcpip mbox: 32[0m
+[0;32mI (598) wifi_init: udp mbox: 6[0m
+[0;32mI (598) wifi_init: tcp mbox: 6[0m
+[0;32mI (598) wifi_init: tcp tx win: 5760[0m
+[0;32mI (608) wifi_init: tcp rx win: 5760[0m
+[0;32mI (608) wifi_init: tcp mss: 1440[0m
+[0;32mI (608) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (618) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (618) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (628) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (718) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (738) wifi:mode : sta (88:13:bf:63:c2:b4)[0m
+[0;32mI (748) wifi:enable tsf[0m
+[0;32mI (748) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"[0m
+[0;32mI (758) MLX-WS: Servidor HTTP + WebSocket rodando na porta 80[0m
+[0;32mI (758) MLX-WS: Servidor WebSocket pronto em ws://<IP-DA-ESP>/ws[0m
+[0;32mI (758) MLX-WS: UART inicializada (num=1, TX=17, RX=16, baud=921600)[0m
+[0;33mW (758) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (768) main_task: Returned from app_main()[0m
+[0;32mI (818) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (818) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (858) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (888) wifi:state: assoc -> run (0x10)[0m
+[0;33mW (968) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (1028) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38[0m
+[0;32mI (1028) wifi:security: WPA2-PSK, phy: bgn, rssi: -79[0m
+[0;32mI (1028) wifi:pm start, type: 1[0m
+
+[0;32mI (1028) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1118) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;33mW (1168) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (1228) wifi:<ba-add>idx:0 (ifx:0, e8:45:8b:5d:b5:38), tid:0, ssn:0, winSize:64[0m
+[0;33mW (1368) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1568) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1768) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1968) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2168) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2368) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2538) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1[0m
+[0;33mW (2568) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2768) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2778) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:8, winSize:64[0m
+[0;33mW (2968) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (3168) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (3368) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (3418) MLX-WS: Handshake WebSocket OK[0m

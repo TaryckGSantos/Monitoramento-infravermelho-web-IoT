@@ -831,3 +831,10 @@ C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/esp-idf/main/CMakeFiles/lis
 C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/esp-idf/main/CMakeFiles/install.dir
 C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/esp-idf/main/CMakeFiles/install/local.dir
 C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/esp-idf/main/CMakeFiles/install/strip.dir
+C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/esp-idf/mlx90640/CMakeFiles/__idf_mlx90640.dir
+C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/esp-idf/mlx90640/CMakeFiles/edit_cache.dir
+C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/esp-idf/mlx90640/CMakeFiles/rebuild_cache.dir
+C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/esp-idf/mlx90640/CMakeFiles/list_install_components.dir
+C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/esp-idf/mlx90640/CMakeFiles/install.dir
+C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/esp-idf/mlx90640/CMakeFiles/install/local.dir
+C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/esp-idf/mlx90640/CMakeFiles/install/strip.dir

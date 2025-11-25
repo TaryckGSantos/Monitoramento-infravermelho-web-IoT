@@ -1,0 +1,35 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.8.0 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_init[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40081c65: [0;33mpanic_abort[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x4008a615: [0;33mesp_system_abort[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x40092471: [0;33m__assert_func[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/newlib/assert.c[0m[0m:[1;31m80[0m
+[0m--- 0x4008aefe: [0;33mxQueueSemaphoreTake[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c[0m[0m:[1;31m1713[0m
+[0m--- 0x400d8855: [0;33muart_read_bytes[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/esp_driver_uart/src/uart.c[0m[0m:[1;31m1625[0m
+[0m--- 0x400da8a9: [0;33muart_reader_task[0m[0m at [0;32mC:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/main/station_example_main.c[0m[0m:[1;31m238[0m
+[0m--- 0x4008b131: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40080400: [0;33m_init[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40081c65: [0;33mpanic_abort[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x4008a615: [0;33mesp_system_abort[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x4008b4f6: [0;33mvApplicationStackOverflowHook[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m563[0m
+[0m--- 0x4008c903: [0;33mvTaskSwitchContext[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m3689[0m
+[0m--- 0x4008b600: [0;33m_frxt_dispatch[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S[0m[0m:[1;31m451[0m
+[0m--- 0x4008b5b2: [0;33m_frxt_int_exit[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S[0m[0m:[1;31m246[0m
+[0m--- 0x40080400: [0;33m_init[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40081c65: [0;33mpanic_abort[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x4008a615: [0;33mesp_system_abort[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x4008b4f6: [0;33mvApplicationStackOverflowHook[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m563[0m
+[0m--- 0x4008c903: [0;33mvTaskSwitchContext[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m3689[0m
+[0m--- 0x4008b600: [0;33m_frxt_dispatch[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S[0m[0m:[1;31m451[0m
+[0m--- 0x4008b5b2: [0;33m_frxt_int_exit[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S[0m[0m:[1;31m246[0m
+[0m--- 0x40080400: [0;33m_init[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40081c65: [0;33mpanic_abort[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x4008a615: [0;33mesp_system_abort[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x4008b4f6: [0;33mvApplicationStackOverflowHook[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m563[0m
+[0m--- 0x4008c903: [0;33mvTaskSwitchContext[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m3689[0m
+[0m--- 0x4008b600: [0;33m_frxt_dispatch[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S[0m[0m:[1;31m451[0m
+[0m--- 0x4008b5b2: [0;33m_frxt_int_exit[0m[0m at [0;32mC:/Users/taryc/ESP/v5.4.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S[0m[0m:[1;31m246[0m
+[0m--- 0x40080400: [0;33m_init[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m

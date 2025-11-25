@@ -1,0 +1,2283 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 24 2025 16:02:22[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a9fch (109052) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002aa24 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0002aa48 vaddr=3ffb0000 size=03f7ch ( 16252) load[0m
+[0;32mI (135) esp_image: segment 3: paddr=0002e9cc vaddr=40080000 size=0164ch (  5708) load[0m
+[0;32mI (139) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=82330h (533296) map[0m
+[0;32mI (327) esp_image: segment 5: paddr=000b2358 vaddr=4008164c size=163c4h ( 91076) load[0m
+[0;32mI (373) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (373) boot: Disabling RNG early entropy source...[0m
+[0;32mI (384) cpu_start: Multicore app[0m
+[0;32mI (392) cpu_start: Pro cpu start user code[0m
+[0;32mI (392) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (393) app_init: Application information:[0m
+[0;32mI (393) app_init: Project name:     wifi_station[0m
+[0;32mI (397) app_init: App version:      1[0m
+[0;32mI (400) app_init: Compile time:     Nov 24 2025 16:01:55[0m
+[0;32mI (405) app_init: ELF file SHA256:  a0b17ff7a...[0m
+[0;32mI (410) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (413) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (417) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (421) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (425) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (432) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (436) heap_init: At 3FFB9890 len 00026770 (153 KiB): DRAM[0m
+[0;32mI (442) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (447) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (453) heap_init: At 40097A10 len 000085F0 (33 KiB): IRAM[0m
+[0;32mI (459) spi_flash: detected chip: generic[0m
+[0;32mI (462) spi_flash: flash io: dio[0m
+[0;33mW (465) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (478) main_task: Started on CPU0[0m
+[0;32mI (488) main_task: Calling app_main()[0m
+[0;32mI (528) wifi:wifi driver task: 3ffc1860, prio:23, stack:6656, core=0[0m
+[0;32mI (538) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (538) wifi:wifi certification version: v7.0[0m
+[0;32mI (538) wifi:config NVS flash: enabled[0m
+[0;32mI (548) wifi:config nano formatting: disabled[0m
+[0;32mI (548) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (548) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (558) wifi:Init management short buffer num: 32[0m
+[0;32mI (558) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (568) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (568) wifi:Init static rx buffer num: 10[0m
+[0;32mI (568) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (578) wifi_init: rx ba win: 6[0m
+[0;32mI (578) wifi_init: accept mbox: 6[0m
+[0;32mI (578) wifi_init: tcpip mbox: 32[0m
+[0;32mI (588) wifi_init: udp mbox: 6[0m
+[0;32mI (588) wifi_init: tcp mbox: 6[0m
+[0;32mI (588) wifi_init: tcp tx win: 5760[0m
+[0;32mI (598) wifi_init: tcp rx win: 5760[0m
+[0;32mI (598) wifi_init: tcp mss: 1440[0m
+[0;32mI (598) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (608) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (608) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (618) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (698) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (728) wifi:mode : sta (88:13:bf:63:c2:b4)[0m
+[0;32mI (738) wifi:enable tsf[0m
+[0;32mI (738) MLX-SIM: WiFi STA inicializado; conectando ao AP "Melk"[0m
+[0;32mI (748) MLX-SIM: Servidor HTTP + WebSocket rodando na porta 80[0m
+[0;32mI (748) MLX-SIM: Servidor WebSocket pronto em ws://<IP-DA-ESP>/ws[0m
+[0;33mW (748) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;32mI (758) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (758) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (768) main_task: Returned from app_main()[0m
+[0;32mI (798) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (808) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (918) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38[0m
+[0;32mI (918) wifi:security: WPA2-PSK, phy: bgn, rssi: -66[0m
+[0;32mI (928) wifi:pm start, type: 1[0m
+
+[0;32mI (928) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (938) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1438) wifi:<ba-add>idx:0 (ifx:0, e8:45:8b:5d:b5:38), tid:0, ssn:0, winSize:64[0m
+[0;33mW (1758) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2758) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1[0m
+I  (1758) MLX-SIM: Nenhum cliente WebSocket conectado
+0 us to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (29958) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+0 us to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wMLX-SIM: Nenhum cliente WebSocket conectado[0m
+0 us to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:SIM: Nenhum cliente WebSocket conectado[0m
+0 us to 30�$,2w58)$mlX-w�m�$�enhum�g�menue,wmfwo�oet���n�k�mdo�*�$�T}m���vI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba- Nenhum cliente WebSocket conectado[0m
+0 us to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>hum cliente WebSocket conectado[0m
+0 us to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:cliente WebSocket conectado[0m
+0 us to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (inte WebSocket conectado[0m
+0 us to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0,ebSocket conectado[0m
+0 us to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:cket conectado[0m
+0 us to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8 conectado[0m
+0 us to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5dectado[0m
+0 us to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:do[0m
+0 us to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38),  us to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:to 30W (2758) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, s0W (2758) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7,758) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+, DTIM perI (276<) ewp_netif_hendlevw: wte$mt:%196�56=.55.�7,$mewo� 6�5.��5.25u.0, gw:!1=2�179n15.1
+ (ifx5, e8:5�{9f:5e:o5?w�-, tid:�, sIn:��-wmnS�z�:�u�n8- wmfi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, win MLX-SIM: Nenhum cliente WebSocket conectado[0m
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:SIM: Nenhum cliente WebSocket conectado[0m
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1
+ (ifx:0, e8:45:8b:5d:b5:38), tid:0, sIn:0, winSize:64
+8) wifi:pm start, type: 1
+
+[0;32mI (928) wifi:dp:  (2998) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+ Nenhum cliente WebSocket conectado
+, DTIM perI (2768) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.25n:7, winSize:64
+[0;33mW (3758) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (4758) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (5758) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;32mI (5788) MLX-SIM: Handshake WebSocket OK[0m
+[1;31mE (950068) MLX-SIM: Falha ao enviar frame assíncrono: ESP_ERR_INVALID_ARG[0m
+[0;33mW (951068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (952068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (953068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (954068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (955068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (956068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (957068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (958068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (959068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (960068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (961068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (962068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (963068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (964068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (965068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (966068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (967068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (968068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (969068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (970068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (971068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (972068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (973068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (974068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (975068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (976068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (977068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (978068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (979068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (980068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (981068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (982068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (983068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (984068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (985068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (986068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (987068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (988068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (989068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (990068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (991068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (992068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (993068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (994068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (995068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (996068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (997068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (998068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (999068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1000068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1001068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1002068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1003068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1004068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1005068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1006068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1007068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1008068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1009068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1010068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1011068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1012068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1013068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1014068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1015068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1016068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1017068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1018068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1019068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1020068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1021068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1022068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1023068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1024068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1025068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1026068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1027068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1028068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1029068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1030068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1031068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1032068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1033068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1034068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1035068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1036068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1037068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1038068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1039068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1040068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1041068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1042068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1043068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1044068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1045068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1046068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1047068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1048068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1049068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1050068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1051068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1052068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1053068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1054068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1055068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1056068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1057068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1058068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1059068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1060068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1061068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1062068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1063068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1064068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1065068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1066068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1067068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1068068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1069068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1070068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1071068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1072068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1073068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1074068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1075068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1076068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1077068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1078068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1079068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1080068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1081068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1082068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1083068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1084068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1085068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1086068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1087068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1088068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1089068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1090068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1091068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1092068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1093068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1094068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1095068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1096068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1097068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1098068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1099068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1100068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1101068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1102068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1103068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1104068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1105068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1106068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1107068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1108068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1109068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1110068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1111068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1112068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1113068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1114068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1115068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1116068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1117068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1118068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1119068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1120068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1121068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1122068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1123068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1124068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1125068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1126068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1127068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1128068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1129068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1130068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1131068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1132068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1133068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1134068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1135068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1136068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1137068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1138068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1139068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1140068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1141068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1142068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1143068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1144068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1145068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1146068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1147068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1148068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1149068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1150068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1151068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1152068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1153068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1154068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1155068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1156068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1157068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1158068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1159068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1160068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1161068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1162068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1163068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1164068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1165068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1166068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1167068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1168068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1169068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1170068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1171068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1172068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1173068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1174068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1175068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1176068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1177068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1178068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1179068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1180068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1181068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1182068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1183068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1184068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1185068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1186068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1187068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1188068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1189068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1190068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1191068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1192068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1193068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1194068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1195068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1196068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1197068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1198068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1199068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1200068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1201068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1202068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1203068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1204068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1205068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1206068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1207068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1208068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1209068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1210068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1211068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1212068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1213068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1214068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1215068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1216068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1217068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1218068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1219068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1220068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1221068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1222068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1223068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1224068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1225068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1226068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1227068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1228068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1229068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1230068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1231068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1232068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1233068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1234068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1235068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1236068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1237068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1238068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1239068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1240068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1241068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1242068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1243068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1244068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1245068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1246068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1247068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1248068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1249068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1250068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1251068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1252068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1253068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1254068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1255068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1256068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1257068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1258068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1259068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1260068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1261068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1262068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1263068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1264068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1265068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1266068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1267068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1268068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1269068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1270068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1271068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1272068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1273068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1274068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1275068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1276068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1277068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1278068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1279068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1280068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1281068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1282068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1283068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1284068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1285068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1286068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1287068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1288068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1289068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1290068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1291068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1292068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1293068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1294068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1295068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1296068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1297068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1298068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1299068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1300068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1301068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1302068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1303068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1304068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1305068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1306068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1307068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1308068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1309068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1310068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1311068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1312068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1313068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1314068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1315068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1316068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1317068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1318068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1319068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1320068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1321068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1322068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1323068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1324068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1325068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1326068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1327068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1328068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1329068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1330068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1331068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1332068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1333068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1334068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1335068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1336068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1337068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1338068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1339068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1340068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1341068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1342068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1343068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1344068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1345068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1346068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1347068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1348068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1349068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1350068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1351068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1352068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1353068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1354068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1355068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1356068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1357068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1358068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1359068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1360068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1361068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1362068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1363068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1364068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1365068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1366068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1367068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1368068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1369068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1370068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1371068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1372068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1373068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1374068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1375068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1376068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1377068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1378068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1379068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1380068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1381068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1382068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1383068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1384068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1385068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1386068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1387068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1388068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1389068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1390068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1391068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1392068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1393068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1394068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1395068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1396068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1397068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1398068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1399068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1400068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1401068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1402068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1403068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1404068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1405068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1406068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1407068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1408068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1409068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1410068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1411068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1412068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1413068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1414068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1415068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1416068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1417068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1418068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1419068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1420068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1421068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1422068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1423068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1424068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1425068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1426068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1427068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1428068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1429068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1430068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1431068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1432068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1433068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1434068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1435068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1436068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1437068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1438068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1439068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1440068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1441068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1442068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1443068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1444068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1445068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1446068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1447068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1448068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1449068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1450068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1451068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1452068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1453068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1454068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1455068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1456068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1457068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1458068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1459068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1460068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1461068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1462068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1463068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1464068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1465068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1466068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1467068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1468068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1469068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1470068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1471068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1472068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1473068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1474068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1475068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1476068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1477068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1478068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1479068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1480068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1481068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1482068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1483068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1484068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1485068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1486068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1487068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1488068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1489068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1490068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1491068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1492068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1493068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1494068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1495068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1496068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1497068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1498068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1499068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1500068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1501068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1502068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1503068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1504068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1505068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1506068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1507068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1508068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1509068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1510068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1511068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1512068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1513068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1514068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1515068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1516068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1517068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1518068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1519068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1520068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1521068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1522068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1523068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1524068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1525068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1526068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1527068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1528068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1529068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1530068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1531068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1532068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1533068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1534068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1535068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1536068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1537068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1538068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1539068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1540068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1541068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1542068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1543068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1544068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1545068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1546068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1547068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1548068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1549068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1550068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1551068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1552068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1553068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1554068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1555068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1556068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1557068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1558068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1559068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1560068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1561068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1562068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1563068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1564068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1565068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1566068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1567068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1568068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1569068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1570068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1571068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1572068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1573068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1574068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1575068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1576068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1577068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1578068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1579068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1580068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1581068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1582068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1583068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1584068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1585068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1586068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1587068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1588068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1589068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1590068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1591068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1592068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1593068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1594068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1595068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1596068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1597068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1598068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1599068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1600068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1601068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1602068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1603068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1604068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1605068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1606068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1607068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1608068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1609068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1610068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1611068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1612068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1613068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1614068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1615068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1616068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1617068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1618068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1619068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1620068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1621068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1622068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1623068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1624068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1625068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1626068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1627068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1628068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1629068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1630068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1631068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1632068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1633068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1634068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1635068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1636068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1637068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1638068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1639068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1640068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1641068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1642068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1643068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1644068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1645068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1646068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1647068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1648068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1649068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1650068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1651068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1652068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1653068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1654068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1655068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1656068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1657068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1658068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1659068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1660068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1661068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1662068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1663068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1664068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1665068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1666068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1667068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1668068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1669068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1670068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1671068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1672068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1673068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1674068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1675068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1676068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1677068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1678068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1679068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1680068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1681068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1682068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1683068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1684068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1685068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1686068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1687068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1688068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1689068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1690068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1691068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1692068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1693068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1694068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1695068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1696068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1697068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1698068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1699068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1700068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1701068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1702068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1703068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1704068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1705068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1706068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1707068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1708068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1709068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1710068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1711068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1712068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1713068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1714068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1715068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1716068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1717068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1718068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1719068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1720068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1721068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1722068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1723068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1724068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1725068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1726068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1727068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1728068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1729068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1730068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1731068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1732068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1733068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1734068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1735068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1736068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1737068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1738068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1739068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1740068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1741068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1742068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1743068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1744068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1745068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1746068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1747068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1748068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1749068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1750068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1751068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1752068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1753068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1754068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1755068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1756068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1757068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1758068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1759068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1760068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1761068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1762068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1763068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1764068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1765068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1766068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1767068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1768068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1769068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1770068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1771068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1772068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1773068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1774068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1775068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1776068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1777068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1778068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1779068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1780068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1781068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1782068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1783068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1784068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1785068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1786068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1787068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1788068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1789068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1790068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1791068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1792068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1793068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1794068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1795068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1796068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1797068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1798068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1799068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1800068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1801068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1802068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1803068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1804068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1805068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1806068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1807068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1808068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1809068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1810068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1811068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1812068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1813068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1814068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1815068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1816068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1817068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1818068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1819068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1820068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1821068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1822068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1823068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1824068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1825068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1826068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1827068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1828068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1829068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1830068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1831068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1832068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1833068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1834068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1835068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1836068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1837068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1838068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1839068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1840068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1841068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1842068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1843068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1844068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1845068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1846068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1847068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1848068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1849068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1850068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1851068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1852068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1853068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1854068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1855068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1856068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1857068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1858068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1859068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1860068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1861068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1862068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1863068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1864068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1865068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1866068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1867068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1868068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1869068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1870068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1871068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1872068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1873068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1874068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1875068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1876068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1877068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1878068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1879068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1880068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1881068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1882068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1883068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1884068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1885068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1886068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1887068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1888068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1889068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1890068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1891068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1892068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1893068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1894068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1895068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1896068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1897068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1898068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1899068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1900068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1901068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1902068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1903068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1904068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1905068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1906068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1907068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1908068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1909068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1910068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1911068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1912068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1913068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1914068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1915068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1916068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1917068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1918068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1919068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1920068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1921068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1922068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1923068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1924068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1925068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1926068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1927068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1928068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1929068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1930068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1931068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1932068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1933068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1934068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1935068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1936068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1937068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1938068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1939068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1940068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1941068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1942068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1943068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1944068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1945068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1946068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1947068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1948068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1949068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1950068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1951068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1952068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1953068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1954068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1955068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1956068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1957068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1958068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1959068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1960068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1961068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1962068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1963068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1964068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1965068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1966068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1967068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1968068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1969068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1970068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1971068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1972068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1973068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1974068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1975068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1976068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1977068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1978068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1979068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1980068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1981068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1982068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1983068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1984068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1985068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1986068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1987068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1988068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1989068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1990068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1991068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1992068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1993068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1994068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1995068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1996068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1997068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1998068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1999068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2000068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2001068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2002068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2003068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2004068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2005068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2006068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2007068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2008068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2009068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2010068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2011068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2012068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2013068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2014068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2015068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2016068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2017068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2018068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2019068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2020068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2021068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2022068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2023068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2024068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2025068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2026068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2027068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2028068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2029068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2030068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2031068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2032068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2033068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2034068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2035068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2036068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2037068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2038068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2039068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2040068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2041068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2042068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2043068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2044068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2045068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2046068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2047068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2048068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2049068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2050068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2051068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2052068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2053068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2054068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2055068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2056068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2057068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2058068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2059068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2060068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2061068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2062068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2063068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2064068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2065068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2066068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2067068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2068068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2069068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2070068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2071068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2072068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2073068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2074068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2075068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2076068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2077068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2078068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2079068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2080068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2081068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2082068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2083068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2084068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2085068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2086068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2087068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2088068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2089068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2090068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2091068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2092068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2093068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2094068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2095068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2096068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2097068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2098068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2099068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2100068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2101068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2102068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2103068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2104068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2105068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2106068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2107068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2108068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2109068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2110068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2111068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2112068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2113068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2114068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2115068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2116068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2117068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2118068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2119068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2120068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2121068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2122068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2123068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2124068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2125068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2126068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2127068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2128068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2129068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2130068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2131068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2132068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2133068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2134068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2135068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2136068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2137068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2138068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2139068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2140068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2141068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2142068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2143068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2144068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2145068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2146068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2147068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2148068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2149068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2150068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2151068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2152068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2153068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2154068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2155068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2156068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2157068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2158068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2159068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2160068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2161068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2162068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2163068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2164068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2165068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2166068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2167068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2168068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2169068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2170068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2171068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2172068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2173068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2174068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2175068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2176068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2177068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2178068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2179068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2180068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2181068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2182068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2183068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2184068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2185068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2186068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2187068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2188068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2189068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2190068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2191068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2192068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2193068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2194068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2195068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2196068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2197068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2198068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2199068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2200068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2201068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2202068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2203068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2204068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2205068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2206068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2207068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2208068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2209068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2210068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2211068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2212068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2213068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2214068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2215068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2216068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2217068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2218068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2219068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2220068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2221068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2222068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2223068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2224068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2225068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2226068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2227068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2228068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2229068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2230068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2231068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2232068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2233068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2234068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2235068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2236068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2237068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2238068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2239068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2240068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2241068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2242068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2243068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2244068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2245068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2246068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2247068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2248068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2249068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2250068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2251068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2252068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2253068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2254068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2255068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2256068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2257068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2258068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2259068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2260068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2261068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2262068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2263068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2264068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2265068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2266068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2267068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2268068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2269068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2270068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2271068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2272068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2273068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2274068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2275068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2276068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2277068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2278068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2279068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2280068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2281068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2282068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2283068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2284068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2285068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2286068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2287068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2288068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2289068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2290068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2291068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2292068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2293068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2294068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2295068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2296068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2297068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2298068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2299068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2300068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2301068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2302068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2303068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2304068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2305068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2306068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2307068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2308068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2309068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2310068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2311068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2312068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2313068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2314068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2315068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2316068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2317068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2318068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2319068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2320068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2321068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2322068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2323068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2324068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2325068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2326068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2327068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2328068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2329068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2330068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2331068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2332068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2333068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2334068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2335068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2336068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2337068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2338068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2339068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2340068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2341068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2342068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2343068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2344068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2345068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2346068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2347068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2348068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2349068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2350068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2351068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2352068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2353068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2354068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2355068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2356068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2357068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2358068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2359068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2360068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2361068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2362068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2363068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2364068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2365068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2366068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2367068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2368068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2369068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2370068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2371068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2372068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2373068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2374068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2375068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2376068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2377068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2378068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2379068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2380068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2381068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2382068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2383068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2384068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2385068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2386068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2387068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2388068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2389068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2390068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2391068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2392068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2393068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2394068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2395068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2396068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2397068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2398068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2399068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2400068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2401068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2402068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2403068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2404068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2405068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2406068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2407068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2408068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2409068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2410068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2411068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2412068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2413068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2414068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2415068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2416068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2417068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2418068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2419068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2420068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2421068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2422068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2423068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2424068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2425068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2426068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2427068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2428068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2429068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2430068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2431068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2432068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2433068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2434068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2435068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2436068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2437068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2438068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2439068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2440068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2441068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2442068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2443068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2444068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2445068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2446068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2447068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2448068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2449068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2450068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2451068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2452068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2453068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2454068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2455068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2456068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2457068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2458068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2459068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2460068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2461068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2462068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2463068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2464068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2465068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2466068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2467068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2468068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2469068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2470068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2471068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2472068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2473068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2474068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2475068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2476068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2477068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2478068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2479068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2480068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2481068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2482068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2483068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2484068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2485068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2486068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2487068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2488068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2489068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2490068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2491068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2492068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2493068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2494068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2495068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2496068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2497068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2498068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2499068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2500068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2501068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2502068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2503068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2504068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2505068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2506068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2507068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2508068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2509068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2510068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2511068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2512068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2513068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2514068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2515068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2516068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2517068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2518068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2519068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2520068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2521068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2522068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2523068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2524068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2525068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2526068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2527068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2528068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2529068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2530068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2531068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2532068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2533068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2534068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2535068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2536068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2537068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2538068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2539068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2540068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2541068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2542068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2543068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2544068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2545068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2546068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2547068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2548068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2549068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2550068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2551068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2552068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2553068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2554068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2555068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2556068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2557068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2558068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2559068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2560068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2561068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2562068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2563068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2564068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2565068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2566068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2567068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2568068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2569068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2570068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2571068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2572068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2573068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2574068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2575068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2576068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2577068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2578068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2579068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2580068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2581068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2582068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2583068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2584068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2585068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2586068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2587068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2588068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2589068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2590068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2591068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2592068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2593068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2594068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2595068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2596068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2597068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2598068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2599068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2600068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2601068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2602068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2603068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2604068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2605068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2606068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2607068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2608068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2609068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2610068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2611068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2612068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2613068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2614068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2615068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2616068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2617068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2618068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2619068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2620068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2621068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2622068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2623068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2624068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2625068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2626068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2627068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2628068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2629068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2630068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2631068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2632068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2633068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2634068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2635068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2636068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2637068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2638068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2639068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2640068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2641068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2642068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2643068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2644068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2645068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2646068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2647068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2648068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2649068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2650068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2651068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2652068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2653068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2654068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2655068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2656068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2657068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2658068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2659068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2660068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2661068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2662068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2663068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2664068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2665068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2666068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2667068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2668068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2669068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2670068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2671068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2672068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2673068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2674068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2675068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2676068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2677068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2678068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2679068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2680068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2681068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2682068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2683068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2684068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2685068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2686068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2687068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2688068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2689068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2690068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2691068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2692068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2693068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2694068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2695068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2696068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2697068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2698068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2699068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2700068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2701068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2702068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2703068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2704068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2705068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2706068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2707068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2708068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2709068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2710068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2711068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2712068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2713068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2714068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2715068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2716068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2717068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2718068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2719068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2720068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2721068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2722068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2723068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2724068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2725068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2726068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2727068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2728068) MLX-SIM: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2729068) MLX-SIM: Nenhum cliente WebSocket conectado[0m

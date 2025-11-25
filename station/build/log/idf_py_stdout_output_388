@@ -1,0 +1,180 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 24 2025 16:02:22[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1bd94h (114068) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0002bdbc vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0002bde0 vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=0002fdc0 vaddr=40080000 size=00258h (   600) load[0m
+[0;32mI (139) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=84cf0h (543984) map[0m
+[0;32mI (332) esp_image: segment 5: paddr=000b4d18 vaddr=40080258 size=186ach (100012) load[0m
+[0;32mI (383) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (383) boot: Disabling RNG early entropy source...[0m
+[0;32mI (393) cpu_start: Multicore app[0m
+[0;32mI (402) cpu_start: Pro cpu start user code[0m
+[0;32mI (402) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (402) app_init: Application information:[0m
+[0;32mI (402) app_init: Project name:     wifi_station[0m
+[0;32mI (406) app_init: App version:      74a4d58-dirty[0m
+[0;32mI (411) app_init: Compile time:     Nov 24 2025 17:46:39[0m
+[0;32mI (416) app_init: ELF file SHA256:  fc747245b...[0m
+[0;32mI (420) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (424) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (428) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (432) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (436) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (442) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (447) heap_init: At 3FFBA0F0 len 00025F10 (151 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (457) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 40098904 len 000076FC (29 KiB): IRAM[0m
+[0;32mI (470) spi_flash: detected chip: generic[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (498) main_task: Calling app_main()[0m
+[0;32mI (528) wifi:wifi driver task: 3ffc20c0, prio:23, stack:6656, core=0[0m
+[0;32mI (538) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (538) wifi:wifi certification version: v7.0[0m
+[0;32mI (538) wifi:config NVS flash: enabled[0m
+[0;32mI (538) wifi:config nano formatting: disabled[0m
+[0;32mI (548) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (548) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (548) wifi:Init management short buffer num: 32[0m
+[0;32mI (558) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (558) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (568) wifi:Init static rx buffer num: 10[0m
+[0;32mI (568) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (578) wifi_init: rx ba win: 6[0m
+[0;32mI (578) wifi_init: accept mbox: 6[0m
+[0;32mI (578) wifi_init: tcpip mbox: 32[0m
+[0;32mI (578) wifi_init: udp mbox: 6[0m
+[0;32mI (588) wifi_init: tcp mbox: 6[0m
+[0;32mI (588) wifi_init: tcp tx win: 5760[0m
+[0;32mI (588) wifi_init: tcp rx win: 5760[0m
+[0;32mI (598) wifi_init: tcp mss: 1440[0m
+[0;32mI (598) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (598) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (608) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (608) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (698) wifi:mode : sta (1c:69:20:32:06:84)[0m
+[0;32mI (698) wifi:enable tsf[0m
+[0;32mI (708) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"[0m
+[0;32mI (708) MLX-WS: Servidor HTTP + WebSocket rodando na porta 80[0m
+[0;32mI (708) MLX-WS: Servidor WebSocket pronto em ws://<IP-DA-ESP>/ws[0m
+[0;32mI (718) MLX-WS: UART inicializada (num=1, TX=17, RX=16, baud=115200)[0m
+[0;32mI (718) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (728) wifi:state: init -> auth (0xb0)[0m
+[0;33mW (728) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (738) main_task: Returned from app_main()[0m
+[0;32mI (768) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (798) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (918) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38[0m
+[0;32mI (918) wifi:security: WPA2-PSK, phy: bgn, rssi: -71[0m
+[0;32mI (928) wifi:pm start, type: 1[0m
+
+[0;32mI (928) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;33mW (938) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (958) MLX-WS: Frame OK: Min=2292 Max=2915[0m
+[0;32mI (968) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;33mW (1138) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (1208) MLX-WS: Frame OK: Min=2292 Max=2914[0m
+[0;32mI (1288) wifi:<ba-add>idx:0 (ifx:0, e8:45:8b:5d:b5:38), tid:0, ssn:0, winSize:64[0m
+[0;33mW (1338) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (1468) MLX-WS: Frame OK: Min=2269 Max=2914[0m
+[0;33mW (1538) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (1718) MLX-WS: Frame OK: Min=2269 Max=2915[0m
+[0;33mW (1738) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1938) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (1978) MLX-WS: Frame OK: Min=2261 Max=2905[0m
+[0;33mW (2138) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2228) MLX-WS: Frame OK: Min=2261 Max=2905[0m
+[0;32mI (2328) esp_netif_handlers: sta ip: 192.168.15.22, mask: 255.255.255.0, gw: 192.168.15.1[0m
+[0;33mW (2338) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2488) MLX-WS: Frame OK: Min=2298 Max=2915[0m
+[0;33mW (2538) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2558) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+[0;32mI (2738) MLX-WS: Frame OK: Min=2298 Max=2917[0m
+[0;33mW (2738) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (2938) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2998) MLX-WS: Frame OK: Min=2313 Max=2917[0m
+[0;33mW (3138) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (3248) MLX-WS: Frame OK: Min=2311 Max=2916[0m
+[0;33mW (3338) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (3508) MLX-WS: Frame OK: Min=2311 Max=2916[0m
+[0;33mW (3538) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (3738) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (3758) MLX-WS: Frame OK: Min=2309 Max=2916[0m
+[0;33mW (3938) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (4018) MLX-WS: Frame OK: Min=2271 Max=2916[0m
+[0;33mW (4138) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (4268) MLX-WS: Frame OK: Min=2271 Max=2918[0m
+[0;33mW (4338) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (4528) MLX-WS: Frame OK: Min=2282 Max=2918[0m
+[0;33mW (4538) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (4738) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (4778) MLX-WS: Frame OK: Min=2313 Max=2917[0m
+[0;33mW (4938) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (5038) MLX-WS: Frame OK: Min=2257 Max=2917[0m
+[0;33mW (5138) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (5288) MLX-WS: Frame OK: Min=2257 Max=2918[0m
+[0;33mW (5338) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (5538) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (5548) MLX-WS: Frame OK: Min=2314 Max=2918[0m
+[0;33mW (5738) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (5798) MLX-WS: Frame OK: Min=2323 Max=2918[0m
+[0;33mW (5938) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (6058) MLX-WS: Frame OK: Min=2323 Max=2918[0m
+[0;33mW (6138) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (6308) MLX-WS: Frame OK: Min=2328 Max=2919[0m
+[0;33mW (6338) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (6538) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (6568) MLX-WS: Frame OK: Min=2328 Max=2919[0m
+[0;33mW (6738) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (6818) MLX-WS: Frame OK: Min=2326 Max=2920[0m
+[0;33mW (6938) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (7078) MLX-WS: Frame OK: Min=2271 Max=2930[0m
+[0;33mW (7138) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (7328) MLX-WS: Frame OK: Min=2271 Max=2930[0m
+[0;33mW (7338) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (7538) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (7588) MLX-WS: Frame OK: Min=2264 Max=2920[0m
+[0;33mW (7738) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (7838) MLX-WS: Frame OK: Min=2264 Max=2920[0m
+[0;33mW (7938) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (8098) MLX-WS: Frame OK: Min=2314 Max=2930[0m
+[0;33mW (8138) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (8338) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (8348) MLX-WS: Frame OK: Min=2304 Max=2930[0m
+[0;33mW (8538) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (8608) MLX-WS: Frame OK: Min=2304 Max=2930[0m
+[0;33mW (8738) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (8858) MLX-WS: Frame OK: Min=2290 Max=2932[0m
+[0;33mW (8938) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (9118) MLX-WS: Frame OK: Min=2290 Max=2932[0m
+[0;33mW (9138) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (9338) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (9368) MLX-WS: Frame OK: Min=2298 Max=2932[0m
+[0;33mW (9538) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (9628) MLX-WS: Frame OK: Min=2298 Max=2932[0m

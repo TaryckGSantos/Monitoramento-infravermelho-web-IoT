@@ -552,3 +552,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/esp-idf/main/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/taryc/Desktop/TESTE_WIFI_HTML/station/build/esp-idf/mlx90640/cmake_install.cmake")
+endif()
+

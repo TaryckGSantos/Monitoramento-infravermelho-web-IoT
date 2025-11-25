@@ -1,0 +1,1090 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 24 2025 16:02:22[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1c2a0h (115360) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0002c2c8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (128) esp_image: segment 2: paddr=0002c2ec vaddr=3ffb0000 size=03d2ch ( 15660) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=87734h (554804) map[0m
+[0;32mI (328) esp_image: segment 4: paddr=000b775c vaddr=3ffb3d2c size=002dch (   732) load[0m
+[0;32mI (329) esp_image: segment 5: paddr=000b7a40 vaddr=40080000 size=18d40h (101696) load[0m
+[0;32mI (384) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (384) boot: Disabling RNG early entropy source...[0m
+[0;32mI (394) cpu_start: Multicore app[0m
+[0;32mI (403) cpu_start: Pro cpu start user code[0m
+[0;32mI (403) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (403) app_init: Application information:[0m
+[0;32mI (403) app_init: Project name:     wifi_station[0m
+[0;32mI (407) app_init: App version:      74a4d58-dirty[0m
+[0;32mI (411) app_init: Compile time:     Nov 24 2025 17:46:39[0m
+[0;32mI (417) app_init: ELF file SHA256:  ea03d1105...[0m
+[0;32mI (421) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (425) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (428) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (432) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (437) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (443) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFBBEA0 len 00024160 (144 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (458) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 40098D40 len 000072C0 (28 KiB): IRAM[0m
+[0;32mI (471) spi_flash: detected chip: generic[0m
+[0;32mI (473) spi_flash: flash io: dio[0m
+[0;33mW (476) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (488) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (499) main_task: Started on CPU0[0m
+[0;32mI (509) main_task: Calling app_main()[0m
+[0;32mI (549) wifi:wifi driver task: 3ffc3e70, prio:23, stack:6656, core=0[0m
+[0;32mI (559) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (559) wifi:wifi certification version: v7.0[0m
+[0;32mI (569) wifi:config NVS flash: enabled[0m
+[0;32mI (569) wifi:config nano formatting: disabled[0m
+[0;32mI (569) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (569) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (579) wifi:Init management short buffer num: 32[0m
+[0;32mI (579) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (589) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (589) wifi:Init static rx buffer num: 10[0m
+[0;32mI (589) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (599) wifi_init: rx ba win: 6[0m
+[0;32mI (599) wifi_init: accept mbox: 6[0m
+[0;32mI (599) wifi_init: tcpip mbox: 32[0m
+[0;32mI (609) wifi_init: udp mbox: 6[0m
+[0;32mI (609) wifi_init: tcp mbox: 6[0m
+[0;32mI (609) wifi_init: tcp tx win: 5760[0m
+[0;32mI (619) wifi_init: tcp rx win: 5760[0m
+[0;32mI (619) wifi_init: tcp mss: 1440[0m
+[0;32mI (619) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (629) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (629) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (639) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (729) wifi:mode : sta (88:13:bf:63:c2:b4)[0m
+[0;32mI (729) wifi:enable tsf[0m
+[0;32mI (729) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"[0m
+[0;32mI (739) MLX-WS: Servidor HTTP + WebSocket rodando na porta 80[0m
+[0;32mI (739) MLX-WS: Servidor WebSocket pronto em ws://<IP-DA-ESP>/ws[0m
+[0;32mI (739) MLX-WS: Inicializando I2C e MLX90640...[0m
+[0;32mI (749) MLX90640_I2C: I2C inicializado (port=0, SDA=21, SCL=22, freq=400000)[0m
+[1;31mE (749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x2400): ESP_ERR_TIMEOUT[0m
+[1;31mE (759) MLX-WS: Erro MLX90640_DumpEE: -2[0m
+[0;33mW (759) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (769) main_task: Returned from app_main()[0m
+[0;32mI (819) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (819) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (839) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (849) wifi:state: assoc -> run (0x10)[0m
+[0;33mW (969) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (979) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38[0m
+[0;32mI (979) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (989) wifi:pm start, type: 1[0m
+
+[0;32mI (989) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[1;31mE (1009) MLX90640_I2C: I2CRead: erro ao ler (addr 0x8000, n=1): ESP_ERR_TIMEOUT[0m
+[0;33mW (1009) MLX-WS: MLX90640_GetFrameData erro: -1[0m
+[0;32mI (1019) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;33mW (1169) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (1229) wifi:<ba-add>idx:0 (ifx:0, e8:45:8b:5d:b5:38), tid:0, ssn:0, winSize:64[0m
+[1;31mE (1259) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (1259) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (1319) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (1319) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (1369) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (1559) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (1559) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (1569) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1769) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1969) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (2049) MLX90640_I2C: I2CRead: erro ao ler (addr 0x8000, n=1): ESP_ERR_TIMEOUT[0m
+[0;33mW (2049) MLX-WS: MLX90640_GetFrameData erro: -1[0m
+[0;33mW (2169) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2279) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1[0m
+[0;33mW (2369) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2469) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:6, winSize:64[0m
+[1;31mE (2549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (2549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (2569) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (2599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (2599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (2649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (2649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (2699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (2699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (2749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (2749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (2769) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (2799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (2799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (2849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (2849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (2899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (2899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (2949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (2949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (2969) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (2999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (2999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (3169) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (3199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (3369) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (3399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (3569) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (3599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (3749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (3769) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (3799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (3949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (3969) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (3999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (3999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (4169) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (4199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (4369) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (4399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (4569) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (4599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (4769) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (4799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (4899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (4949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (4969) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[1;31mE (4999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (4999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[0;33mW (5169) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (5199) MLX-WS: Handshake WebSocket OK[0m
+[1;31mE (5199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (5899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (5999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (5999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (6049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (6099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (6149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (6199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (6249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (6299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (6349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (6399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (6449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (6499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (6549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (6599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (6649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (6699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (6749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (6799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (6849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (6899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (6949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (6999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (6999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (7049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (7099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (7149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (7199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (7249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (7299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (7349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (7399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (7449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (7499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (7549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (7599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (7649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (7699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (7749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (7799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (7849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (7899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (7949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (7999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (7999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (8049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (8099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (8149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (8199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (8249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (8299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (8349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (8399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (8449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (8499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (8549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (8599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (8649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (8699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (8749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (8799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (8849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (8899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (8949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (8999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (8999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (9449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (9499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (9549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (9599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (9999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (9999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (10049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (10099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (10149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (10199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (10249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (10299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (10349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (10399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (10449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (10499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (10549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (10599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (10649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (10699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (10749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (10799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (10849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (10899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (10949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (10999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (10999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (11199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (11249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (11299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (11349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (11399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (11849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (11999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (11999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (12049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (12099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (12149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (12199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (12249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (12299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (12349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (12399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (12449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (12499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (12549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (12599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (12649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (12699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (12749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (12799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (12849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (12899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (12949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (12999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (12999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (13049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (13099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (13149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (13199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (13249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (13299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (13349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (13399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (13449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (13499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (13549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (13599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (13649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (13699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (13749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (13799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (13849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (13899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (13949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (13999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (13999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (14049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (14099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (14149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (14199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (14249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (14299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (14349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (14399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (14449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (14499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (14549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (14599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (14649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (14699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (14749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (14799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (14849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (14899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (14949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (14999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (14999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (15049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (15099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (15149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (15199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (15249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (15299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (15349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (15399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (15449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (15499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (15549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (15599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (15649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (15699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (15749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (15799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (15849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (15899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (15949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (15999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (15999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (16199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (16249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (16499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (16799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (16849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (16999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (16999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (17049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (17099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (17149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (17199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (17249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (17299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (17349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (17399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (17449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (17499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (17549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (17599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (17649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (17699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (17749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (17799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (17849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (17899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (17949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (17999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (17999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (18049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (18099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (18149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (18199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (18249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (18299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (18349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (18399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (18449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (18499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (18549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (18599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (18649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (18699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (18749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (18799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (18849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (18899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (18949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (18999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (18999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (19049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (19099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (19149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (19199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (19249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (19299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (19349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (19399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (19449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (19499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (19549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (19599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (19649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (19699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (19749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (19799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (19849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (19899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (19949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (19999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (19999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (20049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (20099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (20149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (20199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (20249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (20299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (20349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (20399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (20449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (20499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (20549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (20599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (20649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (20699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (20749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (20799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (20849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (20899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (20949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (20999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (20999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (21049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (21099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (21149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (21199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (21249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (21299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (21349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (21399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (21449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (21499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (21549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (21599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (21649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (21699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (21749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (21799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (21849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (21899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (21949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (21999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (21999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (22049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (22099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (22149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (22199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (22249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (22299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (22349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (22399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (22449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (22499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (22549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (22599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (22649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (22699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (22749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (22799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (22849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (22899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (22949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (22999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (22999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (23049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (23099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (23149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (23199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (23249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (23299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (23349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (23399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (23449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (23499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (23549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (23599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (23649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (23699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (23749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (23799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (23849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (23899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (23949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (23999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (23999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (24049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (24099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (24149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (24199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (24249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (24299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (24349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (24399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (24449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (24499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (24549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (24599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (24649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (24699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (24749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (24799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (24849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (24899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (24949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (24999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (24999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (25049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (25099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (25149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (25199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (25249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (25299) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25349) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (25349) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25399) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (25399) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25449) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (25449) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25499) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (25499) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25549) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (25549) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25599) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (25599) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25649) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (25649) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25699) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (25699) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25749) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (25749) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25799) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (25799) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25849) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (25849) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25899) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_FAIL[0m
+[0;33mW (25899) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25949) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (25949) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (25999) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (25999) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (26049) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (26049) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (26099) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (26099) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (26149) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (26149) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (26199) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (26199) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (26249) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (26249) MLX-WS: MLX90640_GetFrameData erro: -2[0m
+[1;31mE (26299) MLX90640_I2C: I2CRead: erro ao enviar addr (0x8000): ESP_ERR_TIMEOUT[0m
+[0;33mW (26299) MLX-WS: MLX90640_GetFrameData erro: -2[0m

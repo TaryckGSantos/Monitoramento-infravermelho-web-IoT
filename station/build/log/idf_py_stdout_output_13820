@@ -1,0 +1,659 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 24 2025 16:02:22[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1bd94h (114068) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0002bdbc vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0002bde0 vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=0002fdc0 vaddr=40080000 size=00258h (   600) load[0m
+[0;32mI (139) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=84cf0h (543984) map[0m
+[0;32mI (332) esp_image: segment 5: paddr=000b4d18 vaddr=40080258 size=186ach (100012) load[0m
+[0;32mI (383) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (383) boot: Disabling RNG early entropy source...[0m
+[0;32mI (393) cpu_start: Multicore app[0m
+[0;32mI (402) cpu_start: Pro cpu start user code[0m
+[0;32mI (402) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (402) app_init: Application information:[0m
+[0;32mI (402) app_init: Project name:     wifi_station[0m
+[0;32mI (406) app_init: App version:      74a4d58-dirty[0m
+[0;32mI (411) app_init: Compile time:     Nov 24 2025 17:46:39[0m
+[0;32mI (416) app_init: ELF file SHA256:  fc747245b...[0m
+[0;32mI (420) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (424) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (428) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (432) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (436) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (442) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (447) heap_init: At 3FFBA0F0 len 00025F10 (151 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (457) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 40098904 len 000076FC (29 KiB): IRAM[0m
+[0;32mI (470) spi_flash: detected chip: generic[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (498) main_task: Calling app_main()[0m
+[0;32mI (538) wifi:wifi driver task: 3ffc20c0, prio:23, stack:6656, core=0[0m
+[0;32mI (548) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (548) wifi:wifi certification version: v7.0[0m
+[0;32mI (548) wifi:config NVS flash: enabled[0m
+[0;32mI (548) wifi:config nano formatting: disabled[0m
+[0;32mI (558) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (558) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (568) wifi:Init management short buffer num: 32[0m
+[0;32mI (568) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (578) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (578) wifi:Init static rx buffer num: 10[0m
+[0;32mI (578) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (588) wifi_init: rx ba win: 6[0m
+[0;32mI (588) wifi_init: accept mbox: 6[0m
+[0;32mI (588) wifi_init: tcpip mbox: 32[0m
+[0;32mI (598) wifi_init: udp mbox: 6[0m
+[0;32mI (598) wifi_init: tcp mbox: 6[0m
+[0;32mI (598) wifi_init: tcp tx win: 5760[0m
+[0;32mI (608) wifi_init: tcp rx win: 5760[0m
+[0;32mI (608) wifi_init: tcp mss: 1440[0m
+[0;32mI (608) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (618) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (618) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (628) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (718) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (798) wifi:mode : sta (88:13:bf:63:c2:b4)[0m
+[0;32mI (798) wifi:enable tsf[0m
+[0;32mI (808) MLX-WS: WiFi STA inicializado; conectando ao AP "Melk"[0m
+[0;32mI (808) MLX-WS: Servidor HTTP + WebSocket rodando na porta 80[0m
+[0;32mI (808) MLX-WS: Servidor WebSocket pronto em ws://<IP-DA-ESP>/ws[0m
+[0;32mI (818) MLX-WS: UART inicializada (num=1, TX=17, RX=16, baud=115200)[0m
+[0;32mI (828) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (828) wifi:state: init -> auth (0xb0)[0m
+[0;33mW (838) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (838) main_task: Returned from app_main()[0m
+[0;32mI (868) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (888) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1028) wifi:connected with Melk, aid = 9, channel 6, BW20, bssid = e8:45:8b:5d:b5:38[0m
+[0;32mI (1028) wifi:security: WPA2-PSK, phy: bgn, rssi: -72[0m
+[0;32mI (1028) wifi:pm start, type: 1[0m
+
+[0;32mI (1028) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;33mW (1038) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (1088) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1108) MLX-WS: Frame OK: Min=2181 Max=3062[0m
+[0;33mW (1238) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (1298) wifi:<ba-add>idx:0 (ifx:0, e8:45:8b:5d:b5:38), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1368) MLX-WS: Frame OK: Min=2275 Max=3055[0m
+[0;33mW (1438) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (1628) MLX-WS: Frame OK: Min=2275 Max=3009[0m
+[0;33mW (1638) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (1838) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (1878) MLX-WS: Frame OK: Min=2263 Max=3014[0m
+[0;33mW (2038) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2068) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:7, winSize:64[0m
+[0;32mI (2138) MLX-WS: Frame OK: Min=2263 Max=3013[0m
+[0;33mW (2238) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2388) MLX-WS: Frame OK: Min=2050 Max=3011[0m
+[0;33mW (2438) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2538) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1[0m
+[0;33mW (2638) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2648) MLX-WS: Frame OK: Min=2050 Max=3000[0m
+[0;33mW (2838) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (2898) MLX-WS: Frame OK: Min=2314 Max=2998[0m
+[0;33mW (3038) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (3158) MLX-WS: Frame OK: Min=2586 Max=3031[0m
+[0;33mW (3238) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (3408) MLX-WS: Frame OK: Min=2397 Max=3035[0m
+[0;33mW (3438) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;33mW (3638) MLX-WS: Nenhum cliente WebSocket conectado[0m
+[0;32mI (3668) MLX-WS: Frame OK: Min=2326 Max=3003[0m
+[0;32mI (3778) MLX-WS: Handshake WebSocket OK[0m
+[0;32mI (3918) MLX-WS: Frame OK: Min=2247 Max=3004[0m
+[0;32mI (4178) MLX-WS: Frame OK: Min=2247 Max=3038[0m
+[0;32mI (4428) MLX-WS: Frame OK: Min=2151 Max=3036[0m
+[0;32mI (4688) MLX-WS: Frame OK: Min=2151 Max=3035[0m
+[0;32mI (4938) MLX-WS: Frame OK: Min=2028 Max=3034[0m
+[0;32mI (5198) MLX-WS: Frame OK: Min=2028 Max=3013[0m
+[0;32mI (5448) MLX-WS: Frame OK: Min=2287 Max=3011[0m
+[0;32mI (5708) MLX-WS: Frame OK: Min=2301 Max=3000[0m
+[0;32mI (5958) MLX-WS: Frame OK: Min=2125 Max=3001[0m
+[0;32mI (6218) MLX-WS: Frame OK: Min=2125 Max=3012[0m
+[0;32mI (6468) MLX-WS: Frame OK: Min=2373 Max=3012[0m
+[0;32mI (6728) MLX-WS: Frame OK: Min=2142 Max=2991[0m
+[0;32mI (6978) MLX-WS: Frame OK: Min=2142 Max=2991[0m
+[0;32mI (7238) MLX-WS: Frame OK: Min=2123 Max=2991[0m
+[0;32mI (7488) MLX-WS: Frame OK: Min=2123 Max=2990[0m
+[0;32mI (7748) MLX-WS: Frame OK: Min=2323 Max=3001[0m
+[0;32mI (8008) MLX-WS: Frame OK: Min=2162 Max=3005[0m
+[0;32mI (8258) MLX-WS: Frame OK: Min=2162 Max=2994[0m
+[0;32mI (8518) MLX-WS: Frame OK: Min=2044 Max=2993[0m
+[0;32mI (8768) MLX-WS: Frame OK: Min=2044 Max=3014[0m
+[0;32mI (9028) MLX-WS: Frame OK: Min=2281 Max=3073[0m
+[0;32mI (9278) MLX-WS: Frame OK: Min=2271 Max=3073[0m
+[0;32mI (9538) MLX-WS: Frame OK: Min=2271 Max=3209[0m
+[0;32mI (9788) MLX-WS: Frame OK: Min=2174 Max=3209[0m
+[0;32mI (10048) MLX-WS: Frame OK: Min=2174 Max=3326[0m
+[0;32mI (10298) MLX-WS: Frame OK: Min=2308 Max=3326[0m
+[0;32mI (10558) MLX-WS: Frame OK: Min=2279 Max=3219[0m
+[0;32mI (10808) MLX-WS: Frame OK: Min=2279 Max=3222[0m
+[0;32mI (11068) MLX-WS: Frame OK: Min=2392 Max=3222[0m
+[0;32mI (11318) MLX-WS: Frame OK: Min=2403 Max=3411[0m
+[0;32mI (11578) MLX-WS: Frame OK: Min=2370 Max=3411[0m
+[0;32mI (11828) MLX-WS: Frame OK: Min=2370 Max=3398[0m
+[0;32mI (12088) MLX-WS: Frame OK: Min=2433 Max=3398[0m
+[0;32mI (12338) MLX-WS: Frame OK: Min=2372 Max=3312[0m
+[0;32mI (12598) MLX-WS: Frame OK: Min=2165 Max=3198[0m
+[0;32mI (12848) MLX-WS: Frame OK: Min=2165 Max=3398[0m
+[0;32mI (13108) MLX-WS: Frame OK: Min=2507 Max=3398[0m
+[0;32mI (13358) MLX-WS: Frame OK: Min=2386 Max=3000[0m
+[0;32mI (13618) MLX-WS: Frame OK: Min=2268 Max=3046[0m
+[0;32mI (13878) MLX-WS: Frame OK: Min=2268 Max=3046[0m
+[0;32mI (14128) MLX-WS: Frame OK: Min=2469 Max=3011[0m
+[0;32mI (14388) MLX-WS: Frame OK: Min=2548 Max=3160[0m
+[0;32mI (14638) MLX-WS: Frame OK: Min=2460 Max=3160[0m
+[0;32mI (14898) MLX-WS: Frame OK: Min=2229 Max=3114[0m
+[0;32mI (15148) MLX-WS: Frame OK: Min=2229 Max=3286[0m
+[0;32mI (15408) MLX-WS: Frame OK: Min=2139 Max=3286[0m
+[0;32mI (15658) MLX-WS: Frame OK: Min=2139 Max=3325[0m
+[0;32mI (15918) MLX-WS: Frame OK: Min=2138 Max=3325[0m
+[0;32mI (16168) MLX-WS: Frame OK: Min=2138 Max=3293[0m
+[0;32mI (16428) MLX-WS: Frame OK: Min=2074 Max=3293[0m
+[0;32mI (16678) MLX-WS: Frame OK: Min=2074 Max=3323[0m
+[0;32mI (16938) MLX-WS: Frame OK: Min=2258 Max=3323[0m
+[0;32mI (17188) MLX-WS: Frame OK: Min=2258 Max=3273[0m
+[0;32mI (17448) MLX-WS: Frame OK: Min=2127 Max=3273[0m
+[0;32mI (17698) MLX-WS: Frame OK: Min=2127 Max=3288[0m
+[0;32mI (17958) MLX-WS: Frame OK: Min=2284 Max=3288[0m
+[0;32mI (18208) MLX-WS: Frame OK: Min=2218 Max=3014[0m
+[0;32mI (18468) MLX-WS: Frame OK: Min=2175 Max=3020[0m
+[0;32mI (18718) MLX-WS: Frame OK: Min=2082 Max=3097[0m
+[0;32mI (18978) MLX-WS: Frame OK: Min=2082 Max=3097[0m
+[0;32mI (19228) MLX-WS: Frame OK: Min=2137 Max=3217[0m
+[0;32mI (19488) MLX-WS: Frame OK: Min=2243 Max=3217[0m
+[0;32mI (19738) MLX-WS: Frame OK: Min=2205 Max=3023[0m
+[0;32mI (19998) MLX-WS: Frame OK: Min=2205 Max=3234[0m
+[0;32mI (20258) MLX-WS: Frame OK: Min=2248 Max=3278[0m
+[0;32mI (20508) MLX-WS: Frame OK: Min=2247 Max=3278[0m
+[0;32mI (20768) MLX-WS: Frame OK: Min=2247 Max=3352[0m
+[0;32mI (21018) MLX-WS: Frame OK: Min=2372 Max=3416[0m
+[0;32mI (21278) MLX-WS: Frame OK: Min=2237 Max=3416[0m
+[0;32mI (21528) MLX-WS: Frame OK: Min=2237 Max=3299[0m
+[0;32mI (21788) MLX-WS: Frame OK: Min=2241 Max=3164[0m
+[0;32mI (22038) MLX-WS: Frame OK: Min=2237 Max=3164[0m
+[0;32mI (22298) MLX-WS: Frame OK: Min=2237 Max=3338[0m
+[0;32mI (22548) MLX-WS: Frame OK: Min=2288 Max=3338[0m
+[0;32mI (22808) MLX-WS: Frame OK: Min=-3830 Max=32523[0m
+[0;32mI (23058) MLX-WS: Frame OK: Min=2360 Max=3319[0m
+[0;32mI (23318) MLX-WS: Frame OK: Min=2340 Max=3319[0m
+[0;32mI (23568) MLX-WS: Frame OK: Min=2340 Max=3289[0m
+[0;32mI (23828) MLX-WS: Frame OK: Min=2401 Max=3356[0m
+[0;32mI (24078) MLX-WS: Frame OK: Min=2401 Max=3399[0m
+[0;32mI (24338) MLX-WS: Frame OK: Min=2426 Max=3426[0m
+[0;32mI (24588) MLX-WS: Frame OK: Min=2292 Max=3426[0m
+[0;32mI (24848) MLX-WS: Frame OK: Min=2244 Max=3301[0m
+[0;32mI (25098) MLX-WS: Frame OK: Min=2244 Max=3315[0m
+[0;32mI (25358) MLX-WS: Frame OK: Min=2379 Max=3315[0m
+[0;32mI (25608) MLX-WS: Frame OK: Min=2352 Max=3277[0m
+[0;32mI (25868) MLX-WS: Frame OK: Min=2352 Max=3297[0m
+[0;32mI (26128) MLX-WS: Frame OK: Min=2288 Max=3297[0m
+[0;32mI (26378) MLX-WS: Frame OK: Min=2285 Max=3277[0m
+[0;32mI (26638) MLX-WS: Frame OK: Min=2285 Max=3352[0m
+[0;32mI (26888) MLX-WS: Frame OK: Min=2382 Max=3352[0m
+[0;32mI (27148) MLX-WS: Frame OK: Min=2382 Max=3444[0m
+[0;32mI (27398) MLX-WS: Frame OK: Min=2372 Max=3444[0m
+[0;32mI (27658) MLX-WS: Frame OK: Min=2372 Max=3555[0m
+[0;32mI (27908) MLX-WS: Frame OK: Min=2383 Max=3555[0m
+[0;32mI (28168) MLX-WS: Frame OK: Min=2307 Max=3287[0m
+[0;32mI (28418) MLX-WS: Frame OK: Min=2185 Max=3264[0m
+[0;32mI (28678) MLX-WS: Frame OK: Min=2185 Max=3289[0m
+[0;32mI (28928) MLX-WS: Frame OK: Min=2266 Max=3289[0m
+[0;32mI (29188) MLX-WS: Frame OK: Min=2103 Max=3224[0m
+[0;32mI (29438) MLX-WS: Frame OK: Min=2103 Max=3185[0m
+[0;32mI (29698) MLX-WS: Frame OK: Min=2258 Max=3210[0m
+[0;32mI (29948) MLX-WS: Frame OK: Min=2327 Max=3249[0m
+[0;32mI (30208) MLX-WS: Frame OK: Min=2269 Max=3249[0m
+[0;32mI (30458) MLX-WS: Frame OK: Min=2231 Max=3192[0m
+[0;32mI (30718) MLX-WS: Frame OK: Min=2148 Max=3192[0m
+[0;32mI (30968) MLX-WS: Frame OK: Min=2148 Max=3150[0m
+[0;32mI (31228) MLX-WS: Frame OK: Min=2256 Max=3303[0m
+[0;32mI (31478) MLX-WS: Frame OK: Min=2347 Max=3303[0m
+[0;32mI (31738) MLX-WS: Frame OK: Min=2347 Max=3346[0m
+[0;32mI (31998) MLX-WS: Frame OK: Min=2295 Max=3346[0m
+[0;32mI (32248) MLX-WS: Frame OK: Min=2270 Max=3201[0m
+[0;32mI (32508) MLX-WS: Frame OK: Min=-3832 Max=32521[0m
+[0;32mI (32758) MLX-WS: Frame OK: Min=2259 Max=3288[0m
+[0;32mI (33018) MLX-WS: Frame OK: Min=2108 Max=3288[0m
+[0;32mI (33268) MLX-WS: Frame OK: Min=2108 Max=3180[0m
+[0;32mI (33528) MLX-WS: Frame OK: Min=2228 Max=3180[0m
+[0;32mI (33778) MLX-WS: Frame OK: Min=2228 Max=3233[0m
+[0;32mI (34038) MLX-WS: Frame OK: Min=2254 Max=3233[0m
+[0;32mI (34288) MLX-WS: Frame OK: Min=2254 Max=3182[0m
+[0;32mI (34548) MLX-WS: Frame OK: Min=2280 Max=3320[0m
+[0;32mI (34798) MLX-WS: Frame OK: Min=2365 Max=3320[0m
+[0;32mI (35058) MLX-WS: Frame OK: Min=2343 Max=3250[0m
+[0;32mI (35308) MLX-WS: Frame OK: Min=2217 Max=3244[0m
+[0;32mI (35568) MLX-WS: Frame OK: Min=2217 Max=3244[0m
+[0;32mI (35818) MLX-WS: Frame OK: Min=2313 Max=3353[0m
+[0;32mI (36078) MLX-WS: Frame OK: Min=2330 Max=3353[0m
+[0;32mI (36328) MLX-WS: Frame OK: Min=2263 Max=3197[0m
+[0;32mI (36588) MLX-WS: Frame OK: Min=2263 Max=3183[0m
+[0;32mI (36838) MLX-WS: Frame OK: Min=2216 Max=3183[0m
+[0;32mI (37098) MLX-WS: Frame OK: Min=2216 Max=3190[0m
+[0;32mI (37348) MLX-WS: Frame OK: Min=2290 Max=3246[0m
+[0;32mI (37608) MLX-WS: Frame OK: Min=2273 Max=3246[0m
+[0;32mI (37868) MLX-WS: Frame OK: Min=2263 Max=3198[0m
+[0;32mI (38118) MLX-WS: Frame OK: Min=2256 Max=3198[0m
+[0;32mI (38378) MLX-WS: Frame OK: Min=2256 Max=3330[0m
+[0;32mI (38628) MLX-WS: Frame OK: Min=2179 Max=3330[0m
+[0;32mI (38888) MLX-WS: Frame OK: Min=2179 Max=3228[0m
+[0;32mI (39138) MLX-WS: Frame OK: Min=2345 Max=3301[0m
+[0;32mI (39398) MLX-WS: Frame OK: Min=2224 Max=3301[0m
+[0;32mI (39648) MLX-WS: Frame OK: Min=2224 Max=3200[0m
+[0;32mI (39908) MLX-WS: Frame OK: Min=2213 Max=3200[0m
+[0;32mI (40158) MLX-WS: Frame OK: Min=2213 Max=3290[0m
+[0;32mI (40418) MLX-WS: Frame OK: Min=2320 Max=3290[0m
+[0;32mI (40668) MLX-WS: Frame OK: Min=2169 Max=3237[0m
+[0;32mI (40928) MLX-WS: Frame OK: Min=2169 Max=3190[0m
+[0;32mI (41178) MLX-WS: Frame OK: Min=2198 Max=3190[0m
+[0;32mI (41438) MLX-WS: Frame OK: Min=2198 Max=3178[0m
+[0;32mI (41688) MLX-WS: Frame OK: Min=2101 Max=3178[0m
+[0;32mI (41948) MLX-WS: Frame OK: Min=2101 Max=3276[0m
+[0;32mI (42198) MLX-WS: Frame OK: Min=2242 Max=3276[0m
+[0;32mI (42458) MLX-WS: Frame OK: Min=2242 Max=3241[0m
+[0;32mI (42708) MLX-WS: Frame OK: Min=2317 Max=3241[0m
+[0;32mI (42968) MLX-WS: Frame OK: Min=2317 Max=3189[0m
+[0;32mI (43228) MLX-WS: Frame OK: Min=2496 Max=3239[0m
+[0;32mI (43478) MLX-WS: Frame OK: Min=2569 Max=3298[0m
+[0;32mI (43738) MLX-WS: Frame OK: Min=2265 Max=3298[0m
+[0;32mI (43988) MLX-WS: Frame OK: Min=2265 Max=3276[0m
+[0;32mI (44248) MLX-WS: Frame OK: Min=2308 Max=3294[0m
+[0;32mI (44498) MLX-WS: Frame OK: Min=2315 Max=3294[0m
+[0;32mI (44758) MLX-WS: Frame OK: Min=2258 Max=3189[0m
+[0;32mI (45008) MLX-WS: Frame OK: Min=2258 Max=3177[0m
+[0;32mI (45268) MLX-WS: Frame OK: Min=2297 Max=3186[0m
+[0;32mI (45518) MLX-WS: Frame OK: Min=2165 Max=3186[0m
+[0;32mI (45778) MLX-WS: Frame OK: Min=2165 Max=3110[0m
+[0;32mI (46028) MLX-WS: Frame OK: Min=2162 Max=3110[0m
+[0;32mI (46288) MLX-WS: Frame OK: Min=2162 Max=3191[0m
+[0;32mI (46538) MLX-WS: Frame OK: Min=2247 Max=3191[0m
+[0;32mI (46798) MLX-WS: Frame OK: Min=2240 Max=3111[0m
+[0;32mI (47048) MLX-WS: Frame OK: Min=2240 Max=3210[0m
+[0;32mI (47308) MLX-WS: Frame OK: Min=2239 Max=3210[0m
+[0;32mI (47558) MLX-WS: Frame OK: Min=2239 Max=3210[0m
+[0;32mI (47818) MLX-WS: Frame OK: Min=2396 Max=3186[0m
+[0;32mI (48068) MLX-WS: Frame OK: Min=2226 Max=3228[0m
+[0;32mI (48328) MLX-WS: Frame OK: Min=2226 Max=3413[0m
+[0;32mI (48588) MLX-WS: Frame OK: Min=2032 Max=3413[0m
+[0;32mI (48838) MLX-WS: Frame OK: Min=2032 Max=3212[0m
+[0;32mI (49098) MLX-WS: Frame OK: Min=2225 Max=3212[0m
+[0;32mI (49348) MLX-WS: Frame OK: Min=2148 Max=3087[0m
+[0;32mI (49608) MLX-WS: Frame OK: Min=2148 Max=3385[0m
+[0;32mI (49858) MLX-WS: Frame OK: Min=2391 Max=3385[0m
+[0;32mI (50118) MLX-WS: Frame OK: Min=2381 Max=3295[0m
+[0;32mI (50368) MLX-WS: Frame OK: Min=2381 Max=3125[0m
+[0;32mI (50628) MLX-WS: Frame OK: Min=1827 Max=3125[0m
+[0;32mI (50878) MLX-WS: Frame OK: Min=1827 Max=3020[0m
+[0;32mI (51138) MLX-WS: Frame OK: Min=2263 Max=3051[0m
+[0;32mI (51388) MLX-WS: Frame OK: Min=2263 Max=3083[0m
+[0;32mI (51648) MLX-WS: Frame OK: Min=2416 Max=3083[0m
+[0;32mI (51898) MLX-WS: Frame OK: Min=2322 Max=3072[0m
+[0;32mI (52158) MLX-WS: Frame OK: Min=2322 Max=3411[0m
+[0;32mI (52408) MLX-WS: Frame OK: Min=2275 Max=3411[0m
+[0;32mI (52668) MLX-WS: Frame OK: Min=2275 Max=3064[0m
+[0;32mI (52918) MLX-WS: Frame OK: Min=2279 Max=3246[0m
+[0;32mI (53178) MLX-WS: Frame OK: Min=2241 Max=3246[0m
+[0;32mI (53438) MLX-WS: Frame OK: Min=2241 Max=3159[0m
+[0;32mI (53688) MLX-WS: Frame OK: Min=2150 Max=3159[0m
+[0;32mI (53948) MLX-WS: Frame OK: Min=2150 Max=3202[0m
+[0;32mI (54198) MLX-WS: Frame OK: Min=2263 Max=3270[0m
+[0;32mI (54458) MLX-WS: Frame OK: Min=2312 Max=3270[0m
+[0;32mI (54708) MLX-WS: Frame OK: Min=2339 Max=3229[0m
+[0;32mI (54968) MLX-WS: Frame OK: Min=2452 Max=3073[0m
+[0;32mI (55218) MLX-WS: Frame OK: Min=2442 Max=3074[0m
+[0;32mI (55478) MLX-WS: Frame OK: Min=2093 Max=3073[0m
+[0;32mI (55728) MLX-WS: Frame OK: Min=2093 Max=3052[0m
+[0;32mI (55988) MLX-WS: Frame OK: Min=2175 Max=3208[0m
+[0;32mI (56238) MLX-WS: Frame OK: Min=2368 Max=3358[0m
+[0;32mI (56498) MLX-WS: Frame OK: Min=2325 Max=3358[0m
+[0;32mI (56748) MLX-WS: Frame OK: Min=2275 Max=3231[0m
+[0;32mI (57008) MLX-WS: Frame OK: Min=2275 Max=3300[0m
+[0;32mI (57258) MLX-WS: Frame OK: Min=2325 Max=3329[0m
+[0;32mI (57518) MLX-WS: Frame OK: Min=2358 Max=3329[0m
+[0;32mI (57778) MLX-WS: Frame OK: Min=2258 Max=3251[0m
+[0;32mI (58028) MLX-WS: Frame OK: Min=2187 Max=3222[0m
+[0;32mI (58288) MLX-WS: Frame OK: Min=2187 Max=3295[0m
+[0;32mI (58538) MLX-WS: Frame OK: Min=2373 Max=3393[0m
+[0;32mI (58798) MLX-WS: Frame OK: Min=2426 Max=3393[0m
+[0;32mI (59048) MLX-WS: Frame OK: Min=2307 Max=3371[0m
+[0;32mI (59308) MLX-WS: Frame OK: Min=2307 Max=3300[0m
+[0;32mI (59558) MLX-WS: Frame OK: Min=2317 Max=3300[0m
+[0;32mI (59818) MLX-WS: Frame OK: Min=2317 Max=3335[0m
+[0;32mI (60068) MLX-WS: Frame OK: Min=2298 Max=3335[0m
+[0;32mI (60328) MLX-WS: Frame OK: Min=2298 Max=3294[0m
+[0;32mI (60578) MLX-WS: Frame OK: Min=2264 Max=3294[0m
+[0;32mI (60838) MLX-WS: Frame OK: Min=2193 Max=3280[0m
+[0;32mI (61088) MLX-WS: Frame OK: Min=2160 Max=3210[0m
+[0;32mI (61348) MLX-WS: Frame OK: Min=2160 Max=3292[0m
+[0;32mI (61598) MLX-WS: Frame OK: Min=2284 Max=3292[0m
+[0;32mI (61858) MLX-WS: Frame OK: Min=2284 Max=3285[0m
+[0;32mI (62108) MLX-WS: Frame OK: Min=2290 Max=3285[0m
+[0;32mI (62368) MLX-WS: Frame OK: Min=2290 Max=3280[0m
+[0;32mI (62628) MLX-WS: Frame OK: Min=2292 Max=3297[0m
+[0;32mI (62878) MLX-WS: Frame OK: Min=2271 Max=3297[0m
+[0;32mI (63138) MLX-WS: Frame OK: Min=2271 Max=3295[0m
+[0;32mI (63388) MLX-WS: Frame OK: Min=2228 Max=3295[0m
+[0;32mI (63648) MLX-WS: Frame OK: Min=2228 Max=3214[0m
+[0;32mI (63898) MLX-WS: Frame OK: Min=2281 Max=3214[0m
+[0;32mI (64158) MLX-WS: Frame OK: Min=2243 Max=3098[0m
+[0;32mI (64408) MLX-WS: Frame OK: Min=2243 Max=3166[0m
+[0;32mI (64668) MLX-WS: Frame OK: Min=2105 Max=3166[0m
+[0;32mI (64918) MLX-WS: Frame OK: Min=2105 Max=3125[0m
+[0;32mI (65178) MLX-WS: Frame OK: Min=2212 Max=3130[0m
+[0;32mI (65428) MLX-WS: Frame OK: Min=2212 Max=3142[0m
+[0;32mI (65688) MLX-WS: Frame OK: Min=2225 Max=3243[0m
+[0;32mI (65938) MLX-WS: Frame OK: Min=1816 Max=3243[0m
+[0;32mI (66198) MLX-WS: Frame OK: Min=1816 Max=3113[0m
+[0;32mI (66448) MLX-WS: Frame OK: Min=2150 Max=3241[0m
+[0;32mI (66708) MLX-WS: Frame OK: Min=2187 Max=3241[0m
+[0;32mI (66968) MLX-WS: Frame OK: Min=2187 Max=3142[0m
+[0;32mI (67218) MLX-WS: Frame OK: Min=2197 Max=3213[0m
+[0;32mI (67478) MLX-WS: Frame OK: Min=2272 Max=3213[0m
+[0;32mI (67728) MLX-WS: Frame OK: Min=2255 Max=3213[0m
+[0;32mI (67988) MLX-WS: Frame OK: Min=2255 Max=3306[0m
+[0;32mI (68238) MLX-WS: Frame OK: Min=2354 Max=3306[0m
+[0;32mI (68498) MLX-WS: Frame OK: Min=2226 Max=3234[0m
+[0;32mI (68748) MLX-WS: Frame OK: Min=2226 Max=3272[0m
+[0;32mI (69008) MLX-WS: Frame OK: Min=2359 Max=3326[0m
+[0;32mI (69258) MLX-WS: Frame OK: Min=2298 Max=3326[0m
+[0;32mI (69518) MLX-WS: Frame OK: Min=2120 Max=3195[0m
+[0;32mI (69768) MLX-WS: Frame OK: Min=2120 Max=3102[0m
+[0;32mI (70028) MLX-WS: Frame OK: Min=2200 Max=3157[0m
+[0;32mI (70278) MLX-WS: Frame OK: Min=2272 Max=3202[0m
+[0;32mI (70788) MLX-WS: Frame OK: Min=2347 Max=3393[0m
+[0;32mI (71048) MLX-WS: Frame OK: Min=2249 Max=3207[0m
+[0;32mI (71308) MLX-WS: Frame OK: Min=2249 Max=3301[0m
+[0;32mI (71558) MLX-WS: Frame OK: Min=2158 Max=3301[0m
+[0;32mI (71818) MLX-WS: Frame OK: Min=2065 Max=3115[0m
+[0;32mI (72068) MLX-WS: Frame OK: Min=2065 Max=3210[0m
+[0;32mI (72328) MLX-WS: Frame OK: Min=2321 Max=3210[0m
+[0;32mI (72578) MLX-WS: Frame OK: Min=2357 Max=3223[0m
+[0;32mI (72838) MLX-WS: Frame OK: Min=2374 Max=3247[0m
+[0;32mI (73088) MLX-WS: Frame OK: Min=2250 Max=3247[0m
+[0;32mI (73348) MLX-WS: Frame OK: Min=2120 Max=3111[0m
+[0;32mI (73598) MLX-WS: Frame OK: Min=2120 Max=3273[0m
+[0;32mI (73858) MLX-WS: Frame OK: Min=2204 Max=3273[0m
+[0;32mI (74108) MLX-WS: Frame OK: Min=2204 Max=3096[0m
+[0;32mI (74368) MLX-WS: Frame OK: Min=2070 Max=3099[0m
+[0;32mI (74618) MLX-WS: Frame OK: Min=2070 Max=3171[0m
+[0;32mI (74878) MLX-WS: Frame OK: Min=2296 Max=3171[0m
+[0;32mI (75128) MLX-WS: Frame OK: Min=2231 Max=3156[0m
+[0;32mI (75388) MLX-WS: Frame OK: Min=2231 Max=3162[0m
+[0;32mI (75638) MLX-WS: Frame OK: Min=2241 Max=3164[0m
+[0;32mI (75898) MLX-WS: Frame OK: Min=2230 Max=3164[0m
+[0;32mI (76158) MLX-WS: Frame OK: Min=2230 Max=3160[0m
+[0;32mI (76408) MLX-WS: Frame OK: Min=2237 Max=3160[0m
+[0;32mI (76668) MLX-WS: Frame OK: Min=2166 Max=3117[0m
+[0;32mI (76918) MLX-WS: Frame OK: Min=2166 Max=3138[0m
+[0;32mI (77178) MLX-WS: Frame OK: Min=2219 Max=3138[0m
+[0;32mI (77428) MLX-WS: Frame OK: Min=2157 Max=3100[0m
+[0;32mI (77688) MLX-WS: Frame OK: Min=2157 Max=3110[0m
+[0;32mI (77938) MLX-WS: Frame OK: Min=2345 Max=3146[0m
+[0;32mI (78198) MLX-WS: Frame OK: Min=2356 Max=3215[0m
+[0;32mI (78448) MLX-WS: Frame OK: Min=2142 Max=3215[0m
+[0;32mI (78708) MLX-WS: Frame OK: Min=2142 Max=3099[0m
+[0;32mI (78958) MLX-WS: Frame OK: Min=2240 Max=3101[0m
+[0;32mI (79218) MLX-WS: Frame OK: Min=2218 Max=3101[0m
+[0;32mI (79468) MLX-WS: Frame OK: Min=2177 Max=3103[0m
+[0;32mI (79728) MLX-WS: Frame OK: Min=2177 Max=3194[0m
+[0;32mI (79988) MLX-WS: Frame OK: Min=2193 Max=3194[0m
+[0;32mI (80238) MLX-WS: Frame OK: Min=2193 Max=3134[0m
+[0;32mI (80498) MLX-WS: Frame OK: Min=2151 Max=3134[0m
+[0;32mI (80748) MLX-WS: Frame OK: Min=2151 Max=3093[0m
+[0;32mI (81008) MLX-WS: Frame OK: Min=2205 Max=3216[0m
+[0;32mI (81258) MLX-WS: Frame OK: Min=2336 Max=3250[0m
+[0;32mI (81518) MLX-WS: Frame OK: Min=2259 Max=3250[0m
+[0;32mI (81768) MLX-WS: Frame OK: Min=2259 Max=3206[0m
+[0;32mI (82028) MLX-WS: Frame OK: Min=2268 Max=3206[0m
+[0;32mI (82278) MLX-WS: Frame OK: Min=2268 Max=3256[0m
+[0;32mI (82538) MLX-WS: Frame OK: Min=2272 Max=3256[0m
+[0;32mI (82788) MLX-WS: Frame OK: Min=2272 Max=3162[0m
+[0;32mI (83048) MLX-WS: Frame OK: Min=2223 Max=3162[0m
+[0;32mI (83298) MLX-WS: Frame OK: Min=2223 Max=3251[0m
+[0;32mI (83558) MLX-WS: Frame OK: Min=2239 Max=3251[0m
+[0;32mI (83808) MLX-WS: Frame OK: Min=2150 Max=3120[0m
+[0;32mI (84068) MLX-WS: Frame OK: Min=2150 Max=3103[0m
+[0;32mI (84328) MLX-WS: Frame OK: Min=2165 Max=3152[0m
+[0;32mI (84578) MLX-WS: Frame OK: Min=2228 Max=3244[0m
+[0;32mI (84838) MLX-WS: Frame OK: Min=2151 Max=3244[0m
+[0;32mI (85088) MLX-WS: Frame OK: Min=2137 Max=3095[0m
+[0;32mI (85348) MLX-WS: Frame OK: Min=2137 Max=3120[0m
+[0;32mI (85598) MLX-WS: Frame OK: Min=2158 Max=3120[0m
+[0;32mI (85858) MLX-WS: Frame OK: Min=2158 Max=3106[0m
+[0;32mI (86108) MLX-WS: Frame OK: Min=2169 Max=3110[0m
+[0;32mI (86368) MLX-WS: Frame OK: Min=2232 Max=3131[0m
+[0;32mI (86618) MLX-WS: Frame OK: Min=2232 Max=3207[0m
+[0;32mI (86878) MLX-WS: Frame OK: Min=2241 Max=3207[0m
+[0;32mI (87128) MLX-WS: Frame OK: Min=2176 Max=3220[0m
+[0;32mI (87388) MLX-WS: Frame OK: Min=2176 Max=3468[0m
+[0;32mI (87638) MLX-WS: Frame OK: Min=2404 Max=3468[0m
+[0;32mI (87898) MLX-WS: Frame OK: Min=2275 Max=3439[0m
+[0;32mI (88148) MLX-WS: Frame OK: Min=2189 Max=3265[0m
+[0;32mI (88408) MLX-WS: Frame OK: Min=2115 Max=3224[0m
+[0;32mI (88668) MLX-WS: Frame OK: Min=2082 Max=3211[0m
+[0;32mI (88918) MLX-WS: Frame OK: Min=2082 Max=3438[0m
+[0;32mI (89178) MLX-WS: Frame OK: Min=2275 Max=3438[0m
+[0;32mI (89428) MLX-WS: Frame OK: Min=2275 Max=3302[0m
+[0;32mI (89688) MLX-WS: Frame OK: Min=2321 Max=3327[0m
+[0;32mI (89938) MLX-WS: Frame OK: Min=2266 Max=3327[0m
+[0;32mI (90198) MLX-WS: Frame OK: Min=2266 Max=3422[0m
+[0;32mI (90448) MLX-WS: Frame OK: Min=2245 Max=3422[0m
+[0;32mI (90708) MLX-WS: Frame OK: Min=2245 Max=3339[0m
+[0;32mI (90958) MLX-WS: Frame OK: Min=2367 Max=3463[0m
+[0;32mI (91218) MLX-WS: Frame OK: Min=2314 Max=3463[0m
+[0;32mI (91468) MLX-WS: Frame OK: Min=2238 Max=3279[0m
+[0;32mI (91728) MLX-WS: Frame OK: Min=2167 Max=3229[0m
+[0;32mI (91978) MLX-WS: Frame OK: Min=2167 Max=3439[0m
+[0;32mI (92238) MLX-WS: Frame OK: Min=1893 Max=3439[0m
+[0;32mI (92498) MLX-WS: Frame OK: Min=1893 Max=3225[0m
+[0;32mI (92748) MLX-WS: Frame OK: Min=2248 Max=3242[0m
+[0;32mI (93008) MLX-WS: Frame OK: Min=2160 Max=3242[0m
+[0;32mI (93258) MLX-WS: Frame OK: Min=2160 Max=3328[0m
+[0;32mI (93518) MLX-WS: Frame OK: Min=2091 Max=3328[0m
+[0;32mI (93768) MLX-WS: Frame OK: Min=2091 Max=3311[0m
+[0;32mI (94028) MLX-WS: Frame OK: Min=2041 Max=3311[0m
+[0;32mI (94278) MLX-WS: Frame OK: Min=2041 Max=3107[0m
+[0;32mI (94538) MLX-WS: Frame OK: Min=2186 Max=3208[0m
+[0;32mI (94788) MLX-WS: Frame OK: Min=2112 Max=3208[0m
+[0;32mI (95048) MLX-WS: Frame OK: Min=2112 Max=3217[0m
+[0;32mI (95298) MLX-WS: Frame OK: Min=2220 Max=3217[0m
+[0;32mI (95558) MLX-WS: Frame OK: Min=2220 Max=3163[0m
+[0;32mI (95808) MLX-WS: Frame OK: Min=2259 Max=3390[0m
+[0;32mI (96068) MLX-WS: Frame OK: Min=2241 Max=3390[0m
+[0;32mI (96318) MLX-WS: Frame OK: Min=2215 Max=3150[0m
+[0;32mI (96578) MLX-WS: Frame OK: Min=2030 Max=3140[0m
+[0;32mI (96838) MLX-WS: Frame OK: Min=2030 Max=3104[0m
+[0;32mI (97088) MLX-WS: Frame OK: Min=2052 Max=3124[0m
+[0;32mI (97348) MLX-WS: Frame OK: Min=2150 Max=3123[0m
+[0;32mI (97598) MLX-WS: Frame OK: Min=2231 Max=3147[0m
+[0;32mI (97858) MLX-WS: Frame OK: Min=2179 Max=3147[0m
+[0;32mI (98108) MLX-WS: Frame OK: Min=2179 Max=3386[0m
+[0;32mI (98368) MLX-WS: Frame OK: Min=2327 Max=3386[0m
+[0;32mI (98618) MLX-WS: Frame OK: Min=2327 Max=3252[0m
+[0;32mI (98878) MLX-WS: Frame OK: Min=2327 Max=3252[0m
+[0;32mI (99128) MLX-WS: Frame OK: Min=2298 Max=3138[0m
+[0;32mI (99388) MLX-WS: Frame OK: Min=2135 Max=3138[0m
+[0;32mI (99638) MLX-WS: Frame OK: Min=2135 Max=3294[0m
+[0;32mI (99898) MLX-WS: Frame OK: Min=2395 Max=3294[0m
+[0;32mI (100148) MLX-WS: Frame OK: Min=2395 Max=3134[0m
+[0;32mI (100408) MLX-WS: Frame OK: Min=2339 Max=3155[0m
+[0;32mI (100668) MLX-WS: Frame OK: Min=2326 Max=21888[0m
+[0;32mI (100918) MLX-WS: Frame OK: Min=2326 Max=3353[0m
+[0;32mI (101178) MLX-WS: Frame OK: Min=2342 Max=3353[0m
+[0;32mI (101428) MLX-WS: Frame OK: Min=2342 Max=3378[0m
+[0;32mI (101688) MLX-WS: Frame OK: Min=2201 Max=3378[0m
+[0;32mI (101938) MLX-WS: Frame OK: Min=2201 Max=3259[0m
+[0;32mI (102198) MLX-WS: Frame OK: Min=2242 Max=3259[0m
+[0;32mI (102448) MLX-WS: Frame OK: Min=2242 Max=3352[0m
+[0;32mI (102708) MLX-WS: Frame OK: Min=2399 Max=3405[0m
+[0;32mI (102958) MLX-WS: Frame OK: Min=2296 Max=3405[0m
+[0;32mI (103218) MLX-WS: Frame OK: Min=2296 Max=3277[0m
+[0;32mI (103468) MLX-WS: Frame OK: Min=2418 Max=3137[0m
+[0;32mI (103728) MLX-WS: Frame OK: Min=2333 Max=3138[0m
+[0;32mI (103978) MLX-WS: Frame OK: Min=2239 Max=3138[0m
+[0;32mI (104238) MLX-WS: Frame OK: Min=2224 Max=3128[0m
+[0;32mI (104498) MLX-WS: Frame OK: Min=2212 Max=3126[0m
+[0;32mI (104748) MLX-WS: Frame OK: Min=2212 Max=3211[0m
+[0;32mI (105008) MLX-WS: Frame OK: Min=1945 Max=3211[0m
+[0;32mI (105258) MLX-WS: Frame OK: Min=1945 Max=3129[0m
+[0;32mI (105518) MLX-WS: Frame OK: Min=2057 Max=3128[0m
+[0;32mI (105768) MLX-WS: Frame OK: Min=2126 Max=3159[0m
+[0;32mI (106028) MLX-WS: Frame OK: Min=2189 Max=3163[0m
+[0;32mI (106278) MLX-WS: Frame OK: Min=2189 Max=3142[0m
+[0;32mI (106538) MLX-WS: Frame OK: Min=2231 Max=3140[0m
+[0;32mI (106788) MLX-WS: Frame OK: Min=2180 Max=3130[0m
+[0;32mI (107048) MLX-WS: Frame OK: Min=1998 Max=3134[0m
+[0;32mI (107298) MLX-WS: Frame OK: Min=1998 Max=3191[0m
+[0;32mI (107558) MLX-WS: Frame OK: Min=2315 Max=3191[0m
+[0;32mI (107808) MLX-WS: Frame OK: Min=2334 Max=3203[0m
+[0;32mI (108068) MLX-WS: Frame OK: Min=1931 Max=3203[0m
+[0;32mI (108328) MLX-WS: Frame OK: Min=1931 Max=3122[0m
+[0;32mI (108578) MLX-WS: Frame OK: Min=2002 Max=3130[0m
+[0;32mI (108838) MLX-WS: Frame OK: Min=2285 Max=3295[0m
+[0;32mI (109088) MLX-WS: Frame OK: Min=2355 Max=3295[0m
+[0;32mI (109348) MLX-WS: Frame OK: Min=2355 Max=3268[0m
+[0;32mI (109598) MLX-WS: Frame OK: Min=1903 Max=3268[0m
+[0;32mI (109858) MLX-WS: Frame OK: Min=1903 Max=3126[0m
+[0;32mI (110108) MLX-WS: Frame OK: Min=1945 Max=3120[0m
+[0;32mI (110368) MLX-WS: Frame OK: Min=2218 Max=3140[0m
+[0;32mI (110618) MLX-WS: Frame OK: Min=2218 Max=3158[0m
+[0;32mI (110878) MLX-WS: Frame OK: Min=2069 Max=3158[0m
+[0;32mI (111128) MLX-WS: Frame OK: Min=2069 Max=3132[0m
+[0;32mI (111388) MLX-WS: Frame OK: Min=2132 Max=3153[0m
+[0;32mI (111648) MLX-WS: Frame OK: Min=2195 Max=3154[0m
+[0;32mI (111898) MLX-WS: Frame OK: Min=2195 Max=3183[0m
+[0;32mI (112158) MLX-WS: Frame OK: Min=2188 Max=3183[0m
+[0;32mI (112408) MLX-WS: Frame OK: Min=2188 Max=3241[0m
+[0;32mI (112668) MLX-WS: Frame OK: Min=2326 Max=3241[0m
+[0;32mI (112918) MLX-WS: Frame OK: Min=2326 Max=3241[0m
+[0;32mI (113178) MLX-WS: Frame OK: Min=2277 Max=3241[0m
+[0;32mI (113428) MLX-WS: Frame OK: Min=2121 Max=3146[0m
+[0;32mI (113688) MLX-WS: Frame OK: Min=2121 Max=3144[0m
+[0;32mI (113938) MLX-WS: Frame OK: Min=2154 Max=3143[0m
+[0;32mI (114198) MLX-WS: Frame OK: Min=2154 Max=3303[0m
+[0;32mI (114448) MLX-WS: Frame OK: Min=2026 Max=3303[0m
+[0;32mI (114708) MLX-WS: Frame OK: Min=1982 Max=3135[0m
+[0;32mI (114958) MLX-WS: Frame OK: Min=1982 Max=3254[0m
+[0;32mI (115218) MLX-WS: Frame OK: Min=1997 Max=3254[0m
+[0;32mI (115478) MLX-WS: Frame OK: Min=1997 Max=3222[0m
+[0;32mI (115728) MLX-WS: Frame OK: Min=2341 Max=3232[0m
+[0;32mI (115988) MLX-WS: Frame OK: Min=2341 Max=3282[0m
+[0;32mI (116238) MLX-WS: Frame OK: Min=2139 Max=3282[0m
+[0;32mI (116498) MLX-WS: Frame OK: Min=2139 Max=3234[0m
+[0;32mI (116748) MLX-WS: Frame OK: Min=1941 Max=3234[0m
+[0;32mI (117008) MLX-WS: Frame OK: Min=1941 Max=3286[0m
+[0;32mI (117258) MLX-WS: Frame OK: Min=2192 Max=3286[0m
+[0;32mI (117518) MLX-WS: Frame OK: Min=2192 Max=3247[0m
+[0;32mI (117768) MLX-WS: Frame OK: Min=2072 Max=3247[0m
+[0;32mI (118028) MLX-WS: Frame OK: Min=2072 Max=3205[0m
+[0;32mI (118278) MLX-WS: Frame OK: Min=2122 Max=3205[0m
+[0;32mI (118538) MLX-WS: Frame OK: Min=2122 Max=3274[0m
+[0;32mI (118798) MLX-WS: Frame OK: Min=2292 Max=3274[0m
+[0;32mI (119048) MLX-WS: Frame OK: Min=2292 Max=3453[0m
+[0;32mI (119308) MLX-WS: Frame OK: Min=2153 Max=3453[0m
+[0;32mI (119558) MLX-WS: Frame OK: Min=2153 Max=3148[0m
+[0;32mI (119818) MLX-WS: Frame OK: Min=2189 Max=3209[0m
+[0;32mI (120068) MLX-WS: Frame OK: Min=2304 Max=3209[0m
+[0;32mI (120328) MLX-WS: Frame OK: Min=2304 Max=3410[0m
+[0;32mI (120578) MLX-WS: Frame OK: Min=2305 Max=3410[0m
+[0;32mI (120838) MLX-WS: Frame OK: Min=2245 Max=3177[0m
+[0;32mI (121088) MLX-WS: Frame OK: Min=2140 Max=3146[0m
+[0;32mI (121348) MLX-WS: Frame OK: Min=2140 Max=3168[0m
+[0;32mI (121598) MLX-WS: Frame OK: Min=2146 Max=3168[0m
+[0;32mI (121858) MLX-WS: Frame OK: Min=2146 Max=3260[0m
+[0;32mI (122108) MLX-WS: Frame OK: Min=2380 Max=3375[0m
+[0;32mI (122368) MLX-WS: Frame OK: Min=2448 Max=3375[0m
+[0;32mI (122628) MLX-WS: Frame OK: Min=2274 Max=3311[0m
+[0;32mI (122878) MLX-WS: Frame OK: Min=2274 Max=3301[0m
+[0;32mI (123138) MLX-WS: Frame OK: Min=2289 Max=3301[0m
+[0;32mI (123388) MLX-WS: Frame OK: Min=2289 Max=3249[0m
+[0;32mI (123648) MLX-WS: Frame OK: Min=2317 Max=3249[0m
+[0;32mI (123898) MLX-WS: Frame OK: Min=2317 Max=3234[0m
+[0;32mI (124158) MLX-WS: Frame OK: Min=2374 Max=3234[0m
+[0;32mI (124408) MLX-WS: Frame OK: Min=2201 Max=3170[0m
+[0;32mI (124668) MLX-WS: Frame OK: Min=2201 Max=3212[0m
+[0;32mI (124918) MLX-WS: Frame OK: Min=2305 Max=3267[0m
+[0;32mI (125178) MLX-WS: Frame OK: Min=2330 Max=3343[0m
+[0;32mI (125428) MLX-WS: Frame OK: Min=2330 Max=3343[0m
+[0;32mI (125688) MLX-WS: Frame OK: Min=2330 Max=3282[0m
+[0;32mI (125948) MLX-WS: Frame OK: Min=2330 Max=3376[0m
+[0;32mI (126198) MLX-WS: Frame OK: Min=2348 Max=3376[0m
+[0;32mI (126458) MLX-WS: Frame OK: Min=2348 Max=3331[0m
+[0;32mI (126708) MLX-WS: Frame OK: Min=2178 Max=3331[0m
+[0;32mI (126968) MLX-WS: Frame OK: Min=2178 Max=3211[0m
+[0;32mI (127218) MLX-WS: Frame OK: Min=2234 Max=3198[0m
+[0;32mI (127478) MLX-WS: Frame OK: Min=2511 Max=3172[0m
+[0;32mI (127728) MLX-WS: Frame OK: Min=2821 Max=3172[0m
+[0;32mI (127988) MLX-WS: Frame OK: Min=2810 Max=3148[0m
+[0;32mI (128238) MLX-WS: Frame OK: Min=2728 Max=3202[0m
+[0;32mI (128498) MLX-WS: Frame OK: Min=2468 Max=3202[0m
+[0;32mI (128748) MLX-WS: Frame OK: Min=2468 Max=3193[0m
+[0;32mI (129008) MLX-WS: Frame OK: Min=2596 Max=3193[0m
+[0;32mI (129268) MLX-WS: Frame OK: Min=2596 Max=3338[0m
+[0;32mI (129518) MLX-WS: Frame OK: Min=2695 Max=3338[0m
+[0;32mI (129778) MLX-WS: Frame OK: Min=2695 Max=3487[0m
+[0;32mI (130028) MLX-WS: Frame OK: Min=2838 Max=3487[0m
+[0;32mI (130288) MLX-WS: Frame OK: Min=2744 Max=3249[0m
+[0;32mI (130538) MLX-WS: Frame OK: Min=2744 Max=3216[0m
+[0;32mI (130798) MLX-WS: Frame OK: Min=2761 Max=3428[0m
+[0;32mI (131048) MLX-WS: Frame OK: Min=2318 Max=3428[0m
+[0;32mI (131308) MLX-WS: Frame OK: Min=2158 Max=3176[0m
+[0;32mI (131558) MLX-WS: Frame OK: Min=2158 Max=3184[0m
+[0;32mI (131818) MLX-WS: Frame OK: Min=2178 Max=3184[0m
+[0;32mI (132068) MLX-WS: Frame OK: Min=2178 Max=3151[0m
+[0;32mI (132328) MLX-WS: Frame OK: Min=2171 Max=3162[0m
+[0;32mI (132588) MLX-WS: Frame OK: Min=2171 Max=3162[0m
+[0;32mI (132838) MLX-WS: Frame OK: Min=2306 Max=3172[0m
+[0;32mI (133098) MLX-WS: Frame OK: Min=2306 Max=3201[0m
+[0;32mI (133348) MLX-WS: Frame OK: Min=2201 Max=3201[0m
+[0;32mI (133608) MLX-WS: Frame OK: Min=2201 Max=3164[0m
+[0;32mI (133858) MLX-WS: Frame OK: Min=2648 Max=3164[0m
+[0;32mI (134118) MLX-WS: Frame OK: Min=2562 Max=3265[0m
+[0;32mI (134368) MLX-WS: Frame OK: Min=2562 Max=3416[0m
+[0;32mI (134628) MLX-WS: Frame OK: Min=2561 Max=3416[0m
+[0;32mI (134878) MLX-WS: Frame OK: Min=2530 Max=3336[0m
+[0;32mI (135138) MLX-WS: Frame OK: Min=2495 Max=3336[0m
+[0;32mI (135388) MLX-WS: Frame OK: Min=2495 Max=3449[0m
+[0;32mI (135648) MLX-WS: Frame OK: Min=2468 Max=3449[0m
+[0;32mI (135908) MLX-WS: Frame OK: Min=2468 Max=3303[0m
+[0;32mI (136158) MLX-WS: Frame OK: Min=2471 Max=3454[0m
+[0;32mI (136418) MLX-WS: Frame OK: Min=2573 Max=3454[0m
+[0;32mI (136668) MLX-WS: Frame OK: Min=2416 Max=3397[0m
+[0;32mI (136928) MLX-WS: Frame OK: Min=2416 Max=3332[0m
+[0;32mI (137178) MLX-WS: Frame OK: Min=2515 Max=3475[0m
+[0;32mI (137438) MLX-WS: Frame OK: Min=2514 Max=3475[0m
+[0;32mI (137688) MLX-WS: Frame OK: Min=2452 Max=3314[0m
+[0;32mI (137948) MLX-WS: Frame OK: Min=2452 Max=3366[0m
+[0;32mI (138198) MLX-WS: Frame OK: Min=2518 Max=3374[0m
+[0;32mI (138458) MLX-WS: Frame OK: Min=2448 Max=3374[0m
+[0;32mI (138708) MLX-WS: Frame OK: Min=2448 Max=3427[0m
+[0;32mI (138968) MLX-WS: Frame OK: Min=2365 Max=3427[0m
+[0;32mI (139228) MLX-WS: Frame OK: Min=2365 Max=3331[0m
+[0;32mI (139478) MLX-WS: Frame OK: Min=2529 Max=3331[0m
