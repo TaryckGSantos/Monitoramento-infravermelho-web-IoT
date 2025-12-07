@@ -1,0 +1,617 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec  6 2025 23:42:43[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=191fch (102908) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=00029224 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=00029248 vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (133) esp_image: segment 3: paddr=0002d228 vaddr=40080000 size=02df0h ( 11760) load[0m
+[0;32mI (139) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=7bc30h (506928) map[0m
+[0;32mI (315) esp_image: segment 5: paddr=000abc58 vaddr=40082df0 size=159b4h ( 88500) load[0m
+[0;32mI (362) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (362) boot: Disabling RNG early entropy source...[0m
+[0;32mI (372) cpu_start: Multicore app[0m
+[0;32mI (381) cpu_start: Pro cpu start user code[0m
+[0;32mI (381) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (381) app_init: Application information:[0m
+[0;32mI (381) app_init: Project name:     wifi_station[0m
+[0;32mI (385) app_init: App version:      e7bcc44-dirty[0m
+[0;32mI (390) app_init: Compile time:     Dec  6 2025 23:42:29[0m
+[0;32mI (395) app_init: ELF file SHA256:  5824bfc8b...[0m
+[0;32mI (399) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (403) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (407) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (411) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (415) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (421) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (426) heap_init: At 3FFB90F8 len 00026F08 (155 KiB): DRAM[0m
+[0;32mI (431) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (436) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (442) heap_init: At 400987A4 len 0000785C (30 KiB): IRAM[0m
+[0;32mI (449) spi_flash: detected chip: generic[0m
+[0;32mI (451) spi_flash: flash io: dio[0m
+[0;33mW (454) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (507) wifi:wifi driver task: 3ffc0fc0, prio:23, stack:6656, core=0[0m
+[0;32mI (517) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (517) wifi:wifi certification version: v7.0[0m
+[0;32mI (517) wifi:config NVS flash: enabled[0m
+[0;32mI (517) wifi:config nano formatting: disabled[0m
+[0;32mI (527) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (527) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (527) wifi:Init management short buffer num: 32[0m
+[0;32mI (537) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (547) wifi:Init static rx buffer num: 10[0m
+[0;32mI (547) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (557) wifi_init: rx ba win: 6[0m
+[0;32mI (557) wifi_init: accept mbox: 6[0m
+[0;32mI (557) wifi_init: tcpip mbox: 32[0m
+[0;32mI (557) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp tx win: 5760[0m
+[0;32mI (567) wifi_init: tcp rx win: 5760[0m
+[0;32mI (577) wifi_init: tcp mss: 1440[0m
+[0;32mI (577) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (577) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (587) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (597) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (677) wifi:mode : sta (1c:69:20:32:06:84)[0m
+[0;32mI (677) wifi:enable tsf[0m
+[0;32mI (687) MLX-SENSOR: WiFi STA inicializado; conectando ao AP "Melk"[0m
+[0;32mI (687) MLX-SENSOR: UDP client pronto para enviar para 192.168.15.27:5005[0m
+[0;32mI (687) MLX-SENSOR: UART inicializada (num=1, TX=17, RX=16, baud=115200)[0m
+[0;32mI (697) main_task: Returned from app_main()[0m
+[0;32mI (717) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (717) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (757) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (787) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (877) wifi:connected with Melk, aid = 9, channel 11, BW20, bssid = e8:45:8b:5d:b5:38[0m
+[0;32mI (877) wifi:security: WPA2-PSK, phy: bgn, rssi: -64[0m
+[0;32mI (877) wifi:pm start, type: 1[0m
+
+[0;32mI (877) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (887) MLX-SENSOR: Frame OK: Min=2796 Max=3311[0m
+[1;31mE (897) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (1017) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1147) MLX-SENSOR: Frame OK: Min=2796 Max=3332[0m
+[1;31mE (1147) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (1397) wifi:<ba-add>idx:0 (ifx:0, e8:45:8b:5d:b5:38), tid:0, ssn:0, winSize:64I (1397) MLX-SENSOR: Frame OK: Min=2820 Max=3333[0m
+
+[1;31mE (1397) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (1657) MLX-SENSOR: Frame OK: Min=2750 Max=3323[0m
+[1;31mE (1657) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (1907) MLX-SENSOR: Frame OK: Min=2750 Max=3324[0m
+[1;31mE (1907) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (2167) MLX-SENSOR: Frame OK: Min=2835 Max=3324[0m
+[1;31mE (2167) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (2257) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:6, winSize:64[0m
+[0;32mI (2417) MLX-SENSOR: Frame OK: Min=2834 Max=3323[0m
+[1;31mE (2417) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (2677) MLX-SENSOR: Frame OK: Min=2780 Max=3313[0m
+[1;31mE (2677) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (2847) esp_netif_handlers: sta ip: 192.168.15.22, mask: 255.255.255.0, gw: 192.168.15.1[0m
+[0;32mI (2937) MLX-SENSOR: Frame OK: Min=2780 Max=3313[0m
+[0;32mI (3187) MLX-SENSOR: Frame OK: Min=2803 Max=3314[0m
+[0;32mI (3447) MLX-SENSOR: Frame OK: Min=2787 Max=3313[0m
+[0;32mI (3697) MLX-SENSOR: Frame OK: Min=2787 Max=3323[0m
+[0;32mI (3957) MLX-SENSOR: Frame OK: Min=2783 Max=3324[0m
+[0;32mI (4207) MLX-SENSOR: Frame OK: Min=2783 Max=3324[0m
+[0;32mI (4467) MLX-SENSOR: Frame OK: Min=2819 Max=3324[0m
+[0;32mI (4717) MLX-SENSOR: Frame OK: Min=2834 Max=3324[0m
+[0;32mI (4977) MLX-SENSOR: Frame OK: Min=2838 Max=3324[0m
+[0;32mI (5227) MLX-SENSOR: Frame OK: Min=2790 Max=3324[0m
+[0;32mI (5487) MLX-SENSOR: Frame OK: Min=2790 Max=3324[0m
+[0;32mI (5737) MLX-SENSOR: Frame OK: Min=2812 Max=3313[0m
+[0;32mI (5997) MLX-SENSOR: Frame OK: Min=2812 Max=3313[0m
+[0;32mI (6257) MLX-SENSOR: Frame OK: Min=2805 Max=3324[0m
+[0;32mI (6507) MLX-SENSOR: Frame OK: Min=2805 Max=3324[0m
+[0;32mI (6767) MLX-SENSOR: Frame OK: Min=2831 Max=3324[0m
+[0;32mI (7017) MLX-SENSOR: Frame OK: Min=2839 Max=3324[0m
+[0;32mI (7277) MLX-SENSOR: Frame OK: Min=2801 Max=3324[0m
+[0;32mI (7527) MLX-SENSOR: Frame OK: Min=2801 Max=3324[0m
+[0;32mI (7787) MLX-SENSOR: Frame OK: Min=2844 Max=3324[0m
+[0;32mI (8037) MLX-SENSOR: Frame OK: Min=2835 Max=3323[0m
+[0;32mI (8297) MLX-SENSOR: Frame OK: Min=2824 Max=3323[0m
+[0;32mI (8547) MLX-SENSOR: Frame OK: Min=2824 Max=3324[0m
+[0;32mI (8807) MLX-SENSOR: Frame OK: Min=2794 Max=3313[0m
+[0;32mI (9067) MLX-SENSOR: Frame OK: Min=2794 Max=3313[0m
+[0;32mI (9317) MLX-SENSOR: Frame OK: Min=2817 Max=3324[0m
+[0;32mI (9577) MLX-SENSOR: Frame OK: Min=2817 Max=3324[0m
+[0;32mI (9827) MLX-SENSOR: Frame OK: Min=2832 Max=3324[0m
+[0;32mI (10087) MLX-SENSOR: Frame OK: Min=2801 Max=3324[0m
+[0;32mI (10337) MLX-SENSOR: Frame OK: Min=2801 Max=3314[0m
+[0;32mI (10597) MLX-SENSOR: Frame OK: Min=2822 Max=3314[0m
+[0;32mI (10847) MLX-SENSOR: Frame OK: Min=2822 Max=3324[0m
+[0;32mI (11107) MLX-SENSOR: Frame OK: Min=2827 Max=3324[0m
+[0;32mI (11357) MLX-SENSOR: Frame OK: Min=2827 Max=3324[0m
+[0;32mI (11617) MLX-SENSOR: Frame OK: Min=2821 Max=3324[0m
+[0;32mI (11867) MLX-SENSOR: Frame OK: Min=2821 Max=3314[0m
+[0;32mI (12127) MLX-SENSOR: Frame OK: Min=2838 Max=3314[0m
+[0;32mI (12387) MLX-SENSOR: Frame OK: Min=2848 Max=3324[0m
+[0;32mI (12637) MLX-SENSOR: Frame OK: Min=2810 Max=3324[0m
+[0;32mI (12897) MLX-SENSOR: Frame OK: Min=2810 Max=3324[0m
+[0;32mI (13147) MLX-SENSOR: Frame OK: Min=2817 Max=3324[0m
+[0;32mI (13407) MLX-SENSOR: Frame OK: Min=2817 Max=3324[0m
+[0;32mI (13657) MLX-SENSOR: Frame OK: Min=2821 Max=3324[0m
+[0;32mI (13917) MLX-SENSOR: Frame OK: Min=2846 Max=3324[0m
+[0;32mI (14167) MLX-SENSOR: Frame OK: Min=2822 Max=3324[0m
+[0;32mI (14427) MLX-SENSOR: Frame OK: Min=2813 Max=3324[0m
+[0;32mI (14677) MLX-SENSOR: Frame OK: Min=2813 Max=3324[0m
+[0;32mI (14937) MLX-SENSOR: Frame OK: Min=2808 Max=3324[0m
+[0;32mI (15187) MLX-SENSOR: Frame OK: Min=2808 Max=3324[0m
+[0;32mI (15447) MLX-SENSOR: Frame OK: Min=2827 Max=3324[0m
+[0;32mI (15707) MLX-SENSOR: Frame OK: Min=2827 Max=3324[0m
+[0;32mI (15957) MLX-SENSOR: Frame OK: Min=2878 Max=3424[0m
+[0;32mI (16217) MLX-SENSOR: Frame OK: Min=2896 Max=3456[0m
+[0;32mI (16467) MLX-SENSOR: Frame OK: Min=2896 Max=3489[0m
+[0;32mI (16727) MLX-SENSOR: Frame OK: Min=2956 Max=3564[0m
+[0;32mI (16977) MLX-SENSOR: Frame OK: Min=3027 Max=3564[0m
+[0;32mI (17237) MLX-SENSOR: Frame OK: Min=3027 Max=3566[0m
+[0;32mI (17487) MLX-SENSOR: Frame OK: Min=3007 Max=3566[0m
+[0;32mI (17747) MLX-SENSOR: Frame OK: Min=3007 Max=3582[0m
+[0;32mI (17997) MLX-SENSOR: Frame OK: Min=3103 Max=3588[0m
+[0;32mI (18257) MLX-SENSOR: Frame OK: Min=3095 Max=3588[0m
+[0;32mI (18507) MLX-SENSOR: Frame OK: Min=2888 Max=3552[0m
+[0;32mI (18767) MLX-SENSOR: Frame OK: Min=2888 Max=3481[0m
+[0;32mI (19027) MLX-SENSOR: Frame OK: Min=2847 Max=3451[0m
+[0;32mI (19277) MLX-SENSOR: Frame OK: Min=2847 Max=3424[0m
+[0;32mI (19537) MLX-SENSOR: Frame OK: Min=2848 Max=3441[0m
+[0;32mI (19787) MLX-SENSOR: Frame OK: Min=2848 Max=3446[0m
+[0;32mI (20047) MLX-SENSOR: Frame OK: Min=2850 Max=3455[0m
+[0;32mI (20297) MLX-SENSOR: Frame OK: Min=2850 Max=3455[0m
+[0;32mI (20557) MLX-SENSOR: Frame OK: Min=2865 Max=3471[0m
+[0;32mI (20807) MLX-SENSOR: Frame OK: Min=2857 Max=3471[0m
+[0;32mI (21067) MLX-SENSOR: Frame OK: Min=2857 Max=3439[0m
+[0;32mI (21317) MLX-SENSOR: Frame OK: Min=2787 Max=3439[0m
+[0;32mI (21577) MLX-SENSOR: Frame OK: Min=2787 Max=3435[0m
+[0;32mI (21827) MLX-SENSOR: Frame OK: Min=2794 Max=3425[0m
+[0;32mI (22087) MLX-SENSOR: Frame OK: Min=2819 Max=3474[0m
+[0;32mI (22347) MLX-SENSOR: Frame OK: Min=2889 Max=3497[0m
+[0;32mI (22597) MLX-SENSOR: Frame OK: Min=2992 Max=3521[0m
+[0;32mI (22857) MLX-SENSOR: Frame OK: Min=2992 Max=3534[0m
+[0;32mI (23107) MLX-SENSOR: Frame OK: Min=3007 Max=3534[0m
+[0;32mI (23367) MLX-SENSOR: Frame OK: Min=3014 Max=3533[0m
+[0;32mI (23617) MLX-SENSOR: Frame OK: Min=2929 Max=3489[0m
+[0;32mI (23877) MLX-SENSOR: Frame OK: Min=2929 Max=3412[0m
+[0;32mI (24127) MLX-SENSOR: Frame OK: Min=2944 Max=3512[0m
+[0;32mI (24387) MLX-SENSOR: Frame OK: Min=2918 Max=3551[0m
+[0;32mI (24637) MLX-SENSOR: Frame OK: Min=2918 Max=3603[0m
+[0;32mI (24897) MLX-SENSOR: Frame OK: Min=2977 Max=3603[0m
+[0;32mI (25147) MLX-SENSOR: Frame OK: Min=2977 Max=3564[0m
+[0;32mI (25407) MLX-SENSOR: Frame OK: Min=2972 Max=3541[0m
+[0;32mI (25667) MLX-SENSOR: Frame OK: Min=2972 Max=3533[0m
+[0;32mI (25917) MLX-SENSOR: Frame OK: Min=2999 Max=3597[0m
+[0;32mI (26177) MLX-SENSOR: Frame OK: Min=2999 Max=3597[0m
+[0;32mI (26427) MLX-SENSOR: Frame OK: Min=3011 Max=3578[0m
+[0;32mI (26687) MLX-SENSOR: Frame OK: Min=2934 Max=3512[0m
+[0;32mI (26937) MLX-SENSOR: Frame OK: Min=2870 Max=3443[0m
+[0;32mI (27197) MLX-SENSOR: Frame OK: Min=2870 Max=3440[0m
+[0;32mI (27447) MLX-SENSOR: Frame OK: Min=2825 Max=3440[0m
+[0;32mI (27707) MLX-SENSOR: Frame OK: Min=2805 Max=3415[0m
+[0;32mI (27957) MLX-SENSOR: Frame OK: Min=2805 Max=3415[0m
+[0;32mI (28217) MLX-SENSOR: Frame OK: Min=2838 Max=3413[0m
+[0;32mI (28467) MLX-SENSOR: Frame OK: Min=2838 Max=3413[0m
+[0;32mI (28727) MLX-SENSOR: Frame OK: Min=2818 Max=3413[0m
+[0;32mI (28987) MLX-SENSOR: Frame OK: Min=2818 Max=3410[0m
+[0;32mI (29237) MLX-SENSOR: Frame OK: Min=2827 Max=3410[0m
+[0;32mI (29497) MLX-SENSOR: Frame OK: Min=2827 Max=3409[0m
+[0;32mI (29747) MLX-SENSOR: Frame OK: Min=2783 Max=3409[0m
+[0;32mI (30007) MLX-SENSOR: Frame OK: Min=2783 Max=3367[0m
+[0;32mI (30257) MLX-SENSOR: Frame OK: Min=2814 Max=3367[0m
+[0;32mI (30517) MLX-SENSOR: Frame OK: Min=2827 Max=3397[0m
+[0;32mI (30767) MLX-SENSOR: Frame OK: Min=2844 Max=3397[0m
+[0;32mI (31027) MLX-SENSOR: Frame OK: Min=2824 Max=3397[0m
+[0;32mI (31277) MLX-SENSOR: Frame OK: Min=2824 Max=3381[0m
+[0;32mI (31537) MLX-SENSOR: Frame OK: Min=2834 Max=3426[0m
+[0;32mI (31787) MLX-SENSOR: Frame OK: Min=2836 Max=3426[0m
+[0;32mI (32047) MLX-SENSOR: Frame OK: Min=2814 Max=3425[0m
+[0;32mI (32307) MLX-SENSOR: Frame OK: Min=2812 Max=3410[0m
+[0;32mI (32557) MLX-SENSOR: Frame OK: Min=2812 Max=3410[0m
+[0;32mI (32817) MLX-SENSOR: Frame OK: Min=2856 Max=3412[0m
+[0;32mI (33067) MLX-SENSOR: Frame OK: Min=2839 Max=3412[0m
+[0;32mI (33327) MLX-SENSOR: Frame OK: Min=2839 Max=3409[0m
+[0;32mI (33577) MLX-SENSOR: Frame OK: Min=2832 Max=3409[0m
+[0;32mI (33837) MLX-SENSOR: Frame OK: Min=2832 Max=3437[0m
+[0;32mI (34087) MLX-SENSOR: Frame OK: Min=2842 Max=3437[0m
+[0;32mI (34347) MLX-SENSOR: Frame OK: Min=2798 Max=3436[0m
+[0;32mI (34597) MLX-SENSOR: Frame OK: Min=2798 Max=3423[0m
+[0;32mI (34857) MLX-SENSOR: Frame OK: Min=2813 Max=3423[0m
+[0;32mI (35107) MLX-SENSOR: Frame OK: Min=2813 Max=3418[0m
+[0;32mI (35367) MLX-SENSOR: Frame OK: Min=2836 Max=3418[0m
+[0;32mI (35627) MLX-SENSOR: Frame OK: Min=2820 Max=3404[0m
+[0;32mI (35877) MLX-SENSOR: Frame OK: Min=2820 Max=3421[0m
+[0;32mI (36137) MLX-SENSOR: Frame OK: Min=2836 Max=3421[0m
+[0;32mI (36387) MLX-SENSOR: Frame OK: Min=2836 Max=3421[0m
+[0;32mI (36647) MLX-SENSOR: Frame OK: Min=2843 Max=3421[0m
+[0;32mI (36897) MLX-SENSOR: Frame OK: Min=2855 Max=3408[0m
+[0;32mI (37157) MLX-SENSOR: Frame OK: Min=2851 Max=3408[0m
+[0;32mI (37407) MLX-SENSOR: Frame OK: Min=2843 Max=3404[0m
+[0;32mI (37667) MLX-SENSOR: Frame OK: Min=2843 Max=3379[0m
+[0;32mI (37917) MLX-SENSOR: Frame OK: Min=2852 Max=3422[0m
+[0;32mI (38177) MLX-SENSOR: Frame OK: Min=2856 Max=3422[0m
+[0;32mI (38427) MLX-SENSOR: Frame OK: Min=2832 Max=3421[0m
+[0;32mI (38687) MLX-SENSOR: Frame OK: Min=2825 Max=3391[0m
+[0;32mI (38937) MLX-SENSOR: Frame OK: Min=2817 Max=3419[0m
+[0;32mI (39197) MLX-SENSOR: Frame OK: Min=2817 Max=3419[0m
+[0;32mI (39457) MLX-SENSOR: Frame OK: Min=2813 Max=3406[0m
+[0;32mI (39707) MLX-SENSOR: Frame OK: Min=2813 Max=3421[0m
+[0;32mI (39967) MLX-SENSOR: Frame OK: Min=2838 Max=3421[0m
+[0;32mI (40217) MLX-SENSOR: Frame OK: Min=2838 Max=3408[0m
+[0;32mI (40477) MLX-SENSOR: Frame OK: Min=2814 Max=3408[0m
+[0;32mI (40727) MLX-SENSOR: Frame OK: Min=2811 Max=3368[0m
+[0;32mI (40987) MLX-SENSOR: Frame OK: Min=2811 Max=3393[0m
+[0;32mI (41237) MLX-SENSOR: Frame OK: Min=2866 Max=3393[0m
+[0;32mI (41497) MLX-SENSOR: Frame OK: Min=2824 Max=3392[0m
+[0;32mI (41747) MLX-SENSOR: Frame OK: Min=2824 Max=3417[0m
+[0;32mI (42007) MLX-SENSOR: Frame OK: Min=2835 Max=3417[0m
+[0;32mI (42257) MLX-SENSOR: Frame OK: Min=2835 Max=3423[0m
+[0;32mI (42517) MLX-SENSOR: Frame OK: Min=2865 Max=3426[0m
+[0;32mI (42777) MLX-SENSOR: Frame OK: Min=2834 Max=3426[0m
+[0;32mI (43027) MLX-SENSOR: Frame OK: Min=2816 Max=3423[0m
+[0;32mI (43287) MLX-SENSOR: Frame OK: Min=2816 Max=3423[0m
+[0;32mI (43537) MLX-SENSOR: Frame OK: Min=2819 Max=3422[0m
+[0;32mI (43797) MLX-SENSOR: Frame OK: Min=2893 Max=3422[0m
+[0;32mI (44047) MLX-SENSOR: Frame OK: Min=2915 Max=3423[0m
+[0;32mI (44307) MLX-SENSOR: Frame OK: Min=2886 Max=3423[0m
+[0;32mI (44557) MLX-SENSOR: Frame OK: Min=2886 Max=3393[0m
+[0;32mI (44817) MLX-SENSOR: Frame OK: Min=2839 Max=3393[0m
+[0;32mI (45067) MLX-SENSOR: Frame OK: Min=2839 Max=3453[0m
+[0;32mI (45327) MLX-SENSOR: Frame OK: Min=2920 Max=3454[0m
+[0;32mI (45577) MLX-SENSOR: Frame OK: Min=3016 Max=3520[0m
+[0;32mI (45837) MLX-SENSOR: Frame OK: Min=2926 Max=3520[0m
+[0;32mI (46087) MLX-SENSOR: Frame OK: Min=2919 Max=3452[0m
+[0;32mI (46347) MLX-SENSOR: Frame OK: Min=2919 Max=3460[0m
+[0;32mI (46607) MLX-SENSOR: Frame OK: Min=2916 Max=3460[0m
+[0;32mI (46857) MLX-SENSOR: Frame OK: Min=2916 Max=3475[0m
+[0;32mI (47117) MLX-SENSOR: Frame OK: Min=2955 Max=3475[0m
+[0;32mI (47367) MLX-SENSOR: Frame OK: Min=3000 Max=3467[0m
+[0;32mI (47627) MLX-SENSOR: Frame OK: Min=3003 Max=3475[0m
+[0;32mI (47877) MLX-SENSOR: Frame OK: Min=2880 Max=3481[0m
+[0;32mI (48137) MLX-SENSOR: Frame OK: Min=2880 Max=3481[0m
+[0;32mI (48387) MLX-SENSOR: Frame OK: Min=2958 Max=3468[0m
+[0;32mI (48647) MLX-SENSOR: Frame OK: Min=2923 Max=3454[0m
+[0;32mI (48897) MLX-SENSOR: Frame OK: Min=2868 Max=3470[0m
+[0;32mI (49157) MLX-SENSOR: Frame OK: Min=2868 Max=3470[0m
+[0;32mI (49407) MLX-SENSOR: Frame OK: Min=2869 Max=3440[0m
+[0;32mI (49667) MLX-SENSOR: Frame OK: Min=2817 Max=3439[0m
+[0;32mI (49927) MLX-SENSOR: Frame OK: Min=2803 Max=3373[0m
+[0;32mI (50177) MLX-SENSOR: Frame OK: Min=2803 Max=3387[0m
+[0;32mI (50437) MLX-SENSOR: Frame OK: Min=2807 Max=3387[0m
+[0;32mI (50687) MLX-SENSOR: Frame OK: Min=2807 Max=3387[0m
+[0;32mI (50947) MLX-SENSOR: Frame OK: Min=2836 Max=3389[0m
+[0;32mI (51197) MLX-SENSOR: Frame OK: Min=2836 Max=3390[0m
+[0;32mI (51457) MLX-SENSOR: Frame OK: Min=2851 Max=3402[0m
+[0;32mI (51707) MLX-SENSOR: Frame OK: Min=2856 Max=3402[0m
+[0;32mI (51967) MLX-SENSOR: Frame OK: Min=2814 Max=3387[0m
+[0;32mI (52217) MLX-SENSOR: Frame OK: Min=2814 Max=3401[0m
+[0;32mI (52477) MLX-SENSOR: Frame OK: Min=2779 Max=3401[0m
+[0;32mI (52727) MLX-SENSOR: Frame OK: Min=2779 Max=3413[0m
+[0;32mI (52987) MLX-SENSOR: Frame OK: Min=2821 Max=3413[0m
+[0;32mI (53237) MLX-SENSOR: Frame OK: Min=2833 Max=3412[0m
+[0;32mI (53497) MLX-SENSOR: Frame OK: Min=2840 Max=3412[0m
+[0;32mI (53757) MLX-SENSOR: Frame OK: Min=2809 Max=3433[0m
+[0;32mI (54007) MLX-SENSOR: Frame OK: Min=2791 Max=3477[0m
+[0;32mI (54267) MLX-SENSOR: Frame OK: Min=2760 Max=3477[0m
+[0;32mI (54517) MLX-SENSOR: Frame OK: Min=2760 Max=3444[0m
+[0;32mI (54777) MLX-SENSOR: Frame OK: Min=2791 Max=3444[0m
+[0;32mI (55027) MLX-SENSOR: Frame OK: Min=2792 Max=3444[0m
+[0;32mI (55287) MLX-SENSOR: Frame OK: Min=2744 Max=3414[0m
+[0;32mI (55537) MLX-SENSOR: Frame OK: Min=2744 Max=3414[0m
+[0;32mI (55797) MLX-SENSOR: Frame OK: Min=2717 Max=3414[0m
+[0;32mI (56047) MLX-SENSOR: Frame OK: Min=2717 Max=3417[0m
+[0;32mI (56307) MLX-SENSOR: Frame OK: Min=2780 Max=3427[0m
+[0;32mI (56557) MLX-SENSOR: Frame OK: Min=2791 Max=3427[0m
+[0;32mI (56817) MLX-SENSOR: Frame OK: Min=2791 Max=3403[0m
+[0;32mI (57077) MLX-SENSOR: Frame OK: Min=2792 Max=3400[0m
+[0;32mI (57327) MLX-SENSOR: Frame OK: Min=2792 Max=3400[0m
+[0;32mI (57587) MLX-SENSOR: Frame OK: Min=2792 Max=3386[0m
+[0;32mI (57837) MLX-SENSOR: Frame OK: Min=2817 Max=3414[0m
+[0;32mI (58097) MLX-SENSOR: Frame OK: Min=2823 Max=3414[0m
+[0;32mI (58347) MLX-SENSOR: Frame OK: Min=2835 Max=3428[0m
+[0;32mI (58607) MLX-SENSOR: Frame OK: Min=2835 Max=3428[0m
+[0;32mI (58857) MLX-SENSOR: Frame OK: Min=2837 Max=3402[0m
+[0;32mI (59117) MLX-SENSOR: Frame OK: Min=2846 Max=3402[0m
+[0;32mI (59367) MLX-SENSOR: Frame OK: Min=2842 Max=3399[0m
+[0;32mI (59627) MLX-SENSOR: Frame OK: Min=2836 Max=3399[0m
+[0;32mI (59877) MLX-SENSOR: Frame OK: Min=2804 Max=3399[0m
+[0;32mI (60137) MLX-SENSOR: Frame OK: Min=2804 Max=3427[0m
+[0;32mI (60387) MLX-SENSOR: Frame OK: Min=2792 Max=3427[0m
+[0;32mI (60647) MLX-SENSOR: Frame OK: Min=2792 Max=3453[0m
+[0;32mI (60907) MLX-SENSOR: Frame OK: Min=2790 Max=3453[0m
+[0;32mI (61157) MLX-SENSOR: Frame OK: Min=2788 Max=3413[0m
+[0;32mI (61417) MLX-SENSOR: Frame OK: Min=2774 Max=3413[0m
+[0;32mI (61667) MLX-SENSOR: Frame OK: Min=2774 Max=3402[0m
+[0;32mI (61927) MLX-SENSOR: Frame OK: Min=2789 Max=3411[0m
+[0;32mI (62177) MLX-SENSOR: Frame OK: Min=2791 Max=3411[0m
+[0;32mI (62437) MLX-SENSOR: Frame OK: Min=2864 Max=3433[0m
+[0;32mI (62687) MLX-SENSOR: Frame OK: Min=2857 Max=3433[0m
+[0;32mI (62947) MLX-SENSOR: Frame OK: Min=2806 Max=3425[0m
+[0;32mI (63197) MLX-SENSOR: Frame OK: Min=2806 Max=3397[0m
+[0;32mI (63457) MLX-SENSOR: Frame OK: Min=2827 Max=3410[0m
+[0;32mI (63707) MLX-SENSOR: Frame OK: Min=2827 Max=3426[0m
+[0;32mI (63967) MLX-SENSOR: Frame OK: Min=2847 Max=3427[0m
+[0;32mI (64217) MLX-SENSOR: Frame OK: Min=2845 Max=3427[0m
+[0;32mI (64477) MLX-SENSOR: Frame OK: Min=2826 Max=3411[0m
+[0;32mI (64737) MLX-SENSOR: Frame OK: Min=2826 Max=3425[0m
+[0;32mI (64987) MLX-SENSOR: Frame OK: Min=2829 Max=3425[0m
+[0;32mI (65247) MLX-SENSOR: Frame OK: Min=2836 Max=3425[0m
+[0;32mI (65497) MLX-SENSOR: Frame OK: Min=2827 Max=3425[0m
+[0;32mI (65757) MLX-SENSOR: Frame OK: Min=2827 Max=3401[0m
+[0;32mI (66007) MLX-SENSOR: Frame OK: Min=2838 Max=3401[0m
+[0;32mI (66267) MLX-SENSOR: Frame OK: Min=2845 Max=3398[0m
+[0;32mI (66517) MLX-SENSOR: Frame OK: Min=2845 Max=3409[0m
+[0;32mI (66777) MLX-SENSOR: Frame OK: Min=2845 Max=3414[0m
+[0;32mI (67027) MLX-SENSOR: Frame OK: Min=2888 Max=3426[0m
+[0;32mI (67287) MLX-SENSOR: Frame OK: Min=2866 Max=3426[0m
+[0;32mI (67537) MLX-SENSOR: Frame OK: Min=2829 Max=3346[0m
+[0;32mI (67797) MLX-SENSOR: Frame OK: Min=2829 Max=3371[0m
+[0;32mI (68047) MLX-SENSOR: Frame OK: Min=2841 Max=3415[0m
+[0;32mI (68307) MLX-SENSOR: Frame OK: Min=2846 Max=3548[0m
+[0;32mI (68567) MLX-SENSOR: Frame OK: Min=2874 Max=3548[0m
+[0;32mI (68817) MLX-SENSOR: Frame OK: Min=2867 Max=3533[0m
+[0;32mI (69077) MLX-SENSOR: Frame OK: Min=2867 Max=3507[0m
+[0;32mI (69327) MLX-SENSOR: Frame OK: Min=2847 Max=3507[0m
+[0;32mI (69587) MLX-SENSOR: Frame OK: Min=2847 Max=3493[0m
+[0;32mI (69837) MLX-SENSOR: Frame OK: Min=2868 Max=3484[0m
+[0;32mI (70097) MLX-SENSOR: Frame OK: Min=2866 Max=3477[0m
+[0;32mI (70347) MLX-SENSOR: Frame OK: Min=2862 Max=3493[0m
+[0;32mI (70607) MLX-SENSOR: Frame OK: Min=2834 Max=3493[0m
+[0;32mI (70857) MLX-SENSOR: Frame OK: Min=2834 Max=3472[0m
+[0;32mI (71117) MLX-SENSOR: Frame OK: Min=2844 Max=3480[0m
+[0;32mI (71367) MLX-SENSOR: Frame OK: Min=2825 Max=3480[0m
+[0;32mI (71627) MLX-SENSOR: Frame OK: Min=2825 Max=3485[0m
+[0;32mI (71877) MLX-SENSOR: Frame OK: Min=2858 Max=3507[0m
+[0;32mI (72137) MLX-SENSOR: Frame OK: Min=2863 Max=3513[0m
+[0;32mI (72397) MLX-SENSOR: Frame OK: Min=2854 Max=3527[0m
+[0;32mI (72647) MLX-SENSOR: Frame OK: Min=2854 Max=3527[0m
+[0;32mI (72907) MLX-SENSOR: Frame OK: Min=2882 Max=3393[0m
+[0;32mI (73157) MLX-SENSOR: Frame OK: Min=2863 Max=3344[0m
+[0;32mI (73417) MLX-SENSOR: Frame OK: Min=2863 Max=3315[0m
+[0;32mI (73667) MLX-SENSOR: Frame OK: Min=2875 Max=3331[0m
+[0;32mI (73927) MLX-SENSOR: Frame OK: Min=2820 Max=3331[0m
+[0;32mI (74177) MLX-SENSOR: Frame OK: Min=2820 Max=3300[0m
+[0;32mI (74437) MLX-SENSOR: Frame OK: Min=2836 Max=3329[0m
+[0;32mI (74687) MLX-SENSOR: Frame OK: Min=2836 Max=3329[0m
+[0;32mI (74947) MLX-SENSOR: Frame OK: Min=2850 Max=3329[0m
+[0;32mI (75197) MLX-SENSOR: Frame OK: Min=2853 Max=3329[0m
+[0;32mI (75457) MLX-SENSOR: Frame OK: Min=2808 Max=3333[0m
+[0;32mI (75707) MLX-SENSOR: Frame OK: Min=2808 Max=3333[0m
+[0;32mI (75967) MLX-SENSOR: Frame OK: Min=2810 Max=3332[0m
+[0;32mI (76227) MLX-SENSOR: Frame OK: Min=2819 Max=3332[0m
+[0;32mI (76477) MLX-SENSOR: Frame OK: Min=2819 Max=3370[0m
+[0;32mI (76737) MLX-SENSOR: Frame OK: Min=2832 Max=3370[0m
+[0;32mI (76987) MLX-SENSOR: Frame OK: Min=2832 Max=3345[0m
+[0;32mI (77247) MLX-SENSOR: Frame OK: Min=2848 Max=3345[0m
+[0;32mI (77497) MLX-SENSOR: Frame OK: Min=2815 Max=3287[0m
+[0;32mI (77757) MLX-SENSOR: Frame OK: Min=2815 Max=3309[0m
+[0;32mI (78007) MLX-SENSOR: Frame OK: Min=2802 Max=3346[0m
+[0;32mI (78267) MLX-SENSOR: Frame OK: Min=2761 Max=3346[0m
+[0;32mI (78517) MLX-SENSOR: Frame OK: Min=-3828 Max=32524[0m
+[0;32mI (78777) MLX-SENSOR: Frame OK: Min=2773 Max=3337[0m
+[0;32mI (79027) MLX-SENSOR: Frame OK: Min=2784 Max=3311[0m
+[0;32mI (79287) MLX-SENSOR: Frame OK: Min=2784 Max=3328[0m
+[0;32mI (79537) MLX-SENSOR: Frame OK: Min=2769 Max=3328[0m
+[0;32mI (79797) MLX-SENSOR: Frame OK: Min=2760 Max=3310[0m
+[0;32mI (80057) MLX-SENSOR: Frame OK: Min=2760 Max=3326[0m
+[0;32mI (80307) MLX-SENSOR: Frame OK: Min=2784 Max=3346[0m
+[0;32mI (80567) MLX-SENSOR: Frame OK: Min=2789 Max=3346[0m
+[0;32mI (80817) MLX-SENSOR: Frame OK: Min=-3829 Max=32524[0m
+[0;32mI (81077) MLX-SENSOR: Frame OK: Min=2779 Max=3337[0m
+[0;32mI (81327) MLX-SENSOR: Frame OK: Min=2779 Max=3327[0m
+[0;32mI (81587) MLX-SENSOR: Frame OK: Min=2828 Max=3327[0m
+[0;32mI (81837) MLX-SENSOR: Frame OK: Min=2862 Max=3327[0m
+[0;32mI (82097) MLX-SENSOR: Frame OK: Min=2862 Max=3332[0m
+[0;32mI (82347) MLX-SENSOR: Frame OK: Min=2852 Max=3332[0m
+[0;32mI (82607) MLX-SENSOR: Frame OK: Min=2852 Max=3327[0m
+[0;32mI (82857) MLX-SENSOR: Frame OK: Min=2828 Max=3385[0m
+[0;32mI (83117) MLX-SENSOR: Frame OK: Min=2828 Max=3385[0m
+[0;32mI (83367) MLX-SENSOR: Frame OK: Min=2824 Max=3315[0m
+[0;32mI (83627) MLX-SENSOR: Frame OK: Min=2792 Max=3343[0m
+[0;32mI (83887) MLX-SENSOR: Frame OK: Min=2792 Max=3343[0m
+[0;32mI (84137) MLX-SENSOR: Frame OK: Min=2821 Max=3328[0m
+[0;32mI (84397) MLX-SENSOR: Frame OK: Min=2821 Max=3339[0m
+[0;32mI (84647) MLX-SENSOR: Frame OK: Min=2817 Max=3339[0m
+[0;32mI (84907) MLX-SENSOR: Frame OK: Min=2817 Max=3341[0m
+[0;32mI (85157) MLX-SENSOR: Frame OK: Min=2853 Max=3342[0m
+[0;32mI (85417) MLX-SENSOR: Frame OK: Min=2835 Max=3342[0m
+[0;32mI (85667) MLX-SENSOR: Frame OK: Min=2835 Max=3340[0m
+[0;32mI (85927) MLX-SENSOR: Frame OK: Min=2854 Max=3340[0m
+[0;32mI (86177) MLX-SENSOR: Frame OK: Min=2854 Max=3371[0m
+[0;32mI (86437) MLX-SENSOR: Frame OK: Min=2852 Max=3371[0m
+[0;32mI (86687) MLX-SENSOR: Frame OK: Min=2852 Max=3367[0m
+[0;32mI (86947) MLX-SENSOR: Frame OK: Min=2855 Max=3355[0m
+[0;32mI (87197) MLX-SENSOR: Frame OK: Min=2829 Max=3331[0m
+[0;32mI (87457) MLX-SENSOR: Frame OK: Min=2780 Max=3331[0m
+[0;32mI (87717) MLX-SENSOR: Frame OK: Min=2780 Max=3331[0m
+[0;32mI (87967) MLX-SENSOR: Frame OK: Min=2808 Max=3342[0m
+[0;32mI (88227) MLX-SENSOR: Frame OK: Min=2842 Max=3342[0m
+[0;32mI (88477) MLX-SENSOR: Frame OK: Min=2842 Max=3327[0m
+[0;32mI (88737) MLX-SENSOR: Frame OK: Min=2842 Max=3327[0m
+[0;32mI (88987) MLX-SENSOR: Frame OK: Min=2815 Max=3345[0m
+[0;32mI (89247) MLX-SENSOR: Frame OK: Min=2815 Max=3346[0m
+[0;32mI (89497) MLX-SENSOR: Frame OK: Min=2822 Max=3373[0m
+[0;32mI (89757) MLX-SENSOR: Frame OK: Min=2841 Max=3373[0m
+[0;32mI (90007) MLX-SENSOR: Frame OK: Min=2815 Max=3341[0m
+[0;32mI (90267) MLX-SENSOR: Frame OK: Min=2815 Max=3358[0m
+[0;32mI (90517) MLX-SENSOR: Frame OK: Min=2825 Max=3358[0m
+[0;32mI (90777) MLX-SENSOR: Frame OK: Min=2825 Max=3356[0m
+[0;32mI (91027) MLX-SENSOR: Frame OK: Min=2866 Max=3360[0m
+[0;32mI (91287) MLX-SENSOR: Frame OK: Min=2859 Max=3360[0m
+[0;32mI (91547) MLX-SENSOR: Frame OK: Min=2859 Max=3345[0m
+[0;32mI (91797) MLX-SENSOR: Frame OK: Min=2863 Max=3331[0m
+[0;32mI (92057) MLX-SENSOR: Frame OK: Min=2840 Max=3331[0m
+[0;32mI (92307) MLX-SENSOR: Frame OK: Min=2840 Max=3345[0m
+[0;32mI (92567) MLX-SENSOR: Frame OK: Min=2867 Max=3347[0m
+[0;32mI (92817) MLX-SENSOR: Frame OK: Min=2836 Max=3376[0m
+[0;32mI (93077) MLX-SENSOR: Frame OK: Min=2836 Max=3379[0m
+[0;32mI (93327) MLX-SENSOR: Frame OK: Min=2858 Max=3379[0m
+[0;32mI (93587) MLX-SENSOR: Frame OK: Min=2853 Max=3347[0m
+[0;32mI (93837) MLX-SENSOR: Frame OK: Min=2853 Max=3347[0m
+[0;32mI (94097) MLX-SENSOR: Frame OK: Min=2848 Max=3395[0m
+[0;32mI (94347) MLX-SENSOR: Frame OK: Min=2848 Max=3395[0m
+[0;32mI (94607) MLX-SENSOR: Frame OK: Min=2862 Max=3358[0m
+[0;32mI (94857) MLX-SENSOR: Frame OK: Min=2887 Max=3358[0m
+[0;32mI (95117) MLX-SENSOR: Frame OK: Min=2891 Max=3372[0m
+[0;32mI (95377) MLX-SENSOR: Frame OK: Min=2878 Max=3374[0m
+[0;32mI (95627) MLX-SENSOR: Frame OK: Min=2878 Max=3403[0m
+[0;32mI (95887) MLX-SENSOR: Frame OK: Min=2852 Max=3403[0m
+[0;32mI (96137) MLX-SENSOR: Frame OK: Min=2838 Max=3383[0m
+[0;32mI (96397) MLX-SENSOR: Frame OK: Min=2838 Max=3383[0m
+[0;32mI (96647) MLX-SENSOR: Frame OK: Min=2817 Max=3369[0m
+[0;32mI (96907) MLX-SENSOR: Frame OK: Min=2817 Max=3369[0m
+[0;32mI (97157) MLX-SENSOR: Frame OK: Min=2794 Max=3383[0m
+[0;32mI (97417) MLX-SENSOR: Frame OK: Min=2794 Max=3394[0m
+[0;32mI (97667) MLX-SENSOR: Frame OK: Min=2756 Max=3394[0m
+[0;32mI (97927) MLX-SENSOR: Frame OK: Min=2756 Max=3381[0m
+[0;32mI (98177) MLX-SENSOR: Frame OK: Min=2797 Max=3381[0m
+[0;32mI (98437) MLX-SENSOR: Frame OK: Min=2771 Max=3355[0m
+[0;32mI (98687) MLX-SENSOR: Frame OK: Min=2771 Max=3384[0m
+[0;32mI (98947) MLX-SENSOR: Frame OK: Min=2755 Max=3384[0m
+[0;32mI (99207) MLX-SENSOR: Frame OK: Min=2755 Max=3384[0m
+[0;32mI (99457) MLX-SENSOR: Frame OK: Min=2771 Max=3384[0m
+[0;32mI (99717) MLX-SENSOR: Frame OK: Min=2771 Max=3382[0m
+[0;32mI (99967) MLX-SENSOR: Frame OK: Min=2787 Max=3395[0m
+[0;32mI (100227) MLX-SENSOR: Frame OK: Min=2787 Max=3395[0m
+[0;32mI (100477) MLX-SENSOR: Frame OK: Min=2786 Max=3381[0m
+[0;32mI (100737) MLX-SENSOR: Frame OK: Min=2723 Max=3367[0m
+[0;32mI (100987) MLX-SENSOR: Frame OK: Min=2723 Max=3354[0m
+[0;32mI (101247) MLX-SENSOR: Frame OK: Min=2754 Max=3382[0m
+[0;32mI (101497) MLX-SENSOR: Frame OK: Min=2738 Max=3382[0m
+[0;32mI (101757) MLX-SENSOR: Frame OK: Min=2738 Max=3382[0m
+[0;32mI (102007) MLX-SENSOR: Frame OK: Min=2755 Max=3395[0m
+[0;32mI (102267) MLX-SENSOR: Frame OK: Min=2770 Max=3395[0m
+[0;32mI (102517) MLX-SENSOR: Frame OK: Min=2770 Max=3396[0m
+[0;32mI (102777) MLX-SENSOR: Frame OK: Min=2770 Max=3396[0m
+[0;32mI (103037) MLX-SENSOR: Frame OK: Min=2772 Max=3383[0m
+[0;32mI (103287) MLX-SENSOR: Frame OK: Min=2725 Max=3396[0m
+[0;32mI (103547) MLX-SENSOR: Frame OK: Min=2725 Max=3396[0m
+[0;32mI (103797) MLX-SENSOR: Frame OK: Min=2756 Max=3381[0m
+[0;32mI (104057) MLX-SENSOR: Frame OK: Min=2756 Max=3380[0m
+[0;32mI (104307) MLX-SENSOR: Frame OK: Min=2787 Max=3381[0m
+[0;32mI (104567) MLX-SENSOR: Frame OK: Min=2770 Max=3381[0m
+[0;32mI (104817) MLX-SENSOR: Frame OK: Min=2756 Max=3382[0m
+[0;32mI (105077) MLX-SENSOR: Frame OK: Min=2722 Max=3382[0m
+[0;32mI (105327) MLX-SENSOR: Frame OK: Min=2722 Max=3381[0m
+[0;32mI (105587) MLX-SENSOR: Frame OK: Min=2755 Max=3381[0m
+���������������������������������������������������������������� Min=2740 Max=3368
+[0;32mI (106097) MLX-SENSOR: Frame OK: Min=2740 Max=3395[0m
+[0;32mI (106347) MLX-SENSOR: Frame OK: Min=2771 Max=3395[0m
+[0;32mI (106607) MLX-SENSOR: Frame OK: Min=2769 Max=3381[0m
+[0;32mI (106867) MLX-SENSOR: Frame OK: Min=2769 Max=3395[0m
+[0;32mI (107117) MLX-SENSOR: Frame OK: Min=2722 Max=3395[0m
+[0;32mI (107377) MLX-SENSOR: Frame OK: Min=2722 Max=3381[0m
+[0;32mI (107627) MLX-SENSOR: Frame OK: Min=2754 Max=3370[0m
+[0;32mI (107887) MLX-SENSOR: Frame OK: Min=2754 Max=3367[0m
+[0;32mI (108137) MLX-SENSOR: Frame OK: Min=2783 Max=3403[0m
+[0;32mI (108397) MLX-SENSOR: Frame OK: Min=2803 Max=3403[0m
+[0;32mI (108647) MLX-SENSOR: Frame OK: Min=2786 Max=3380[0m
+[0;32mI (108907) MLX-SENSOR: Frame OK: Min=2786 Max=3380[0m
+[0;32mI (109157) MLX-SENSOR: Frame OK: Min=2808 Max=3370[0m
+[0;32mI (109417) MLX-SENSOR: Frame OK: Min=2818 Max=3383[0m
+[0;32mI (109667) MLX-SENSOR: Frame OK: Min=2802 Max=3394[0m
+[0;32mI (109927) MLX-SENSOR: Frame OK: Min=2802 Max=3394[0m
+[0;32mI (110177) MLX-SENSOR: Frame OK: Min=2786 Max=3381[0m
+[0;32mI (110437) MLX-SENSOR: Frame OK: Min=2786 Max=3381[0m
+[0;32mI (110697) MLX-SENSOR: Frame OK: Min=2818 Max=3395[0m
+[0;32mI (110947) MLX-SENSOR: Frame OK: Min=2804 Max=3395[0m
+[0;32mI (111207) MLX-SENSOR: Frame OK: Min=2804 Max=3393[0m
+[0;32mI (111457) MLX-SENSOR: Frame OK: Min=2808 Max=3393[0m
+[0;32mI (111717) MLX-SENSOR: Frame OK: Min=2770 Max=3367[0m
+[0;32mI (111967) MLX-SENSOR: Frame OK: Min=2770 Max=3379[0m
+[0;32mI (112227) MLX-SENSOR: Frame OK: Min=2788 Max=3381[0m
+[0;32mI (112477) MLX-SENSOR: Frame OK: Min=2798 Max=3381[0m
+[0;32mI (112737) MLX-SENSOR: Frame OK: Min=2787 Max=3393[0m
+[0;32mI (112987) MLX-SENSOR: Frame OK: Min=2787 Max=3407[0m
+[0;32mI (113247) MLX-SENSOR: Frame OK: Min=2785 Max=3407[0m
+[0;32mI (113497) MLX-SENSOR: Frame OK: Min=2785 Max=3381[0m
+[0;32mI (113757) MLX-SENSOR: Frame OK: Min=2809 Max=3394[0m
+[0;32mI (114007) MLX-SENSOR: Frame OK: Min=2809 Max=3394[0m
+[0;32mI (114267) MLX-SENSOR: Frame OK: Min=2802 Max=3395[0m
+[0;32mI (114517) MLX-SENSOR: Frame OK: Min=2795 Max=3395[0m
+[0;32mI (114777) MLX-SENSOR: Frame OK: Min=2795 Max=3395[0m
+[0;32mI (115037) MLX-SENSOR: Frame OK: Min=2801 Max=3422[0m
+[0;32mI (115287) MLX-SENSOR: Frame OK: Min=2801 Max=3422[0m
+[0;32mI (115547) MLX-SENSOR: Frame OK: Min=2801 Max=3408[0m
+[0;32mI (115797) MLX-SENSOR: Frame OK: Min=2802 Max=3408[0m
+[0;32mI (116057) MLX-SENSOR: Frame OK: Min=2802 Max=3382[0m
+[0;32mI (116307) MLX-SENSOR: Frame OK: Min=2770 Max=3367[0m
+[0;32mI (116567) MLX-SENSOR: Frame OK: Min=2770 Max=3405[0m
+[0;32mI (116817) MLX-SENSOR: Frame OK: Min=2738 Max=3405[0m
+[0;32mI (117077) MLX-SENSOR: Frame OK: Min=2738 Max=3366[0m
+[0;32mI (117327) MLX-SENSOR: Frame OK: Min=2755 Max=3379[0m
+[0;32mI (117587) MLX-SENSOR: Frame OK: Min=2743 Max=3379[0m
+[0;32mI (117837) MLX-SENSOR: Frame OK: Min=2743 Max=3344[0m
+[0;32mI (118097) MLX-SENSOR: Frame OK: Min=2811 Max=3344[0m
+[0;32mI (118347) MLX-SENSOR: Frame OK: Min=2811 Max=3352[0m
+[0;32mI (118607) MLX-SENSOR: Frame OK: Min=2830 Max=3368[0m
+[0;32mI (118867) MLX-SENSOR: Frame OK: Min=2839 Max=3385[0m
+[0;32mI (119117) MLX-SENSOR: Frame OK: Min=2839 Max=3385[0m
+[0;32mI (119377) MLX-SENSOR: Frame OK: Min=2845 Max=3383[0m
+[0;32mI (119627) MLX-SENSOR: Frame OK: Min=2858 Max=3411[0m
+[0;32mI (119887) MLX-SENSOR: Frame OK: Min=2853 Max=3411[0m
+[0;32mI (120137) MLX-SENSOR: Frame OK: Min=2853 Max=3371[0m
+[0;32mI (120397) MLX-SENSOR: Frame OK: Min=2840 Max=3371[0m
+[0;32mI (120647) MLX-SENSOR: Frame OK: Min=2840 Max=3382[0m
+[0;32mI (120907) MLX-SENSOR: Frame OK: Min=2834 Max=3382[0m
+[0;32mI (121157) MLX-SENSOR: Frame OK: Min=2834 Max=3366[0m
+[0;32mI (121417) MLX-SENSOR: Frame OK: Min=2873 Max=3366[0m
+[0;32mI (121667) MLX-SENSOR: Frame OK: Min=2874 Max=3373[0m
+[0;32mI (121927) MLX-SENSOR: Frame OK: Min=2876 Max=3373[0m
+[0;32mI (122177) MLX-SENSOR: Frame OK: Min=2849 Max=3381[0m
+[0;32mI (122437) MLX-SENSOR: Frame OK: Min=2849 Max=3414[0m
+[0;32mI (122697) MLX-SENSOR: Frame OK: Min=2846 Max=3436[0m
+[0;32mI (122947) MLX-SENSOR: Frame OK: Min=2846 Max=3452[0m
+[0;32mI (123207) MLX-SENSOR: Frame OK: Min=2867 Max=3452[0m
+[0;32mI (123457) MLX-SENSOR: Frame OK: Min=2871 Max=3452[0m
+[0;32mI (123717) MLX-SENSOR: Frame OK: Min=2799 Max=3451[0m
+[0;32mI (123967) MLX-SENSOR: Frame OK: Min=2799 Max=3450[0m
+[0;32mI (124227) MLX-SENSOR: Frame OK: Min=2871 Max=3457[0m
+[0;32mI (124477) MLX-SENSOR: Frame OK: Min=2827 Max=3457[0m
+[0;32mI (124737) MLX-SENSOR: Frame OK: Min=2827 Max=3400[0m
+[0;32mI (124987) MLX-SENSOR: Frame OK: Min=2849 Max=3451[0m
+[0;32mI (125247) MLX-SENSOR: Frame OK: Min=2844 Max=3451[0m
+[0;32mI (125497) MLX-SENSOR: Frame OK: Min=2844 Max=3444[0m
+[0;32mI (125757) MLX-SENSOR: Frame OK: Min=2846 Max=3444[0m
+[0;32mI (126007) MLX-SENSOR: Frame OK: Min=2852 Max=3443[0m
+[0;32mI (126267) MLX-SENSOR: Frame OK: Min=2852 Max=3443[0m
+[0;32mI (126527) MLX-SENSOR: Frame OK: Min=2852 Max=3476[0m
+[0;32mI (126777) MLX-SENSOR: Frame OK: Min=2907 Max=3497[0m
+[0;32mI (127037) MLX-SENSOR: Frame OK: Min=2907 Max=3526[0m
+[0;32mI (127287) MLX-SENSOR: Frame OK: Min=2898 Max=3526[0m
+[0;32mI (127547) MLX-SENSOR: Frame OK: Min=2897 Max=3340[0m
+[0;32mI (127797) MLX-SENSOR: Frame OK: Min=2887 Max=3401[0m
+[0;32mI (128057) MLX-SENSOR: Frame OK: Min=2887 Max=3408[0m
+[0;32mI (128307) MLX-SENSOR: Frame OK: Min=2904 Max=3581[0m
+[0;32mI (128567) MLX-SENSOR: Frame OK: Min=2908 Max=3581[0m
+[0;32mI (128817) MLX-SENSOR: Frame OK: Min=2853 Max=3452[0m
+[0;32mI (129077) MLX-SENSOR: Frame OK: Min=2793 Max=3452[0m
+[0;32mI (129327) MLX-SENSOR: Frame OK: Min=2793 Max=3404[0m
+[0;32mI (129587) MLX-SENSOR:Frame OK: Min=2858 Max=3586[0m
+[0;32mI (129847) MLX-SENSOR: Frame OK: Min=3106 Max=4278[0m
+[0;32mI (130097) MLX-SENSOR: Frame OK: Min=2936 Max=4278[0m
+[0;32mI (130357) MLX-SENSOR: Frame OK: Min=2936 Max=3628[0m
+[0;32mI (130607) MLX-SENSOR: Fame OK: Min=2814 Max=3628[0m
+[0;32mI (130867) MLX-SENSOR: Frame OK: Min=2814 Max=3383[0m

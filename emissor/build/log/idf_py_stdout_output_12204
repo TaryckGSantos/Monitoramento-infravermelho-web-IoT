@@ -1,0 +1,217 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec  6 2025 23:42:43[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=191fch (102908) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=00029224 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=00029248 vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (133) esp_image: segment 3: paddr=0002d228 vaddr=40080000 size=02df0h ( 11760) load[0m
+[0;32mI (139) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=7bc30h (506928) map[0m
+[0;32mI (315) esp_image: segment 5: paddr=000abc58 vaddr=40082df0 size=159b4h ( 88500) load[0m
+[0;32mI (362) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (362) boot: Disabling RNG early entropy source...[0m
+[0;32mI (372) cpu_start: Multicore app[0m
+[0;32mI (381) cpu_start: Pro cpu start user code[0m
+[0;32mI (381) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (381) app_init: Application information:[0m
+[0;32mI (381) app_init: Project name:     wifi_station[0m
+[0;32mI (385) app_init: App version:      e7bcc44-dirty[0m
+[0;32mI (390) app_init: Compile time:     Dec  6 2025 23:42:29[0m
+[0;32mI (395) app_init: ELF file SHA256:  6e355fefb...[0m
+[0;32mI (399) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (403) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (407) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (411) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (415) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (421) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (426) heap_init: At 3FFB90F8 len 00026F08 (155 KiB): DRAM[0m
+[0;32mI (431) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (436) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (442) heap_init: At 400987A4 len 0000785C (30 KiB): IRAM[0m
+[0;32mI (449) spi_flash: detected chip: generic[0m
+[0;32mI (451) spi_flash: flash io: dio[0m
+[0;33mW (454) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (507) wifi:wifi driver task: 3ffc10c8, prio:23, stack:6656, core=0[0m
+[0;32mI (517) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (517) wifi:wifi certification version: v7.0[0m
+[0;32mI (517) wifi:config NVS flash: enabled[0m
+[0;32mI (517) wifi:config nano formatting: disabled[0m
+[0;32mI (527) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (527) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (527) wifi:Init management short buffer num: 32[0m
+[0;32mI (537) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (547) wifi:Init static rx buffer num: 10[0m
+[0;32mI (547) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (557) wifi_init: rx ba win: 6[0m
+[0;32mI (557) wifi_init: accept mbox: 6[0m
+[0;32mI (557) wifi_init: tcpip mbox: 32[0m
+[0;32mI (557) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp tx win: 5760[0m
+[0;32mI (567) wifi_init: tcp rx win: 5760[0m
+[0;32mI (577) wifi_init: tcp mss: 1440[0m
+[0;32mI (577) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (577) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (587) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (637) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;33mW (637) phy_init: failed to load RF calibration data (0xffffffff), falling back to full calibration[0m
+[0;32mI (717) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;32mI (747) wifi:mode : sta (1c:69:20:32:06:84)[0m
+[0;32mI (747) wifi:enable tsf[0m
+[0;32mI (747) MLX-SENSOR: WiFi STA inicializado; conectando ao AP "Melk"[0m
+[0;32mI (747) MLX-SENSOR: UDP client pronto para enviar para 192.168.15.1:5005[0m
+[0;32mI (757) MLX-SENSOR: UART inicializada (num=1, TX=17, RX=16, baud=115200)[0m
+[0;32mI (757) main_task: Returned from app_main()[0m
+[0;32mI (997) MLX-SENSOR: Frame OK: Min=2817 Max=3388[0m
+[1;31mE (997) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (1257) MLX-SENSOR: Frame OK: Min=2809 Max=3387[0m
+[1;31mE (1257) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (1507) MLX-SENSOR: Frame OK: Min=2809 Max=3387[0m
+[1;31mE (1507) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (1767) MLX-SENSOR: Frame OK: Min=2775 Max=3387[0m
+[1;31mE (1767) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (1977) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1977) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1997) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2017) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2027) MLX-SENSOR: Frame OK: Min=2775 Max=3387[0m
+[1;31mE (2027) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (2147) wifi:connected with Melk, aid = 10, channel 11, BW20, bssid = e8:45:8b:5d:b5:38[0m
+[0;32mI (2147) wifi:security: WPA2-PSK, phy: bgn, rssi: -79[0m
+[0;32mI (2167) wifi:pm start, type: 1[0m
+
+[0;32mI (2167) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2197) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2277) MLX-SENSOR: Frame OK: Min=2827 Max=3387[0m
+[1;31mE (2277) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (2537) MLX-SENSOR: Frame OK: Min=2800 Max=3387[0m
+[1;31mE (2537) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (2617) wifi:<ba-add>idx:0 (ifx:0, e8:45:8b:5d:b5:38), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2787) MLX-SENSOR: Frame OK: Min=2774 Max=3387[0m
+[1;31mE (2787) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (3047) MLX-SENSOR: Frame OK: Min=2774 Max=3387[0m
+[1;31mE (3047) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (3297) MLX-SENSOR: Frame OK: Min=2798 Max=3388[0m
+[1;31mE (3297) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (3557) MLX-SENSOR: Frame OK: Min=2846 Max=3388[0m
+[1;31mE (3557) MLX-SENSOR: Erro sendto UDP: -1[0m
+[0;32mI (3657) esp_netif_handlers: sta ip: 192.168.15.22, mask: 255.255.255.0, gw: 192.168.15.1[0m
+[0;32mI (3807) MLX-SENSOR: Frame OK: Min=2834 Max=3388[0m
+[0;32mI (3807) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:6, winSize:64[0m
+[0;32mI (4067) MLX-SENSOR: Frame OK: Min=2787 Max=3378[0m
+[0;32mI (4327) MLX-SENSOR: Frame OK: Min=2787 Max=3378[0m
+[0;32mI (4577) MLX-SENSOR: Frame OK: Min=2825 Max=3388[0m
+[0;32mI (4837) MLX-SENSOR: Frame OK: Min=2813 Max=3387[0m
+[0;32mI (5087) MLX-SENSOR: Frame OK: Min=2813 Max=3387[0m
+[0;32mI (5347) MLX-SENSOR: Frame OK: Min=2814 Max=3388[0m
+[0;32mI (5597) MLX-SENSOR: Frame OK: Min=2814 Max=3388[0m
+[0;32mI (5857) MLX-SENSOR: Frame OK: Min=2797 Max=3387[0m
+[0;32mI (6107) MLX-SENSOR: Frame OK: Min=2797 Max=3387[0m
+[0;32mI (6367) MLX-SENSOR: Frame OK: Min=2827 Max=3388[0m
+[0;32mI (6617) MLX-SENSOR: Frame OK: Min=2803 Max=3388[0m
+[0;32mI (6877) MLX-SENSOR: Frame OK: Min=2792 Max=3389[0m
+[0;32mI (7127) MLX-SENSOR: Frame OK: Min=2792 Max=3389[0m
+[0;32mI (7387) MLX-SENSOR: Frame OK: Min=2819 Max=3389[0m
+[0;32mI (7647) MLX-SENSOR: Frame OK: Min=2819 Max=3389[0m
+[0;32mI (7897) MLX-SENSOR: Frame OK: Min=2795 Max=3389[0m
+[0;32mI (8157) MLX-SENSOR: Frame OK: Min=2795 Max=3389[0m
+[0;32mI (8407) MLX-SENSOR: Frame OK: Min=2826 Max=3388[0m
+[0;32mI (8667) MLX-SENSOR: Frame OK: Min=2804 Max=3388[0m
+[0;32mI (8917) MLX-SENSOR: Frame OK: Min=2804 Max=3389[0m
+[0;32mI (9177) MLX-SENSOR: Frame OK: Min=2815 Max=3389[0m
+[0;32mI (9427) MLX-SENSOR: Frame OK: Min=2776 Max=3388[0m
+[0;32mI (9687) MLX-SENSOR: Frame OK: Min=2776 Max=3388[0m
+[0;32mI (9937) MLX-SENSOR: Frame OK: Min=2809 Max=3387[0m
+[0;32mI (10197) MLX-SENSOR: Frame OK: Min=2773 Max=3377[0m
+[0;32mI (10457) MLX-SENSOR: Frame OK: Min=2773 Max=3377[0m
+[0;32mI (10707) MLX-SENSOR: Frame OK: Min=2807 Max=3387[0m
+[0;32mI (10967) MLX-SENSOR: Frame OK: Min=2798 Max=3387[0m
+[0;32mI (11217) MLX-SENSOR: Frame OK: Min=2798 Max=3387[0m
+[0;32mI (11477) MLX-SENSOR: Frame OK: Min=2819 Max=3387[0m
+[0;32mI (11727) MLX-SENSOR: Frame OK: Min=2805 Max=3387[0m
+[0;32mI (11987) MLX-SENSOR: Frame OK: Min=2805 Max=3388[0m
+[0;32mI (12237) MLX-SENSOR: Frame OK: Min=2829 Max=3388[0m
+[0;32mI (12497) MLX-SENSOR: Frame OK: Min=2816 Max=3387[0m
+[0;32mI (12757) MLX-SENSOR: Frame OK: Min=2816 Max=3387[0m
+[0;32mI (13007) MLX-SENSOR: Frame OK: Min=2796 Max=3387[0m
+[0;32mI (13267) MLX-SENSOR: Frame OK: Min=2796 Max=3387[0m
+[0;32mI (13517) MLX-SENSOR: Frame OK: Min=2807 Max=3386[0m
+[0;32mI (13777) MLX-SENSOR: Frame OK: Min=2798 Max=3386[0m
+[0;32mI (14027) MLX-SENSOR: Frame OK: Min=2793 Max=3387[0m
+[0;32mI (14287) MLX-SENSOR: Frame OK: Min=2793 Max=3387[0m
+[0;32mI (14537) MLX-SENSOR: Frame OK: Min=2825 Max=3387[0m
+[0;32mI (14797) MLX-SENSOR: Frame OK: Min=2835 Max=3387[0m
+[0;32mI (15047) MLX-SENSOR: Frame OK: Min=2773 Max=3387[0m
+[0;32mI (15307) MLX-SENSOR: Frame OK: Min=2773 Max=3387[0m
+[0;32mI (15557) MLX-SENSOR: Frame OK: Min=2816 Max=3387[0m
+[0;32mI (15817) MLX-SENSOR: Frame OK: Min=2786 Max=3377[0m
+[0;32mI (16077) MLX-SENSOR: Frame OK: Min=2786 Max=3377[0m
+[0;32mI (16327) MLX-SENSOR: Frame OK: Min=2802 Max=3387[0m
+[0;32mI (16587) MLX-SENSOR: Frame OK: Min=2810 Max=3386[0m
+[0;32mI (16837) MLX-SENSOR: Frame OK: Min=2778 Max=3386[0m
+[0;32mI (17097) MLX-SENSOR: Frame OK: Min=2778 Max=3386[0m
+[0;32mI (17347) MLX-SENSOR: Frame OK: Min=2815 Max=3386[0m
+[0;32mI (17607) MLX-SENSOR: Frame OK: Min=2811 Max=3387[0m
+[0;32mI (17857) MLX-SENSOR: Frame OK: Min=2807 Max=3387[0m
+[0;32mI (18117) MLX-SENSOR: Frame OK: Min=2793 Max=3387[0m
+[0;32mI (18367) MLX-SENSOR: Frame OK: Min=2793 Max=3387[0m
+[0;32mI (18627) MLX-SENSOR: Frame OK: Min=2734 Max=3387[0m
+[0;32mI (18887) MLX-SENSOR: Frame OK: Min=2734 Max=3387[0m
+[0;32mI (19137) MLX-SENSOR: Frame OK: Min=2800 Max=3386[0m
+[0;32mI (19397) MLX-SENSOR: Frame OK: Min=2784 Max=3386[0m
+[0;32mI (19647) MLX-SENSOR: Frame OK: Min=2784 Max=3386[0m
+[0;32mI (19907) MLX-SENSOR: Frame OK: Min=2803 Max=3386[0m
+[0;32mI (20157) MLX-SENSOR: Frame OK: Min=2803 Max=3386[0m
+[0;32mI (20417) MLX-SENSOR: Frame OK: Min=2805 Max=3386[0m
+[0;32mI (20667) MLX-SENSOR: Frame OK: Min=2827 Max=3386[0m
+[0;32mI (20927) MLX-SENSOR: Frame OK: Min=2832 Max=3386[0m
+[0;32mI (21177) MLX-SENSOR: Frame OK: Min=2775 Max=3386[0m
+[0;32mI (21437) MLX-SENSOR: Frame OK: Min=2775 Max=3386[0m
+[0;32mI (21697) MLX-SENSOR: Frame OK: Min=2784 Max=3385[0m
+[0;32mI (21947) MLX-SENSOR: Frame OK: Min=2795 Max=3385[0m
+[0;32mI (22207) MLX-SENSOR: Frame OK: Min=2795 Max=3385[0m
+[0;32mI (22457) MLX-SENSOR: Frame OK: Min=2814 Max=3385[0m
+[0;32mI (22717) MLX-SENSOR: Frame OK: Min=2817 Max=3386[0m
+[0;32mI (22967) MLX-SENSOR: Frame OK: Min=2826 Max=3386[0m
+[0;32mI (23227) MLX-SENSOR: Frame OK: Min=2811 Max=3385[0m
+[0;32mI (23477) MLX-SENSOR: Frame OK: Min=2811 Max=3385[0m
+[0;32mI (23737) MLX-SENSOR: Frame OK: Min=2826 Max=3385[0m
+[0;32mI (23987) MLX-SENSOR: Frame OK: Min=2813 Max=3375[0m
+[0;32mI (24247) MLX-SENSOR: Frame OK: Min=2781 Max=3376[0m
+[0;32mI (24507) MLX-SENSOR: Frame OK: Min=2781 Max=3386[0m
+[0;32mI (24757) MLX-SENSOR: Frame OK: Min=2828 Max=3385[0m
+[0;32mI (25017) MLX-SENSOR: Frame OK: Min=2828 Max=3385[0m
+[0;32mI (25267) MLX-SENSOR: Frame OK: Min=2795 Max=3386[0m
+[0;32mI (25527) MLX-SENSOR: Frame OK: Min=2795 Max=3386[0m
+[0;32mI (25777) MLX-SENSOR: Frame OK: Min=2827 Max=3385[0m
+[0;32mI (26037) MLX-SENSOR: Frame OK: Min=2817 Max=3385[0m
+[0;32mI (26287) MLX-SENSOR: Frame OK: Min=2817 Max=3385[0m
+[0;32mI (26547) MLX-SENSOR: Frame OK: Min=2800 Max=3385[0m
+[0;32mI (26797) MLX-SENSOR: Frame OK: Min=2800 Max=3385[0m
+[0;32mI (27057) MLX-SENSOR: Frame OK: Min=2822 Max=3385[0m
+[0;32mI (27317) MLX-SENSOR: Frame OK: Min=2820 Max=3385[0m
+[0;32mI (27567) MLX-SENSOR: Frame OK: Min=2816 Max=3385[0m

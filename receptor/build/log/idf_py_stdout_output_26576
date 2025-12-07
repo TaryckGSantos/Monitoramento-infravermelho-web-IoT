@@ -1,0 +1,168 @@
+Command: C:\Users\tvgid\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\tvgid\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\tvgid\OneDrive\Documentos\TESTE_WIFI_HTML\not\station\build\wifi_station.elf C:\Users\tvgid\OneDrive\Documentos\TESTE_WIFI_HTML\not\station\build\bootloader\bootloader.elf --force-color -m 'C:\Users\tvgid\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\tvgid\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM7'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec  6 2025 22:39:26[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f38ch (127884) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=0002f3b4 vaddr=3ffb0000 size=00c64h (  3172) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=9803ch (622652) map[0m
+[0;32mI (348) esp_image: segment 3: paddr=000c8064 vaddr=3ffb0c64 size=03288h ( 12936) load[0m
+[0;32mI (353) esp_image: segment 4: paddr=000cb2f4 vaddr=40080000 size=17f34h ( 98100) load[0m
+[0;32mI (392) esp_image: segment 5: paddr=000e3230 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (404) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (404) boot: Disabling RNG early entropy source...[0m
+[0;32mI (414) cpu_start: Multicore app[0m
+[0;32mI (423) cpu_start: Pro cpu start user code[0m
+[0;32mI (423) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (423) app_init: Application information:[0m
+[0;32mI (423) app_init: Project name:     wifi_station[0m
+[0;32mI (427) app_init: App version:      e7bcc44-dirty[0m
+[0;32mI (432) app_init: Compile time:     Dec  7 2025 17:53:43[0m
+[0;32mI (437) app_init: ELF file SHA256:  c5981b27d...[0m
+[0;32mI (441) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (445) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (449) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (453) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (457) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (463) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (468) heap_init: At 3FFB9828 len 000267D8 (153 KiB): DRAM[0m
+[0;32mI (473) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (478) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (484) heap_init: At 40097F34 len 000080CC (32 KiB): IRAM[0m
+[0;33mW (490) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (502) spi_flash: detected chip: generic[0m
+[0;32mI (506) spi_flash: flash io: dio[0m
+[0;33mW (509) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (522) main_task: Started on CPU0[0m
+[0;32mI (532) main_task: Calling app_main()[0m
+[0;32mI (572) wifi:wifi driver task: 3ffc17fc, prio:23, stack:6656, core=0[0m
+[0;32mI (582) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (592) wifi:wifi certification version: v7.0[0m
+[0;32mI (592) wifi:config NVS flash: enabled[0m
+[0;32mI (592) wifi:config nano formatting: disabled[0m
+[0;32mI (592) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (592) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (602) wifi:Init management short buffer num: 32[0m
+[0;32mI (602) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (612) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (612) wifi:Init static rx buffer num: 10[0m
+[0;32mI (612) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (622) wifi_init: rx ba win: 6[0m
+[0;32mI (622) wifi_init: accept mbox: 6[0m
+[0;32mI (622) wifi_init: tcpip mbox: 32[0m
+[0;32mI (632) wifi_init: udp mbox: 6[0m
+[0;32mI (632) wifi_init: tcp mbox: 6[0m
+[0;32mI (632) wifi_init: tcp tx win: 5760[0m
+[0;32mI (642) wifi_init: tcp rx win: 5760[0m
+[0;32mI (642) wifi_init: tcp mss: 1440[0m
+[0;32mI (642) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (652) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (652) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (662) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (752) wifi:mode : sta (88:13:bf:63:c2:b4)[0m
+[0;32mI (752) wifi:enable tsf[0m
+[0;32mI (752) MLX-WS-SERVER: WiFi STA inicializado; conectando ao AP "Melk"[0m
+[0;32mI (762) MLX-WS-SERVER: Servidor HTTP + WebSocket rodando na porta 80[0m
+[0;32mI (762) MLX-WS-SERVER: Servidor WebSocket pronto em ws://<IP-DA-ESP-SERVIDOR>/ws[0m
+[0;32mI (772) MLX-WS-SERVER: UDP servidor escutando na porta 5005[0m
+[0;32mI (782) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (782) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (782) esp-tls: couldn't get hostname for :firestore.googleapis.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (782) main_task: Returned from app_main()[0m
+[1;31mE (792) esp-tls: Failed to open new connection[0m
+[1;31mE (802) transport_base: Failed to open a new connection[0m
+[1;31mE (802) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (812) MLX-WS-SERVER: Erro ao enviar para Firebase: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (822) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (842) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (972) wifi:connected with Melk, aid = 10, channel 1, BW20, bssid = e8:45:8b:5d:b5:38[0m
+[0;32mI (972) wifi:security: WPA2-PSK, phy: bgn, rssi: -57[0m
+[0;32mI (982) wifi:pm start, type: 1[0m
+
+[0;32mI (982) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (982) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1392) wifi:<ba-add>idx:0 (ifx:0, e8:45:8b:5d:b5:38), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2432) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1[0m
+[0;32mI (2932) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (2932) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:6, winSize:64[0m
+[0;32mI (3232) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (3852) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (4462) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (4772) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (5382) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (6002) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (6312) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (6922) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (7532) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (7852) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (8462) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (9072) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (9382) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (9992) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (10612) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[1;31mE (10852) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[1;31mE (10862) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[1;31mE (10872) esp-tls: create_ssl_handle failed[0m
+[1;31mE (10872) esp-tls: Failed to open new connection[0m
+[1;31mE (10872) transport_base: Failed to open a new connection[0m
+[0;32mI (10882) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[1;31mE (10882) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10892) MLX-WS-SERVER: Erro ao enviar para Firebase: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11532) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (12152) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (12452) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (13062) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (13682) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (13992) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (14602) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (15212) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (15522) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (16142) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (16752) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (17062) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (17672) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (18292) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (18592) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (19212) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (19822) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (20132) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (20912) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[1;31mE (20932) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[1;31mE (20932) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[1;31mE (20942) esp-tls: create_ssl_handle failed[0m
+[1;31mE (20942) esp-tls: Failed to open new connection[0m
+[1;31mE (20952) transport_base: Failed to open a new connection[0m
+[1;31mE (20962) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (20962) MLX-WS-SERVER: Erro ao enviar para Firebase: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (21362) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (21672) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (22282) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (22892) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (23202) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (23822) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (24432) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (24742) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (25352) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (25972) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (26282) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m

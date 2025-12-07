@@ -15,13 +15,19 @@
 
 <body>
 
-<h1>WebSocket MLX90640 Fake</h1>
+<h1>Visualizacao MLX90640</h1>
 <p>Status: <span id="status">conectando...</span></p>
+
+<p>
+    <a href="historico.html" target="_blank">
+        Acesse aqui o histórico de capturas
+    </a>
+</p>
 
 <canvas id="heatmap" width="320" height="240"></canvas>
 
 <script>
-const IP = "192.168.15.22";
+const IP = "192.168.15.27";
 const ws = new WebSocket(`ws://${IP}/ws`);
 
 const statusEl = document.getElementById("status");

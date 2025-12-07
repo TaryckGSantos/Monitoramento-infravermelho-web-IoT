@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Histórico de Capturas MLX90640</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            padding: 10px 16px;
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        header a {
+            color: #4fc3f7;
+            text-decoration: none;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 360px;
+            border-right: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .search-box {
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 6px 8px;
+            box-sizing: border-box;
+        }
+
+        .frame-list {
+            flex: 1;
+            overflow-y: auto;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .frame-item {
+            padding: 8px 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+
+        .frame-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .frame-item.selected {
+            background-color: #d0ebff;
+        }
+
+        .frame-item .timestamp {
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .frame-item .meta {
+            font-size: 11px;
+            color: #555;
+        }
+
+        .viewer {
+            flex: 1;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .viewer-info {
+            margin-bottom: 8px;
+        }
+
+        canvas {
+            image-rendering: auto;
+            image-rendering: optimizeQuality;
+            width: 640px;
+            height: 480px;
+            border: 1px solid #000;
+        }
+
+        .empty-message {
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Histórico de Capturas MLX90640</h1>
+    <a href="index.html">Voltar para visualização em tempo real</a>
+</header>
+
+<div class="container">
+    <aside class="sidebar">
+        <div class="search-box">
+            <input id="searchInput" type="text"
+                   placeholder="Buscar por data/hora ou ID...">
+        </div>
+        <ul id="frameList" class="frame-list"></ul>
+    </aside>
+
+    <main class="viewer">
+        <div class="viewer-info">
+            <div id="selectedInfo" class="empty-message">
+                Selecione um frame na lista ao lado.
+            </div>
+        </div>
+        <canvas id="heatmap" width="320" height="240"></canvas>
+    </main>
+</div>
+
+<script type="module">
+    // ===========================
+    // Firebase + Firestore
+    // ===========================
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+    import {
+        getFirestore,
+        collection,
+        query,
+        orderBy,
+        getDocs
+    } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBylZrRkFf0xTUNqaCx7bMogndO0qEEQ_8",
+        authDomain: "mlx-thermal-monitor.firebaseapp.com",
+        projectId: "mlx-thermal-monitor",
+        storageBucket: "mlx-thermal-monitor.firebasestorage.app",
+        messagingSenderId: "694225184222",
+        appId: "1:694225184222:web:325751175fc0f1b5d9a94f",
+        measurementId: "G-E1NCGJ2SJ6"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db  = getFirestore(app);
+
+    // ===========================
+    // Constantes de imagem
+    // ===========================
+    const RAW_COLS = 32;
+    const RAW_ROWS = 24;
+
+    const canvas   = document.getElementById("heatmap");
+    const ctx      = canvas.getContext("2d");
+
+    const rawCanvas = document.createElement("canvas");
+    rawCanvas.width  = RAW_COLS;
+    rawCanvas.height = RAW_ROWS;
+    const rawCtx = rawCanvas.getContext("2d");
+    const rawImgData = rawCtx.createImageData(RAW_COLS, RAW_ROWS);
+
+    const frameListEl   = document.getElementById("frameList");
+    const searchInputEl = document.getElementById("searchInput");
+    const selectedInfo  = document.getElementById("selectedInfo");
+
+    let allFrames = [];  // { id, timestamp, rows, cols, frame[] }
+    let currentSelectedId = null;
+
+    // ===========================
+    // Colormap arco-íris (mesmo do viewer ao vivo)
+    // ===========================
+    function rainbowColorMap(v) {
+        const t = v / 255.0;
+        let r = 0, g = 0, b = 0;
+
+        if (t < 0.25) {
+            const u = t / 0.25;
+            r = 0; g = 255 * u; b = 255;
+        } else if (t < 0.5) {
+            const u = (t - 0.25) / 0.25;
+            r = 0; g = 255; b = 255 * (1 - u);
+        } else if (t < 0.75) {
+            const u = (t - 0.5) / 0.25;
+            r = 255 * u; g = 255; b = 0;
+        } else {
+            const u = (t - 0.75) / 0.25;
+            r = 255; g = 255 * (1 - u); b = 0;
+        }
+        return [r | 0, g | 0, b | 0];
+    }
+
+    // ===========================
+    // Desenhar frame no canvas
+    // ===========================
+    function drawFrame(frame, rows, cols) {
+        if (!frame || frame.length === 0) {
+            // limpa
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            return;
+        }
+
+        // 1) preenche imagem 32x24 com as cores
+        for (let y = 0; y < rows; y++) {
+            for (let x = 0; x < cols; x++) {
+                const v = frame[y * cols + x] ?? 0;
+                const [r, g, b] = rainbowColorMap(v);
+
+                const idx = (y * cols + x) * 4;
+                rawImgData.data[idx + 0] = r;
+                rawImgData.data[idx + 1] = g;
+                rawImgData.data[idx + 2] = b;
+                rawImgData.data[idx + 3] = 255;
+            }
+        }
+        rawCtx.putImageData(rawImgData, 0, 0);
+
+        // 2) desenha com interpolação no canvas maior
+        ctx.save();
+        ctx.imageSmoothingEnabled = true;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(rawCanvas, 0, 0, canvas.width, canvas.height);
+        ctx.restore();
+    }
+
+    // ===========================
+    // Lista e filtros
+    // ===========================
+    function renderList(frames) {
+        frameListEl.innerHTML = "";
+
+        if (frames.length === 0) {
+            const li = document.createElement("li");
+            li.className = "frame-item";
+            li.innerHTML = "<span class='meta'>Nenhum frame encontrado.</span>";
+            frameListEl.appendChild(li);
+            return;
+        }
+
+        frames.forEach(frame => {
+            const li = document.createElement("li");
+            li.className = "frame-item";
+            li.dataset.id = frame.id;
+
+            const tsText = frame.timestamp || "(sem timestamp)";
+
+            li.innerHTML = `
+                <div class="timestamp">${tsText}</div>
+                <div class="meta">
+                    ID: ${frame.id}<br>
+                    ${frame.rows}x${frame.cols}
+                </div>
+            `;
+
+            li.addEventListener("click", () => {
+                selectFrame(frame.id);
+            });
+
+            frameListEl.appendChild(li);
+        });
+    }
+
+    function selectFrame(id) {
+        const frame = allFrames.find(f => f.id === id);
+        if (!frame) return;
+
+        currentSelectedId = id;
+
+        // atualiza seleção visual
+        document.querySelectorAll(".frame-item").forEach(el => {
+            el.classList.toggle("selected", el.dataset.id === id);
+        });
+
+        // info
+        selectedInfo.textContent =
+            `Frame ${frame.id} capturado em ${frame.timestamp || "sem timestamp"}`;
+
+        drawFrame(frame.frame, frame.rows || RAW_ROWS, frame.cols || RAW_COLS);
+    }
+
+    function applySearchFilter() {
+        const term = searchInputEl.value.trim().toLowerCase();
+        if (!term) {
+            renderList(allFrames);
+            return;
+        }
+
+        const filtered = allFrames.filter(f => {
+            const ts = (f.timestamp || "").toLowerCase();
+            const id = (f.id || "").toLowerCase();
+            return ts.includes(term) || id.includes(term);
+        });
+
+        renderList(filtered);
+    }
+
+    searchInputEl.addEventListener("input", applySearchFilter);
+
+    // ===========================
+    // Carregar frames do Firestore
+    // ===========================
+    async function loadFrames() {
+        try {
+            const qFrames = query(
+                collection(db, "frames"),
+                orderBy("timestamp", "desc")
+            );
+            const snap = await getDocs(qFrames);
+
+            allFrames = [];
+
+            snap.forEach(docSnap => {
+                const data = docSnap.data();
+
+                // Tenta tratar frame como array simples;
+                // Se vier como array de objetos (caso bizarro), converte.
+                let frameArr = data.frame || [];
+                if (Array.isArray(frameArr) && frameArr.length > 0 &&
+                    typeof frameArr[0] === "object") {
+                    frameArr = frameArr.map(v => {
+                        if (typeof v === "number") return v;
+                        if (v.integerValue !== undefined) return parseInt(v.integerValue);
+                        if (v.doubleValue  !== undefined) return Number(v.doubleValue);
+                        return 0;
+                    });
+                }
+
+                // Converte o timestamp para string legível
+let tsText = "";
+if (data.timestamp) {
+    if (typeof data.timestamp.toDate === "function") {
+        const d = data.timestamp.toDate();
+        tsText = d.toLocaleString("pt-BR", {
+            dateStyle: "short",
+            timeStyle: "medium"
+        });
+    } else if (typeof data.timestamp === "string") {
+        if (data.timestamp.startsWith("boot_us=")) {
+            const us = Number(data.timestamp.split("=")[1]);
+            const s = (us / 1e6).toFixed(1);
+            tsText = `≈ ${s}s após o boot`;
+        } else {
+            const d = new Date(data.timestamp);
+            if (!isNaN(d.getTime())) {
+                tsText = d.toLocaleString("pt-BR", {
+                    dateStyle: "short",
+                    timeStyle: "medium"
+                });
+            } else {
+                tsText = data.timestamp;
+            }
+        }
+    }
+}
+
+allFrames.push({
+    id: docSnap.id,
+    timestamp: tsText,
+    rows: data.rows ?? RAW_ROWS,
+    cols: data.cols ?? RAW_COLS,
+    frame: frameArr
+});
+
+            });
+
+            renderList(allFrames);
+
+            // Se quiser, já seleciona o mais recente automaticamente
+            if (allFrames.length > 0) {
+                selectFrame(allFrames[0].id);
+            }
+
+        } catch (err) {
+            console.error("Erro ao carregar frames:", err);
+            frameListEl.innerHTML = "";
+            const li = document.createElement("li");
+            li.className = "frame-item";
+            li.innerHTML = "<span class='meta'>Erro ao carregar frames. Veja o console.</span>";
+            frameListEl.appendChild(li);
+        }
+    }
+
+    loadFrames();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1738 @@
+Command: C:\Users\tvgid\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\tvgid\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\tvgid\OneDrive\Documentos\TESTE_WIFI_HTML\not\station\build\wifi_station.elf C:\Users\tvgid\OneDrive\Documentos\TESTE_WIFI_HTML\not\station\build\bootloader\bootloader.elf --force-color -m 'C:\Users\tvgid\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\tvgid\esp\v5.5.1\esp-idf\tools\idf.py' '-p' 'COM7'
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec  6 2025 22:39:26[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=304e4h (197860) map[0m
+[0;32mI (156) esp_image: segment 1: paddr=0004050c vaddr=3ffb0000 size=03eech ( 16108) load[0m
+[0;32mI (162) esp_image: segment 2: paddr=00044400 vaddr=40080000 size=0bc18h ( 48152) load[0m
+[0;32mI (181) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=98584h (624004) map[0m
+[0;32mI (394) esp_image: segment 4: paddr=000e85ac vaddr=4008bc18 size=0c31ch ( 49948) load[0m
+[0;32mI (414) esp_image: segment 5: paddr=000f48d0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (426) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (426) boot: Disabling RNG early entropy source...[0m
+[0;32mI (436) cpu_start: Multicore app[0m
+[0;32mI (445) cpu_start: Pro cpu start user code[0m
+[0;32mI (445) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (445) app_init: Application information:[0m
+[0;32mI (445) app_init: Project name:     wifi_station[0m
+[0;32mI (449) app_init: App version:      e7bcc44-dirty[0m
+[0;32mI (454) app_init: Compile time:     Dec  7 2025 17:53:43[0m
+[0;32mI (459) app_init: ELF file SHA256:  d406844f2...[0m
+[0;32mI (463) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (467) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (471) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (475) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (479) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (485) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (490) heap_init: At 3FFB9830 len 000267D0 (153 KiB): DRAM[0m
+[0;32mI (495) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (501) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (506) heap_init: At 40097F34 len 000080CC (32 KiB): IRAM[0m
+[0;33mW (513) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (524) spi_flash: detected chip: generic[0m
+[0;32mI (528) spi_flash: flash io: dio[0m
+[0;33mW (531) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (544) main_task: Started on CPU0[0m
+[0;32mI (554) main_task: Calling app_main()[0m
+[0;32mI (594) wifi:wifi driver task: 3ffc1804, prio:23, stack:6656, core=0[0m
+[0;32mI (604) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (614) wifi:wifi certification version: v7.0[0m
+[0;32mI (614) wifi:config NVS flash: enabled[0m
+[0;32mI (614) wifi:config nano formatting: disabled[0m
+[0;32mI (614) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (614) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (624) wifi:Init management short buffer num: 32[0m
+[0;32mI (624) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (634) wifi:Init static rx buffer num: 10[0m
+[0;32mI (634) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (644) wifi_init: rx ba win: 6[0m
+[0;32mI (644) wifi_init: accept mbox: 6[0m
+[0;32mI (644) wifi_init: tcpip mbox: 32[0m
+[0;32mI (654) wifi_init: udp mbox: 6[0m
+[0;32mI (654) wifi_init: tcp mbox: 6[0m
+[0;32mI (654) wifi_init: tcp tx win: 5760[0m
+[0;32mI (664) wifi_init: tcp rx win: 5760[0m
+[0;32mI (664) wifi_init: tcp mss: 1440[0m
+[0;32mI (664) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (674) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (674) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (684) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (774) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (844) wifi:mode : sta (88:13:bf:63:c2:b4)[0m
+[0;32mI (844) wifi:enable tsf[0m
+[0;32mI (854) MLX-WS-SERVER: WiFi STA inicializado; conectando ao AP "Melk"[0m
+[0;32mI (864) MLX-WS-SERVER: Servidor HTTP + WebSocket rodando na porta 80[0m
+[0;32mI (864) MLX-WS-SERVER: Servidor WebSocket pronto em ws://<IP-DA-ESP-SERVIDOR>/ws[0m
+[0;32mI (864) MLX-WS-SERVER: UDP servidor escutando na porta 5005[0m
+[1;31mE (884) esp-tls: couldn't get hostname for :firestore.googleapis.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (884) esp-tls: Failed to open new connection[0m
+[1;31mE (884) transport_base: Failed to open a new connection[0m
+[1;31mE (894) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (894) MLX-WS-SERVER: Erro ao enviar para Firebase: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (904) main_task: Returned from app_main()[0m
+[0;32mI (924) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (924) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (964) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (974) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1104) wifi:connected with Melk, aid = 10, channel 1, BW20, bssid = e8:45:8b:5d:b5:38[0m
+[0;32mI (1104) wifi:security: WPA2-PSK, phy: bgn, rssi: -57[0m
+[0;32mI (1104) wifi:pm start, type: 1[0m
+
+[0;32mI (1104) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1224) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1334) wifi:<ba-add>idx:0 (ifx:0, e8:45:8b:5d:b5:38), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2374) esp_netif_handlers: sta ip: 192.168.15.27, mask: 255.255.255.0, gw: 192.168.15.1[0m
+[0;32mI (2614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (2964) wifi:<ba-add>idx:1 (ifx:0, e8:45:8b:5d:b5:38), tid:7, ssn:6, winSize:64[0m
+[0;32mI (3374) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (3784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (4294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (4704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (5324) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (5934) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (6354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (6854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (7474) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (7784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (8394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (9004) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (9314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (9934) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (10544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (10854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (11334) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (11334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (11824) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (12204) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (12384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (13004) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (13614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (13924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (14534) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (15154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (15464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (16074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (16694) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (16994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (17614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (18224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (18534) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (19154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (19764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (20064) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (20684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (21304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (21604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (22224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (22564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (22694) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (23074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (23584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (23584) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (24364) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (24674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (25294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (25904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (26214) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (26824) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (27444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (27744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (28364) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (28974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (29284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (29894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (30514) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (30814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (31434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (32044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (32354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (32974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (33584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (33894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (34074) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (34434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (34844) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (34934) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (35424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (36044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (36654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (36964) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (37574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (38194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (38494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (39114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (39724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (40034) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (40654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (41264) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (41574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (42184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (42804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (43104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (43724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (44334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (44644) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (45264) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (45434) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (45664) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (46184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (46304) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (46894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (47404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (47714) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (48334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (49044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (49254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (49864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (50184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (50784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (51404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (52014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (52034) MLX-WS-SERVER: Handshake WebSocket OK[0m
+[0;32mI (52284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (52744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (53334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (53764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (54274) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (54804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (55304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (55854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (56324) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (56664) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (56904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (57344) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (57444) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (57854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (58374) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (58884) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (59394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (59904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (60464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (60924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (61514) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (61944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (62564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (62984) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (63484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (64034) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (64504) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (65074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (65524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (66124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (66554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (67074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (67594) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (67764) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (68084) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (68594) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (68594) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (69104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (69694) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (70134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (70744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (71174) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (71664) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (72214) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (72844) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (73264) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (73714) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (74234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (74734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (75244) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (75784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (76264) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (76834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (77294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (77824) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (78314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (78824) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (78904) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (79334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (79554) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (79974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (80404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (80874) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (81454) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (81894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (82434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (82924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (83554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (83964) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (84584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (85024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (85474) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (86074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (86494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (87034) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (87544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (88034) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (88574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (89054) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (89564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (89834) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (90084) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (90544) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (90584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (91104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (91644) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (92164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (92634) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (93184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (93654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (94254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (94674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (95194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (95724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (96254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (96774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (97224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (97784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (98254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (98874) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (99294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (99794) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (100354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (100814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (100834) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (101314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (101474) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (101834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (102394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (102864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (103364) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (103904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (104384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (104904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (105404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (106004) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (106424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (106944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (107474) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (107974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (108524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (108994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (109504) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (110004) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (110624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (111044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (111554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (111754) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (112084) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (112434) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (112564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (113134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (113584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (114104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (114614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (115234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (115654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (116144) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (116704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (117174) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (117754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (118194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (118704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (119224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (119734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (120274) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (120744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (121324) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (121784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (122374) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (122774) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (122804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (123314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (123484) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (123844) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (124324) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (124894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (125354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (125954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (126374) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (126994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (127404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (127904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (128454) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (128944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (129494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (129954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (130544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (130974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (131594) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (132014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (132514) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (133064) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (133534) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (133874) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (134114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (134554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (134554) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (135164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (135584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (136184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (136634) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (137114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (137684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (138134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (138654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (139164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (139664) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (140204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (140694) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (141254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (141724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (142304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (142744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (143254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (143774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (144284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (144824) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (144894) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (145304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (145554) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (145874) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (146314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (146924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (147354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (147864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (148394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (149024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (149444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (149894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (150504) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (150944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (151444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (151964) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (152474) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (153014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (153484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (154004) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (154514) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (155124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (155534) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (155834) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (156034) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (156534) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (156544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (157054) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (157634) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (158094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (158614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (159114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (159734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (160154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (160644) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (161204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (161654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (162254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (162684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (163224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (163724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (164354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (164754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (165234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (165814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (166264) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (166824) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (166864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (167294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (167634) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (167834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (168324) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (168814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (169364) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (169984) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (170424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (170874) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (171474) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (171894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (172434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (172944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (173434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (173974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (174444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (175034) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (175464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (176084) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (176504) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (177014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (177554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (177914) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (178024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (178544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (178614) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (179044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (179654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (180084) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (180584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (181114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (181604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (182164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (182624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (183194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (183654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (184264) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (184704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (185234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (185734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (186204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (186794) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (187234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (187794) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (188254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (188884) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (189064) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (189304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (189744) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (189784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (190354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (190824) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (191404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (191844) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (192404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (192874) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (193364) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (193924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (194404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (194904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (195414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (196024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (196444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (197074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (197494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (198124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (198544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (198994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (199504) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (200024) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (200024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (200524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (200714) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (201034) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (201554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (202114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (202654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (203164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (203594) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (204104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (204634) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (205134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (205684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (206164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (206734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (207174) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (207764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (208204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (208834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (209254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (209734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (210304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (210764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (210994) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (211264) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (211684) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (211784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (212374) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (212824) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (213454) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (213874) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (214334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (214844) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (215364) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (215974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (216394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (216894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (217444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (217914) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (218494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (218944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (219454) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (219974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (220474) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (221014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (221494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (222024) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (222064) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (222524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (222824) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (223114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (223544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (224154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (224574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (225074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (225584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (226104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (226674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (227124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (227734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (228144) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (228654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (229194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (229814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (230234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (230704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (231284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (231724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (232334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (232754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (233134) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (233264) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (233774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (233834) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (234434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (234804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (235304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (235814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (236324) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (236954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (237374) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (237874) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (238424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (238894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (239404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (239924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (240524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (240944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (241554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (242014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (242474) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (243044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (243494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (244014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (244184) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (244514) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (244894) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (245134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (245554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (246044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (246604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (247074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (247654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (248094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (248604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (249124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (249644) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (250154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (250654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (251164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (251674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (252204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (252694) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (253234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (253744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (254244) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (254764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (255194) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (255254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (255764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (255894) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (256274) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (256894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (257314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (257814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (258364) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (258834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (259414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (259854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (260464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (260884) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (261394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (261904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (262554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (262924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (263434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (264024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (264464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (265014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (265494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (265994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (266184) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (266544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (266894) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (267014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (267564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (268054) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (268594) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (269074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (269694) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (270114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (270594) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (271164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (271624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (272214) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (272644) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (273194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (273684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (274174) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (274744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (275214) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (275784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (276224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (276834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (277224) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (277254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (277754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (277934) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (278304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (278934) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (279344) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (279814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (280314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (280824) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (281334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (281854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (282384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (282934) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (283384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (284254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (284464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (284914) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (285484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (285954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (286564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (286984) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (287624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (288004) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (288234) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (288504) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (289024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (289044) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (289524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (290114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (290554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (291054) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (291604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (292074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (292594) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (293104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (293684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (294124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (294704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (295154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (295784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (296204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (296834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (297204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (297704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (298304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (298744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (299244) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (299344) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (299754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (300014) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (300394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (300814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (301284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (301794) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (302304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (302914) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (303344) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (303844) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (304384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (304864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (305464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (305884) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (306484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (306914) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (307534) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (307954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (308524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (309004) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (309464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (310024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (310294) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (310494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (310944) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (311004) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (311524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (312024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (312574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (313204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (313624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (314074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (314674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (315094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (315604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (316144) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (316644) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (317194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (317654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (318244) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (318674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (319274) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (319714) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (320344) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (320754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (321234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (321344) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (321744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (322034) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (322254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (322854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (323274) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (323884) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (324314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (324814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (325364) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (325834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (326414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (326854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (327464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (327884) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (328394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (328924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (329414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (329974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (330434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (331024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (331464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (331974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (332324) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (332494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (332994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (333054) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (333544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (334124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (334594) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (335044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (335564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (336064) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (336684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (337094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (337714) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (338164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (338624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (339214) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (339644) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (340164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (340684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (341314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (341704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (342204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (342784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (343224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (343384) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (343754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (344044) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (344254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (344764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (345294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (345784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (346314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (346804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (347394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (347834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (348444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (348864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (349384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (349914) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (350384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (350924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (351414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (352014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (352434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (352944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (353484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (353964) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (354314) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (354544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (354994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (355094) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (355524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (356014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (356634) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (357054) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (357684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (358104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (358574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (359154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (359594) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (360134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (360624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (361124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (361694) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (362154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (362724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (363174) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (363774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (364194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (364704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (365224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (365394) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (365774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (366104) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (366284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (366754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (367334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (367774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (368384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (368804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (369354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (369854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (370484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (370884) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (371354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (371864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (372384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (372994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (373414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (373964) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (374454) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (375084) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (375494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (375954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (376404) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (376554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (376984) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (377114) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (377604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (378024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (378514) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (379064) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (379694) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (380114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (380564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (381164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (381584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (382094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (382634) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (383174) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (383684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (384144) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (384734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (385164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (385674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (386194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (386694) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (387204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (387414) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (387774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (388084) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (388284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (388744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (389314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (389764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (390274) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (390804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (391304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (391854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (392314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (392904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (393354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (393924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (394374) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (394884) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (395424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (396054) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (396414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (396934) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (397524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (397954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (398374) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (398454) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (398994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (399124) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (399484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (400174) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (400594) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (401024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (401524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (402064) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (402554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (403114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (403574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (404084) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (404604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (405214) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (405624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (406254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (406674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (407164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (407714) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (408184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (408754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (409204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (409414) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (409784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (410134) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (410224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (410734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (411274) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (411764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (412324) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (412774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (413284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (413804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (414424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (414834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (415334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (415894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (416354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (416944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (417394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (417994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (418424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (419044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (419464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (419934) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (420474) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (420514) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (420974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (421304) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (421564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (421994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (422514) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (423034) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (423524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (424044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (424554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (425134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (425574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (426194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (426614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (427114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (427654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (428124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (428704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (429154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (429754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (430174) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (430794) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (431224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (431624) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (431854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (432284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (432394) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (432734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (433244) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (433744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (434274) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (434784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (435294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (435844) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (436304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (436894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (437344) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (437944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (438364) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (438864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (439394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (439884) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (440464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (440914) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (441514) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (441934) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (442444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (442684) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (442984) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (443394) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (443474) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (444034) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (444494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (445084) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (445514) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (446134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (446554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (447074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (447604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (448094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (448604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (449094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (449694) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (450114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (450654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (451164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (451654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (452214) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (452674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (453224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (453694) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (453704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (454214) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (454364) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (454724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (455354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (455774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (456254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (456824) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (457274) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (457824) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (458304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (458814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (459344) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (459834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (460384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (460854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (461444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (461894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (462434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (462914) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (463414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (463964) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (464444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (464654) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (465014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (465344) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (465464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (466064) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (466484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (467044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (467534) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (468024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (468574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (469044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (469634) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (470074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (470684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (471084) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (471604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (472164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (472774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (473184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (473644) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (474254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (474674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (475304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (475694) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (475724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (476214) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (476364) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (476774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (477224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (477794) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (478254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (478874) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (479294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (479924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (480294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (480804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (481394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (481834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (482404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (482864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (483364) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (483914) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (484544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (484904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (485414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (486014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (486434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (486674) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (487014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (487404) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (487454) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (487974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (488534) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (488994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (489584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (490014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (490634) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (491054) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (491614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (492104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (492574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (493154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (493604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (494204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (494624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (495134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (495664) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (496154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (496714) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (497174) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (497694) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (497764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (498194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (498384) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (498814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (499234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (499734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (500284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (500834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (501334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (501784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (502294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (502804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (503314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (503854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (504334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (504904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (505364) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (505954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (506384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (506974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (507424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (507914) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (508424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (508684) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (508944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (509444) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (509454) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (509964) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (510574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (510994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (511494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (512044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (512524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (513094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (513544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (514144) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (514564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (515074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (515614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (516104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (516664) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (517124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (517714) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (518144) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (518664) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (519184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (519684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (519754) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (520194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (520454) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (520704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (521284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (521724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (522334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (522754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (523264) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (523804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (524284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (524854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (525314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (525904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (526334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (526944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (527374) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (527864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (528434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (528894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (529404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (529914) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (530424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (530734) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (530944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (531424) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (531454) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (531994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (532474) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (533044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (533494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (534014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (534524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (535024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (535564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (536054) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (536614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (537084) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (537664) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (538094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (538614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (539134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (539644) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (540184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (540654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (541234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (541674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (541704) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (542204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (542394) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (542704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (543214) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (543754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (544234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (544764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (545254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (545794) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (546284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (546904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (547324) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (547834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (548374) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (548844) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (549354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (549864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (550474) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (550894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (551394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (551904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (552424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (552734) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (552984) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (553444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (553494) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (553974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (554464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (554984) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (555504) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (556004) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (556554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (557024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (557604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (558054) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (558554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (559084) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (559584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (560124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (560604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (561174) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (561624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (562224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (562654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (563194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (563694) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (563874) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (564184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (564574) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (564734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (565204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (565794) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (566234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (566844) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (567264) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (567764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (568314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (568784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (569334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (569814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (570414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (570834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (571464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (571884) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (572374) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (572934) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (573394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (573944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (574414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (574854) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (574924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (575444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (575584) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (575954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (576484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (576974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (577534) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (577994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (578584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (579024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (579624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (580044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (580554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (581094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (581574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (582144) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (582604) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (583194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (583624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (584134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (584654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (585284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (585674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (585874) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (586184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (586574) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (586744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (587204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (587764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (588224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (588734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (589254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (589764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (590274) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (590794) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (591294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (591804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (592324) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (592834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (593344) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (593894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (594364) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (594944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (595384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (595994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (596414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (596854) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (596924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (597894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (597944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (597984) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (598524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (598974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (599484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (599994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (600504) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (601044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (601674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (602094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (602554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (603124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (603574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (604084) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (604614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (605104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (605664) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (606134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (606714) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (607154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (607734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (608184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (608354) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (608684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (609094) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (609234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (609714) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (610284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (610734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (611334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (611754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (612344) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (612804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (613294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (613854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (614314) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (614904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (615334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (615844) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (616374) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (616954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (617414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (617894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (618454) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (618914) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (619474) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (619504) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (619944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (620264) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (620544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (620964) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (621564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (622014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (622644) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (623064) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (623524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (624034) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (624544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (625164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (625584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (626174) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (626634) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (627104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (627684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (628124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (628624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (629154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (629664) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (630204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (630584) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (630784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (631194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (631264) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (631704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (632304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (632724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (633244) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (633774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (634404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (634824) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (635284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (635874) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (636304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (636924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (637344) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (637844) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (638394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (638864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (639444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (639894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (640494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (640914) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (641424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (641544) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (641944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (642234) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (642444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (643014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (643474) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (643984) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (644494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (645004) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (645534) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (646134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (646574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (647054) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (647624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (648074) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (648594) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (649094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (649734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (650144) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (650744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (651204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (651654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (652244) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (652634) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (652674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (653184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (653304) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (653704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (654214) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (654734) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (655384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (655794) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (656254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (656784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (657284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (657814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (658304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (658834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (659344) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (659984) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (660404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (660864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (661454) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (661884) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (662394) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (662924) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (663414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (663604) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (663954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (664244) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (664444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (665024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (665464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (666064) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (666484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (666994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (667544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (668024) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (668564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (669044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (669634) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (670064) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (670564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (671104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (671594) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (672154) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (672614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (673204) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (673644) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (674144) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (674574) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (674674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (675174) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (675274) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (675724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (676244) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (676774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (677214) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (677784) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (678254) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (678864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (679284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (679774) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (680344) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (680804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (681384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (681834) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (682384) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (682854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (683484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (683904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (684374) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (684954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (685404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (685564) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (685944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (686324) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (686434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (686994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (687474) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (688104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (688534) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (688994) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (689574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (690004) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (690624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (691044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (691534) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (692094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (692564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (693134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (693584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (694094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (694614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (695124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (695634) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (696214) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (696684) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (696694) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (697164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (697464) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (697744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (698194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (698814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (699234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (699864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (700234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (700754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (701334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (701764) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (702354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (702804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (703304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (703854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (704324) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (704904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (705344) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (705954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (706374) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (706894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (707424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (707804) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (708054) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (708424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (708474) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (708934) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (709524) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (709964) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (710464) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (710974) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (711484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (712044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (712514) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (713094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (713544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (714044) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (714564) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (715194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (715614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (716104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (716664) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (717124) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (718134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (718134) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (718654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (718784) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (719184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (719544) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (719684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (720194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (720704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (721284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (721724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (722224) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (722754) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (723264) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (723804) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (724294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (724844) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (725294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (725894) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (726324) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (726944) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (727364) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (727964) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (728404) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (728874) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (729444) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (729834) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (729904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (730424) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (730494) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (730934) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (731544) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (731964) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (732454) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (733014) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (733494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (734064) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (734514) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (735114) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (735534) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (736034) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (736554) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (737064) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (737624) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (738094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (738674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (739104) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (739614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (740144) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (740654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (740784) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (741164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (741514) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (741664) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (742244) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (742684) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (743294) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (743724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (744234) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (744744) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (745244) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (745814) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (746264) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (746864) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (747304) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (747824) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (748334) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (748824) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (749354) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (749854) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (750434) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (750874) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (751484) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (751874) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (751904) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (752414) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (752594) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (752954) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (753584) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (753964) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (754454) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (754964) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (755474) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (755984) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (756494) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (757034) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (757574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (758034) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (758574) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (759054) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (759674) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (760094) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (760724) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (761164) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (761614) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (762194) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (762634) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (762894) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (763184) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (763574) MLX-WS-SERVER: Firebase POST OK, HTTP status = 200[0m
+[0;32mI (763654) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (764284) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
+[0;32mI (764704) MLX-WS-SERVER: Frame recebido via UDP (768 bytes)[0m
