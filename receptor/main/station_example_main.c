@@ -1,6 +1,5 @@
 // esp32_server_main.c
-// ESP32 #2 (SERVIDOR): recebe frames 24x32 em 8 bits via UDP,
-// guarda em mlx_frame_u8 e envia em JSON via WebSocket /ws para o navegador.
+// recebe frames 24x32 em 8 bits via UDP, guarda em mlx_frame_u8 e envia em JSON via WebSocket /ws para o navegador.
 
 #include <stdio.h>
 #include <string.h>
@@ -16,10 +15,10 @@
 #include "nvs_flash.h"
 #include "esp_netif.h"
 #include "esp_timer.h"   
-#include "esp_sntp.h"        // <-- ADICIONADO
+#include "esp_sntp.h"       
 
 #include "esp_http_server.h"    // HTTP server + WebSocket
-#include "esp_http_client.h"    // <-- ADICIONADO
+#include "esp_http_client.h"    
 
 #include "esp_crt_bundle.h"
 
@@ -28,39 +27,34 @@
 
 #define TAG "MLX-WS-SERVER"
 
-// -----------------------------
-// MLX90640 - parâmetros
-// -----------------------------
 #define MLX_ROWS   24
 #define MLX_COLS   32
-#define MLX_PIXELS (MLX_ROWS * MLX_COLS)    // 768
+#define MLX_PIXELS (MLX_ROWS * MLX_COLS)
 
-#define FIREBASE_BODY_MAX 24000   // coloque isso perto dos #define, se quiser
+#define FIREBASE_BODY_MAX 24000
 
-// 24x32 em 8 bits (frame atual)
 static uint8_t mlx_frame_u8[MLX_PIXELS];
 
-// -----------------------------
-// FIREBASE (REST / Firestore)
-// -----------------------------
-// Troque pela SUA API KEY (a mesma do config do app web)
-#define FIREBASE_API_KEY "SEU_API_KEY_AQUI"
+// API KEY 
+#define FIREBASE_API_KEY "AIzaSyBylZrRkFf0xTUNqaCx7bMogndO0qEEQ_8"
 
 // Endpoint documents.create da coleção "frames"
 #define FIREBASE_URL "https://firestore.googleapis.com/v1/projects/" \
                      "mlx-thermal-monitor/databases/(default)/documents/frames?key=" FIREBASE_API_KEY
 
-// Se quiser validar TLS corretamente, coloque aqui o root CA que assina
-// firestore.googleapis.com. Exemplo:
-//
-// extern const char FIREBASE_ROOT_CA_PEM[] asm("_binary_firebase_root_ca_pem_start");
-//
-// e no sdkconfig.cmake ou similar, inclua o .pem na imagem.
-// Para simplificar, deixarei cert_pem = NULL (não recomendado para produção).
+static void on_got_ip(void *arg, esp_event_base_t event_base,
+                      int32_t event_id, void *event_data)
+{
+    ip_event_got_ip_t *event = (ip_event_got_ip_t *)event_data;
+    esp_netif_ip_info_t *ip_info = &event->ip_info;
 
-// -----------------------------
-// SNTP (acertar data/hora via NTP)
-// -----------------------------
+    ESP_LOGI(TAG, "GOT IP: " IPSTR ", GW: " IPSTR ", MASK: " IPSTR,
+             IP2STR(&ip_info->ip),
+             IP2STR(&ip_info->gw),
+             IP2STR(&ip_info->netmask));
+}
+
+// SNTP | acertar data/hora via NTP
 static void time_sync_notification_cb(struct timeval *tv)
 {
     ESP_LOGI(TAG, "Hora sincronizada via SNTP");
@@ -69,16 +63,15 @@ static void time_sync_notification_cb(struct timeval *tv)
 static void initialize_sntp(void)
 {
     ESP_LOGI(TAG, "Inicializando SNTP");
-    sntp_setoperatingmode(SNTP_OPMODE_POLL);
-    sntp_setservername(0, "pool.ntp.org");  // pode trocar pra um servidor BR se quiser
-    sntp_set_time_sync_notification_cb(time_sync_notification_cb);
-    sntp_init();
+    esp_sntp_setoperatingmode(SNTP_OPMODE_POLL);
+    esp_sntp_setservername(0, "br.pool.ntp.org");
+    esp_sntp_set_time_sync_notification_cb(time_sync_notification_cb);
+    esp_sntp_init();
 }
 
 // Envia um frame 24x32 (8 bits) para Firestore
 static void firebase_send_frame(const uint8_t *frame)
 {
-    // Montar JSON do documento:
     // {
     //   "fields": {
     //     "rows": {"integerValue":"24"},
@@ -92,7 +85,7 @@ static void firebase_send_frame(const uint8_t *frame)
     //   }
     // }
 
-    // timestamp em ISO UTC (ex: 2025-12-07T02:47:09Z)
+    // timestamp em ISO UTC
     time_t now;
     time(&now);
 
@@ -101,10 +94,6 @@ static void firebase_send_frame(const uint8_t *frame)
 
     char ts_str[64];
     strftime(ts_str, sizeof(ts_str), "%Y-%m-%dT%H:%M:%SZ", &tm_utc);
-
-
-    // buffer grande o suficiente para o JSON
-    // 768 valores * ~10 caracteres cada + overhead
 
     char *body = malloc(FIREBASE_BODY_MAX);
     if (!body) {
@@ -143,8 +132,8 @@ static void firebase_send_frame(const uint8_t *frame)
         .timeout_ms = 10000,
         .crt_bundle_attach = esp_crt_bundle_attach,
         .transport_type = HTTP_TRANSPORT_OVER_SSL,
-        .cert_pem = NULL,                    // coloque o root CA aqui em produção
-        .skip_cert_common_name_check = true  // NÃO usar em produção
+        .cert_pem = NULL,                   
+        .skip_cert_common_name_check = true  
     };
 
     esp_http_client_handle_t client = esp_http_client_init(&config);
@@ -174,7 +163,6 @@ static void firebase_uploader_task(void *arg)
 {
     uint8_t local_copy[MLX_PIXELS];
 
-    // Espera SNTP acertar o relógio (ano >= 2020)
     time_t now = 0;
     struct tm timeinfo = {0};
 
@@ -182,7 +170,7 @@ static void firebase_uploader_task(void *arg)
         time(&now);
         gmtime_r(&now, &timeinfo);
         if (timeinfo.tm_year >= (2020 - 1900)) {
-            break;  // já tem hora razoável
+            break; 
         }
         ESP_LOGI(TAG, "Aguardando sincronizacao SNTP...");
         vTaskDelay(pdMS_TO_TICKS(2000));
@@ -195,15 +183,13 @@ static void firebase_uploader_task(void *arg)
     }
 }
 
-// -----------------------------
 // HTTP + WEBSOCKET
-// -----------------------------
 static httpd_handle_t ws_server = NULL;
 static int ws_client_fd = -1;
 
 static char json_buf[4096];
 
-// Handler simples pra HTTP GET /
+// Handler simples pra HTTP GET
 static esp_err_t root_get_handler(httpd_req_t *req)
 {
     ESP_LOGI(TAG, "HTTP GET / recebido");
@@ -330,7 +316,7 @@ static void send_frame_over_ws(const uint8_t *frame)
     }
 }
 
-// Task que envia o último frame a cada ~200 ms
+// Task que envia o último frame
 static void frame_sender_task(void *arg)
 {
     while (1) {
@@ -339,9 +325,7 @@ static void frame_sender_task(void *arg)
     }
 }
 
-// -----------------------------
 // WIFI (STA simples, com SSID/senha fixos)
-// -----------------------------
 static void wifi_init_sta(void)
 {
     esp_err_t ret = nvs_flash_init();
@@ -354,6 +338,15 @@ static void wifi_init_sta(void)
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
 
+    ESP_ERROR_CHECK(esp_event_handler_instance_register(
+        IP_EVENT,
+        IP_EVENT_STA_GOT_IP,
+        &on_got_ip,
+        NULL,
+        NULL
+    ));
+
+
     esp_netif_create_default_wifi_sta();
 
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
@@ -361,8 +354,8 @@ static void wifi_init_sta(void)
 
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid     = "Melk",
-            .password = "GMUH2021*",
+            .ssid     = "imperadorpaulo",
+            .password = "12345678",
         },
     };
 
@@ -374,9 +367,7 @@ static void wifi_init_sta(void)
     ESP_LOGI(TAG, "WiFi STA inicializado; conectando ao AP \"%s\"", wifi_config.sta.ssid);
 }
 
-// -----------------------------
 // UDP SERVIDOR (recebe frames do SENSOR)
-// -----------------------------
 #define UDP_PORT 5005
 
 static void udp_receiver_task(void *arg)
@@ -422,7 +413,7 @@ static void udp_receiver_task(void *arg)
 
         if (len == MLX_PIXELS) {
             memcpy(mlx_frame_u8, buf, MLX_PIXELS);
-            ESP_LOGI(TAG, "Frame recebido via UDP (%d bytes)", len);  // <-- já estava
+            ESP_LOGI(TAG, "Frame recebido via UDP (%d bytes)", len);
         } else {
             ESP_LOGW(TAG, "Pacote UDP tamanho inesperado: %d", len);
         }
@@ -430,9 +421,7 @@ static void udp_receiver_task(void *arg)
     }
 }
 
-// -----------------------------
 // app_main
-// -----------------------------
 void app_main(void)
 {
     memset(mlx_frame_u8, 0, sizeof(mlx_frame_u8));

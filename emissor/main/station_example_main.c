@@ -1,6 +1,5 @@
 // esp32_sensor_main.c
-// ESP32 #1 (SENSOR): lê GY-MCU90640 via UART, normaliza 24x32 em 8 bits
-// e envia o frame via UDP para a ESP32 #2 (SERVIDOR).
+// ESP32 #1 (SENSOR): lê GY-MCU90640 via UART, normaliza 24x32 em 8 bits e envia o frame via UDP para a ESP32 #2 (SERVIDOR).
 
 #include <stdio.h>
 #include <string.h>
@@ -24,20 +23,16 @@
 
 #define TAG "MLX-SENSOR"
 
-// -----------------------------
-// MLX90640 - parâmetros
-// -----------------------------
+// MLX90640 parâmetros
 #define MLX_ROWS   24
 #define MLX_COLS   32
-#define MLX_PIXELS (MLX_ROWS * MLX_COLS)    // 768
-#define MLX_FRAME_BYTES (MLX_PIXELS * 2)    // 24*32*2 = 1536
+#define MLX_PIXELS (MLX_ROWS * MLX_COLS) 
+#define MLX_FRAME_BYTES (MLX_PIXELS * 2)  
 
-// -----------------------------
 // UART do módulo GY-MCU90640
-// -----------------------------
 #define MLX_UART_NUM   UART_NUM_1
-#define MLX_UART_TXPIN GPIO_NUM_17   // TX da ESP32  -> RX do módulo
-#define MLX_UART_RXPIN GPIO_NUM_16   // RX da ESP32  -> TX do módulo
+#define MLX_UART_TXPIN GPIO_NUM_17
+#define MLX_UART_RXPIN GPIO_NUM_16
 #define MLX_UART_BAUD  115200
 #define MLX_UART_BUF   2048
 
@@ -48,7 +43,7 @@
 // Buffer para reconstrução do frame completo
 static uint8_t  frame_buffer[2048];
 static int      buffer_idx = 0;
-static int      state = 0; // 0:Busca H1, 1:Busca H2, 2:Config, 3:Dados
+static int      state = 0; 
 
 // 24x32 em 8 bits (normalizado) – será enviado via UDP
 static uint8_t  mlx_frame_u8[MLX_PIXELS];
@@ -56,9 +51,7 @@ static uint8_t  mlx_frame_u8[MLX_PIXELS];
 // 24x32 em 16 bits (valores brutos)
 static uint16_t mlx_raw16[MLX_PIXELS];
 
-// -----------------------------
 // WIFI (STA simples, SSID/senha fixos)
-// -----------------------------
 static void wifi_init_sta(void)
 {
     esp_err_t ret = nvs_flash_init();
@@ -77,8 +70,8 @@ static void wifi_init_sta(void)
 
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid     = "Melk",
-            .password = "GMUH2021*",
+            .ssid     = "imperadorpaulo",
+            .password = "12345678",
         },
     };
 
@@ -90,10 +83,8 @@ static void wifi_init_sta(void)
     ESP_LOGI(TAG, "WiFi STA inicializado; conectando ao AP \"%s\"", wifi_config.sta.ssid);
 }
 
-// -----------------------------
 // UDP CLIENTE (envia para ESP32 servidor)
-// -----------------------------
-#define SERVER_IP  "192.168.15.27"  // <<< COLOQUE AQUI O IP DA ESP32 SERVIDOR
+#define SERVER_IP  "172.21.119.51"
 #define UDP_PORT   5005
 
 static int udp_sock = -1;
@@ -130,9 +121,7 @@ static void send_frame_to_server(const uint8_t *frame)
     }
 }
 
-// -----------------------------
 // UART do módulo GY-MCU90640
-// -----------------------------
 static void mlx_uart_init(void)
 {
     uart_config_t cfg = {
@@ -146,11 +135,11 @@ static void mlx_uart_init(void)
 
     ESP_ERROR_CHECK(uart_driver_install(
         MLX_UART_NUM,
-        MLX_UART_BUF,   // rx_buffer_size
-        0,              // tx_buffer_size (0 = sem buffer)
-        0,              // queue_size
-        NULL,           // uart_queue
-        0               // intr_alloc_flags
+        MLX_UART_BUF, 
+        0,   
+        0,     
+        NULL,      
+        0           
     ));
 
     ESP_ERROR_CHECK(uart_param_config(MLX_UART_NUM, &cfg));
@@ -166,9 +155,7 @@ static void mlx_uart_init(void)
              MLX_UART_NUM, MLX_UART_TXPIN, MLX_UART_RXPIN, MLX_UART_BAUD);
 }
 
-// -----------------------------
 // Task que lê bytes da UART e monta frames 24x32 (16 bits) → 8 bits + envia via UDP
-// -----------------------------
 static void uart_reader_task(void *arg)
 {
     uint8_t chunk[64];
@@ -257,9 +244,7 @@ static void uart_reader_task(void *arg)
     }
 }
 
-// -----------------------------
 // app_main
-// -----------------------------
 void app_main(void)
 {
     memset(mlx_frame_u8, 0, sizeof(mlx_frame_u8));
